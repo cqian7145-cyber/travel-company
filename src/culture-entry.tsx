@@ -9,4 +9,5 @@ import './culture.css';
 import './micro-adventures.css';
 import './polish.css';
 import './colour-motion.css';
+import './editorial.css';
 createRoot(document.getElementById('culture-root')!).render(<React.StrictMode><CulturePage/></React.StrictMode>);

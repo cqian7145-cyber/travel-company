@@ -9,4 +9,5 @@ import './culture.css';
 import './micro-adventures.css';
 import './polish.css';
 import './colour-motion.css';
+import './editorial.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);

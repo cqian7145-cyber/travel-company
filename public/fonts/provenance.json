@@ -1,0 +1,26 @@
+[
+  {
+    "family": "Cormorant Garamond",
+    "file": "cormorant-garamond-latin.woff2",
+    "source": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2",
+    "cssSource": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap",
+    "license": "SIL Open Font License 1.1",
+    "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/OFL.txt",
+    "downloadedAt": "2026-11-08",
+    "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
+    "bytes": 37640,
+    "subset": "latin"
+  },
+  {
+    "family": "Inter",
+    "file": "inter-latin.woff2",
+    "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "cssSource": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap",
+    "license": "SIL Open Font License 1.1",
+    "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "downloadedAt": "2026-11-08",
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "bytes": 48256,
+    "subset": "latin"
+  }
+]

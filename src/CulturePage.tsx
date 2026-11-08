@@ -4,10 +4,12 @@ import {renderCultureBody} from '../shared/culture-render.mjs';
 import {useLocalState,isHotel,isTravelDetails,type Plan,type Hotel,type TravelDetails} from './companion-state';
 import {Modal} from './ui';
 import OfflineTools from './OfflineTools';
+import {usePageMotion} from './usePageMotion';
 type CultureState={saved:string[];steps:Record<string,boolean>;notes:Record<string,string>};
 const validPlan=(v:unknown):v is Plan|null=>v===null||Boolean(v&&typeof v==='object'&&Array.isArray((v as Plan).days)&&(v as Plan).days.every(d=>typeof d.date==='string'&&Array.isArray(d.stops)&&d.stops.every(s=>typeof s.placeId==='string')));
 export default function CulturePage(){
  const route=cultureRoute(window.location.pathname)||{kind:'not-found',path:window.location.pathname};
+ usePageMotion('.culture-page',route.path);
  const [state,setState,storageError]=useLocalState<CultureState>('closer-culture-v1',emptyCultureState,(v):v is CultureState=>isCultureState(v));
  const [plan,setPlan]=useLocalState<Plan|null>('closer-plan-v1',null,validPlan);
  const [hotel]=useLocalState<Hotel>('closer-hotel-v1',{name:'',address:'',url:''},isHotel);

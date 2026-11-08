@@ -1,5 +1,5 @@
 import {useRef,useState} from 'react';
-import {ArrowLeft,ArrowRight,Plus} from 'lucide-react';
+import {ArrowLeft,ArrowRight,Plus,BookOpen,Footprints,MapPin} from 'lucide-react';
 import {Modal} from './ui';
 
 function Photo({id,alt,hero=false,large=false}:{id:string;alt:string;hero?:boolean;large?:boolean}){
@@ -18,8 +18,8 @@ const frames=[
 ];
 export function ShanghaiWelcome({onPlan}:{onPlan:()=>void}){
  return <section className="welcome" aria-labelledby="welcome-heading">
-  <div className="welcome-copy" data-reveal><p className="eyebrow">SHANGHAI IS JUST THE BEGINNING.</p><h1 id="welcome-heading">China, Closer<span>.</span></h1><p className="welcome-deck">Less guesswork.<br/>More getting to know a place.</p><div className="welcome-actions"><a className="primary-button" href="#discover-heading">Find a small adventure <ArrowRight size={16}/></a><button className="text-link" onClick={onPlan}>Plan my trip <ArrowRight size={16}/></button></div></div>
-  <figure className="welcome-photo"><Photo id="bund-dusk" alt="The Bund waterfront at dusk, seen across the Huangpu River" hero/><figcaption><span>ONE CITY. SO MANY WAYS IN.</span><span>Shanghai · 上海</span></figcaption></figure>
+  <figure className="welcome-photo" data-reveal><Photo id="shanghai-greeting" alt="A red-brick Shanghai street corner with open doorways and people passing by" hero/><figcaption><span>A CITY, AT STREET LEVEL.</span><span>Shanghai · 上海</span></figcaption></figure>
+  <div className="welcome-copy" data-reveal><p className="eyebrow">A LITTLE LOCAL KNOWLEDGE. A CLOSER LOOK.</p><h1 id="welcome-heading">China, Closer<span>.</span></h1><p className="welcome-deck">Go beyond the view.<br/>Find the story within.</p><p className="welcome-description">Small experiences. Thoughtful travel tools. A little more understanding of the places — and everyday moments — that make a journey your own.</p><div className="welcome-actions"><a className="primary-button" href="#discover-heading">Find a small adventure <ArrowRight size={17}/></a><button className="text-link" onClick={onPlan}>Plan my trip <ArrowRight size={17}/></button></div><div className="welcome-filmstrip" aria-label="More ways to see Shanghai"><Photo id="bund-dusk" alt="The Bund across the river at dusk"/><Photo id="shanghai-street" alt="Afternoon light between Shanghai buildings"/><Photo id="pudong-blue-hour" alt="Pudong skyline at blue hour"/></div><div className="welcome-story-notes"><span><MapPin size={17}/>Shanghai & Hangzhou</span><span><BookOpen size={17}/>Stories with context</span><span><Footprints size={17}/>Explore at your pace</span></div></div>
  </section>;
 }
 export default function ShanghaiPhotography(){

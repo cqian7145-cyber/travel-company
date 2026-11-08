@@ -72,3 +72,7 @@ Run `npm run stories:check` or `npm run check`. See [scope, sources and rights w
 The second city chapter is available at `/?page=hangzhou`. It includes three curated areas (West Lake, Longjing village and the Gongchen Bridge area), separate local bookmarks, Chinese area cards, map searches and an offline visual notebook. Operational facts stay explicitly unknown pending evidence; linked city articles are context, not ticket checkouts. The planner, Trip Mode and airport arrival guides currently cover Shanghai.
 
 UI navigation is larger, with a lake-blue/tea-green palette, short selection/reveal transitions and reduced-motion support. See `docs/HANGZHOU-UI-UPDATE.md` for scope, source boundaries and validation. `npm run check` includes the Hangzhou data and image/offline checks. User-uploaded photo rights and exact shooting locations remain unverified; originals are not checked into the repository.
+
+## Current visual direction
+
+The current brand system is Story-led × Cultural × Minimal: warm ivory, olive/teal, restrained burgundy actions, self-hosted Cormorant Garamond/Inter, cinematic split photography and accessible mobile quick navigation. It supersedes the earlier vivid colour treatment described above. See [DESIGN.md](DESIGN.md) for the design contract. React/Vite/Workers remain the delivery stack; the native shared-image transition has reduced-motion, keyboard and unsupported-browser fallbacks. Licensed fonts are included in the offline kit.

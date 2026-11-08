@@ -48,7 +48,7 @@ export function createHandler(vite){return async(req,res)=>{
   const base=resolve(root,'dist'),file=resolve(base,'.'+decodeURIComponent(culture?.file||path));
   if(!file.startsWith(base+sep)&&file!==base)return send(403,{error:'Forbidden'});
   let data;let extension=extname(file);try{data=await readFile(file);}catch{if(extension)return send(404,{error:'Not found'});data=await readFile(resolve(base,'index.html'));extension='.html';}
-  const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.json':'application/json','.png':'image/png','.ico':'image/x-icon'};
+  const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.json':'application/json','.png':'image/png','.ico':'image/x-icon'};
   res.writeHead(200,{'Content-Type':types[extension]||'application/octet-stream','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});res.end(data);
  }catch{send(500,{error:'Build the app with npm run build before starting.'});}
 };}
