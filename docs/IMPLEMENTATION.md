@@ -21,3 +21,7 @@ Added Trip Mode, Booking Assistant, and China SOS. See COMPANION-MODULES.md for 
 ## Arrival and communication extension
 
 Added China Connectivity, 24 Speak Local templates and First 90 Minutes. See ARRIVAL-TOOLS.md and ARRIVAL-VALIDATION.md. A user-triggered service worker caches only versioned local app assets; navigation can reload offline after saving. A script-free, escaped standalone HTML snapshot provides an additional backup. Changing hotel name/address invalidates its personal-card confirmation. Connection settings never certify eSIM compatibility or service availability. Airport reference costs remain tied to People's Square, and operating hours require current operator checks. No new dependencies or remote storage were added.
+
+## Verified Data Center V1
+
+Local branch only: `data/venues.json` and `data/sources.json` own venue facts/evidence. `catalog.mjs` retains the public compatibility view and stable IDs. `companion.mjs` retains task derivation and confirmation logic, with changed/expired evidence invalidating affected checks. Offline metadata has data version and save time distinct from app build hash and field verification dates. See DATA-VERIFICATION.md, VENUE-FIELD-AUDIT.md and VDC-VALIDATION.md. No database or production changes were made for VDC.

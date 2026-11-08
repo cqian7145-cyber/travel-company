@@ -1,0 +1,1221 @@
+[
+  {
+    "id": "bund",
+    "category": "Iconic sights",
+    "tags": [
+      "Architecture",
+      "Photography"
+    ],
+    "area": "Huangpu",
+    "description": "A riverside walk between Shanghai’s grand old facades and its future-facing skyline. Come back as the city lights up.",
+    "tip": "The promenade can be crowded at sunset. Keep valuables close and use marked crossings.",
+    "duration": "1–2 hours",
+    "image": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?auto=format&fit=crop&w=1800&q=85",
+    "cluster": 0,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "The Bund",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "外滩",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市黄浦区中山东一路",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Outdoor promenade; access can change during events.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "East Nanjing Road station, Lines 2 / 10; walk to the river.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2401,
+          "lng": 121.4906
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231205/584672cc6d044eabb5f7f6fc9049a19f.html",
+          "kind": "official_city_guide",
+          "label": "Visitor information"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "bund_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  },
+  {
+    "id": "yuyuan",
+    "category": "Culture & history",
+    "tags": [
+      "Culture",
+      "Photography"
+    ],
+    "area": "Old City",
+    "description": "Zigzag bridges, intricate rockeries, and quiet courtyards reveal a different rhythm in the heart of the old city.",
+    "tip": "The ticketed garden and surrounding bazaar are separate. Check the official garden account for tickets and closures.",
+    "duration": "1.5–2 hours",
+    "image": "https://images.unsplash.com/photo-1760635519117-e050bf4ebfc6?auto=format&fit=crop&w=900&q=85",
+    "cluster": 0,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Yu Garden",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "豫园",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市黄浦区安仁街218号",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Seasonal schedule and last admission: confirm with the official operator.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 40,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Yuyuan Garden station, Lines 10 / 14; follow signs to the garden.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2272,
+          "lng": 121.4921
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.meet-in-shanghai.net/en/huangpu-district/yu-garden-182016/",
+          "kind": "official_city_guide",
+          "label": "Official guide · ticket instructions"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": "Confirm ticket purchase, date-specific hours, and whether advance booking is needed. The bazaar and the paid garden are separate.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": "Passport / accepted ID requirements: confirm with the operator.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "yuyuan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": {
+      "title": "Check Yu Garden tickets",
+      "caution": "This is an official city guide handoff, not a verified checkout. Avoid treating a third-party ticket offer as the official operator.",
+      "confirmation_baseline": "7bfd04112a66c5a4"
+    }
+  },
+  {
+    "id": "wukang",
+    "category": "Local life",
+    "tags": [
+      "Architecture",
+      "Food",
+      "Photography"
+    ],
+    "area": "Xuhui",
+    "description": "Plane-tree shade, Art Deco corners, and a coffee stop with no agenda. Walk slowly; the best discoveries are in between.",
+    "tip": "This is a residential neighborhood. Avoid photographing inside homes and keep the pavement clear.",
+    "duration": "1.5–2 hours",
+    "image": "https://images.unsplash.com/photo-1704095981825-df894149bb6b?auto=format&fit=crop&w=900&q=85",
+    "cluster": 1,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Wukang Road",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "武康路",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市徐汇区武康路（近淮海中路）",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Public street; individual cafés and shops keep their own hours.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Shanghai Library station, Line 10; walk to Wukang Road.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2031,
+          "lng": 121.4381
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231218/596192f5f59048bbbc3fa54d92304e93.html",
+          "kind": "official_city_guide",
+          "label": "Neighborhood guide · no street ticket"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "wukang_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  },
+  {
+    "id": "museum",
+    "category": "Culture & history",
+    "tags": [
+      "Culture",
+      "Art"
+    ],
+    "area": "Pudong",
+    "description": "Follow centuries of craftsmanship through bronzes, ceramics, and Chinese painting in a spacious contemporary museum.",
+    "tip": "Bring your original passport. Interactive spaces need separate reservations; special exhibitions may charge.",
+    "duration": "2–3 hours",
+    "image": "https://images.unsplash.com/photo-1760635519117-e050bf4ebfc6?auto=format&fit=crop&w=900&q=85",
+    "cluster": 2,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Shanghai Museum East",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "上海博物馆东馆",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市浦东新区世纪大道1952号",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "10:00–18:00; last entry 17:00. Closed Tuesdays except national holidays. Recheck before visiting.",
+        "status": "verified",
+        "verified_at": "2026-11-07",
+        "source_id": "museum_official_visit",
+        "reviewed_at": "2026-11-07",
+        "next_review_at": "2026-11-14",
+        "evidence_note": "Carried forward from operator review recorded in docs/COMPANION-VALIDATION.md on 2026-11-07; not reverified during migration."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": 2,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Shanghai Science and Technology Museum station, Line 2; allow a walk.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2206,
+          "lng": 121.542
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.shanghaimuseum.cn/mu/frontend/pg/m/service/visit-east",
+          "kind": "operator_visit_guide",
+          "label": "Official visit & reservation guide"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": "Individual general admission currently needs no reservation. Interactive spaces require special reservations; paid exhibitions have separate arrangements.",
+        "status": "verified",
+        "verified_at": "2026-11-07",
+        "source_id": "museum_official_visit",
+        "reviewed_at": "2026-11-07",
+        "next_review_at": "2026-11-14",
+        "evidence_note": "Legacy operator admission-rule review preserved; does not verify every identity or ticket channel field."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": "Bring your original passport or another accepted original ID.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "museum_official_visit",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": {
+      "title": "Check museum admission requirements",
+      "caution": "Use the museum’s own reservation channels. Tuesday closures generally apply except national holidays. Recheck your visit date.",
+      "confirmation_baseline": "b43b4c70d9c871a1"
+    }
+  },
+  {
+    "id": "xintiandi",
+    "category": "Food & drink",
+    "tags": [
+      "Food",
+      "Architecture"
+    ],
+    "area": "Huangpu",
+    "description": "Restored shikumen lanes meet an easy evening of restaurants, design shops, and people-watching.",
+    "tip": "Restaurant prices vary widely. Check the menu before ordering; the lanes themselves do not need a ticket.",
+    "duration": "1–2 hours",
+    "image": "https://images.unsplash.com/photo-1704095981825-df894149bb6b?auto=format&fit=crop&w=900&q=85",
+    "cluster": 0,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Xintiandi",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "新天地",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市黄浦区太仓路181弄",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Outdoor lanes; restaurant opening times vary.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Xintiandi station, Lines 10 / 13.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2195,
+          "lng": 121.475
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20231207/521159f5af35430ab1641004f5c68d03.html",
+          "kind": "official_city_guide",
+          "label": "Dining & neighborhood guide"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "xintiandi_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  },
+  {
+    "id": "jingan",
+    "category": "Culture & history",
+    "tags": [
+      "Culture",
+      "Architecture"
+    ],
+    "area": "Jing’an",
+    "description": "Golden roofs rise above one of Shanghai’s busiest neighborhoods. Take a pause for the architecture and surrounding streets.",
+    "tip": "An active place of worship. Dress respectfully, ask before taking photos, and verify admission at the entrance.",
+    "duration": "1–1.5 hours",
+    "image": "https://images.unsplash.com/photo-1760635519117-e050bf4ebfc6?auto=format&fit=crop&w=900&q=85",
+    "cluster": 1,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Jing’an Temple",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "静安寺",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市静安区南京西路1686号",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Confirm current opening hours and ceremonial closures before visiting.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 50,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Jing’an Temple station, Lines 2 / 7 / 14.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2234,
+          "lng": 121.4453
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.meet-in-shanghai.net/en/jingan-district/jing%E2%80%99an-temple-129056/",
+          "kind": "official_city_guide",
+          "label": "Official city guide · check admission"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": "Check admission, current ticket channels, and ceremony-related restrictions directly before visiting.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": "Passport / accepted ID requirements: confirm with the operator.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "jingan_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": {
+      "title": "Check Jing’an Temple admission",
+      "caution": "Do not assume a timed reservation is required or that a ticket is available. The itinerary price is only an estimate.",
+      "confirmation_baseline": "106b3b1f386fac0d"
+    }
+  },
+  {
+    "id": "nanjing",
+    "category": "Local life",
+    "tags": [
+      "Food",
+      "Photography"
+    ],
+    "area": "Huangpu",
+    "description": "A bright, busy slice of Shanghai, with department stores, old food shops, and an easy walk toward the waterfront.",
+    "tip": "Decline unsolicited tea, art-show, and tour invitations. Confirm prices at established businesses.",
+    "duration": "1–2 hours",
+    "image": "https://images.unsplash.com/photo-1704095981825-df894149bb6b?auto=format&fit=crop&w=900&q=85",
+    "cluster": 0,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Nanjing Road",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "南京路步行街",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市黄浦区南京东路步行街",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Public street; shop hours vary.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "East Nanjing Road station, Lines 2 / 10.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2355,
+          "lng": 121.4753
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.meet-in-shanghai.net/en/",
+          "kind": "general_city_portal",
+          "label": "Official visitor guide"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "nanjing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  },
+  {
+    "id": "lujiazui",
+    "category": "Iconic sights",
+    "tags": [
+      "Architecture",
+      "Photography"
+    ],
+    "area": "Pudong",
+    "description": "See the Bund from the other bank, beneath the towers that define modern Shanghai.",
+    "tip": "This card covers the public riverside, not tower observation decks. Tower tickets are separate.",
+    "duration": "1–2 hours",
+    "image": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?auto=format&fit=crop&w=1800&q=85",
+    "cluster": 2,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Lujiazui Riverside",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "陆家嘴滨江",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市浦东新区滨江大道（陆家嘴段）",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Outdoor riverside; event access and ferry services vary.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "Lujiazui station, Lines 2 / 14; walk to Binjiang Avenue.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2397,
+          "lng": 121.4949
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.meet-in-shanghai.net/en/",
+          "kind": "general_city_portal",
+          "label": "Official area guide"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "lujiazui_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  },
+  {
+    "id": "fuxing",
+    "category": "Local life",
+    "tags": [
+      "Nature",
+      "Photography"
+    ],
+    "area": "Huangpu",
+    "description": "A leafy pause for garden paths and a glimpse of everyday neighborhood life.",
+    "tip": "Ask permission before photographing people. Park gates may close at night.",
+    "duration": "1 hour",
+    "image": "https://images.unsplash.com/photo-1760635519117-e050bf4ebfc6?auto=format&fit=crop&w=900&q=85",
+    "cluster": 0,
+    "facts": {
+      "name": {
+        "field": "name",
+        "value": "Fuxing Park",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "chinese_name": {
+        "field": "chinese_name",
+        "value": "复兴公园",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "address": {
+        "field": "address",
+        "value": "上海市黄浦区雁荡路105号",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "opening_hours": {
+        "field": "opening_hours",
+        "value": "Seasonal gate hours; confirm locally.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Current opening hours have no field-specific evidence."
+      },
+      "admission": {
+        "field": "admission",
+        "value": 0,
+        "status": "estimated",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Planning estimate in CNY, not a confirmed admission tariff."
+      },
+      "usual_closed_day": {
+        "field": "usual_closed_day",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "transport": {
+        "field": "transport",
+        "value": "South Shaanxi Road station, Lines 1 / 10 / 12; walk to the park.",
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "coordinates": {
+        "field": "coordinates",
+        "value": {
+          "lat": 31.2149,
+          "lng": 121.4673
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      },
+      "booking_link": {
+        "field": "booking_link",
+        "value": {
+          "url": "https://www.meet-in-shanghai.net/en/",
+          "kind": "general_city_portal",
+          "label": "Official city guide"
+        },
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "A visitor/visit guide handoff, not a verified ticket checkout."
+      },
+      "reservation": {
+        "field": "reservation",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "No field-specific reservation rule verification."
+      },
+      "identity_requirements": {
+        "field": "identity_requirements",
+        "value": null,
+        "status": "unknown",
+        "verified_at": null,
+        "source_id": "fuxing_visitor_information",
+        "reviewed_at": null,
+        "next_review_at": null,
+        "evidence_note": "Imported value; field-specific verification has not been recorded."
+      }
+    },
+    "booking_task": null
+  }
+]

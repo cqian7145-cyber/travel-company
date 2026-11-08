@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-const base='http://127.0.0.1:8787';
+const base=process.argv[2]||'http://127.0.0.1:8787';
+if(!['localhost','127.0.0.1'].includes(new URL(base).hostname))throw new Error('This smoke test targets local Workers only.');
 const trip={days:3,budget:2400,pace:'balanced',interests:['Culture'],date:'2026-11-09',curated:true};
 const post=(body=trip,headers={})=>fetch(base+'/api/plan',{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(body)});
 const home=await fetch(base+'/');assert.equal(home.status,200);assert.match(home.headers.get('Content-Type'),/text\/html/);assert.equal(home.headers.get('X-Content-Type-Options'),'nosniff');

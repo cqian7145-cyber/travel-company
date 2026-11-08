@@ -1,0 +1,63 @@
+{
+  "plan": {
+    "createdAt": "legacy-trip",
+    "input": {
+      "days": 1,
+      "budget": 2400,
+      "pace": "packed",
+      "interests": [
+        "Culture"
+      ],
+      "date": "2026-11-09"
+    },
+    "days": [
+      {
+        "date": "2026-11-09",
+        "stops": [
+          {
+            "id": "stable-0",
+            "placeId": "museum",
+            "time": "10:00",
+            "note": ""
+          },
+          {
+            "id": "stable-1",
+            "placeId": "yuyuan",
+            "time": "14:00",
+            "note": ""
+          },
+          {
+            "id": "stable-2",
+            "placeId": "jingan",
+            "time": "16:00",
+            "note": ""
+          }
+        ],
+        "note": ""
+      }
+    ],
+    "mode": "curated"
+  },
+  "keys": [
+    {
+      "id": "venue:museum",
+      "key": "[\"legacy-trip\",\"venue:museum\",\"[\\\"legacy-trip\\\",\\\"2026-11-09\\\",\\\"stable-0\\\",\\\"museum\\\",\\\"10:00\\\"]\",\"Individual general admission currently needs no reservation. Interactive spaces require special reservations; paid exhibitions have separate arrangements.\",\"Bring your original passport or another accepted original ID.\",\"2026-11-07\",\"https://www.shanghaimuseum.cn/mu/frontend/pg/m/service/visit-east\",\"\"]"
+    },
+    {
+      "id": "venue:yuyuan",
+      "key": "[\"legacy-trip\",\"venue:yuyuan\",\"[\\\"legacy-trip\\\",\\\"2026-11-09\\\",\\\"stable-1\\\",\\\"yuyuan\\\",\\\"14:00\\\"]\",\"Confirm ticket purchase, date-specific hours, and whether advance booking is needed. The bazaar and the paid garden are separate.\",\"Passport / accepted ID requirements: confirm with the operator.\",null,\"https://www.meet-in-shanghai.net/en/huangpu-district/yu-garden-182016/\",\"\"]"
+    },
+    {
+      "id": "venue:jingan",
+      "key": "[\"legacy-trip\",\"venue:jingan\",\"[\\\"legacy-trip\\\",\\\"2026-11-09\\\",\\\"stable-2\\\",\\\"jingan\\\",\\\"16:00\\\"]\",\"Check admission, current ticket channels, and ceremony-related restrictions directly before visiting.\",\"Passport / accepted ID requirements: confirm with the operator.\",null,\"https://www.meet-in-shanghai.net/en/jingan-district/jing%E2%80%99an-temple-129056/\",\"\"]"
+    },
+    {
+      "id": "rail",
+      "key": "[\"legacy-trip\",\"rail\",\"{\\\"days\\\":1,\\\"budget\\\":2400,\\\"pace\\\":\\\"packed\\\",\\\"interests\\\":[\\\"Culture\\\"],\\\"date\\\":\\\"2026-11-09\\\"}\",\"Check your identity-verification status and actual ticket order in Railway 12306. Match your name, station, date, and train.\",\"Valid passport used for booking; identity verification may be required.\",\"2026-11-07\",\"https://www.12306.cn/en/index.html\",\"\"]"
+    },
+    {
+      "id": "hotel",
+      "key": "[\"legacy-trip\",\"hotel\",\"\",\"Get the exact Chinese property name, full address, and official hotel website from your accommodation confirmation.\",\"Accommodation document requirements: confirm with your hotel.\",null,null,\"\"]"
+    }
+  ]
+}
