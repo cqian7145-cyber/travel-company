@@ -1,0 +1,162 @@
+[
+  {
+    "id": "shanghai-greeting",
+    "suppliedFilename": "greetings from Shanghai (1).jpg",
+    "originalSha256": "89adf4035063f52cba0a077dfb23105c98a787eaabc80b14963288b877b0698c",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/shanghai-greeting-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 120726
+      },
+      {
+        "src": "/photography/shanghai-greeting-1600.webp",
+        "width": 736,
+        "height": 981,
+        "bytes": 152186
+      }
+    ]
+  },
+  {
+    "id": "pudong-blue-hour",
+    "suppliedFilename": "Night lights of Shanghai ✨🌃 (1).jpg",
+    "originalSha256": "f348843a27bb8f5b923d08458cad11989b5794d97d1a15b82cd4e645a8c786f6",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/pudong-blue-hour-640.webp",
+        "width": 640,
+        "height": 1146,
+        "bytes": 95636
+      },
+      {
+        "src": "/photography/pudong-blue-hour-1600.webp",
+        "width": 736,
+        "height": 1318,
+        "bytes": 118118
+      }
+    ]
+  },
+  {
+    "id": "bund-clocktower",
+    "suppliedFilename": "the bund shanghai.jpg",
+    "originalSha256": "0b048a38cc0ff986f4acc1b2363affefee68ed04796a8bc8e9c20b8f133458b1",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/bund-clocktower-640.webp",
+        "width": 640,
+        "height": 1137,
+        "bytes": 140052
+      },
+      {
+        "src": "/photography/bund-clocktower-1600.webp",
+        "width": 736,
+        "height": 1308,
+        "bytes": 177164
+      }
+    ]
+  },
+  {
+    "id": "pudong-night",
+    "suppliedFilename": "The bund.jpg",
+    "originalSha256": "2beb06762d5499b9871beaad0897676c81ab279ce3142bf6ec556f2873d502e4",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/pudong-night-640.webp",
+        "width": 640,
+        "height": 1137,
+        "bytes": 124192
+      },
+      {
+        "src": "/photography/pudong-night-1600.webp",
+        "width": 736,
+        "height": 1308,
+        "bytes": 155358
+      }
+    ]
+  },
+  {
+    "id": "bund-dusk",
+    "suppliedFilename": "pexels-olivia-cai-2152171456-32062049.jpg",
+    "originalSha256": "e5d981c65111e089cae148b8794311a04953f6d81ff669d16a680d76cae3ef02",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/bund-dusk-640.webp",
+        "width": 640,
+        "height": 359,
+        "bytes": 29470
+      },
+      {
+        "src": "/photography/bund-dusk-1600.webp",
+        "width": 1600,
+        "height": 898,
+        "bytes": 127164
+      }
+    ]
+  },
+  {
+    "id": "shanghai-street",
+    "suppliedFilename": "pexels-throughnislens-31772157.jpg",
+    "originalSha256": "330e7b12f3abc0b8616b17a92bf8c1946945bc55767692eba3332633a3b270bb",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/shanghai-street-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 43104
+      },
+      {
+        "src": "/photography/shanghai-street-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 181282
+      }
+    ]
+  },
+  {
+    "id": "bund-night-street",
+    "suppliedFilename": "pexels-biravencrow-35367634.jpg",
+    "originalSha256": "20cf636ced01464a1907e4d10fcb0e91058c14430b14c97f7e570bb52ada66bc",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/bund-night-street-640.webp",
+        "width": 640,
+        "height": 958,
+        "bytes": 65918
+      },
+      {
+        "src": "/photography/bund-night-street-1600.webp",
+        "width": 1336,
+        "height": 2000,
+        "bytes": 186678
+      }
+    ]
+  },
+  {
+    "id": "riverside-evening",
+    "suppliedFilename": "pexels-yan-zhang-210144339-25792280.jpg",
+    "originalSha256": "03222e20b5d26fdea3968b672635f03933c71245331daf257fe5d0a0e05b99dc",
+    "rightsStatus": "unverified-user-supplied-local-preview",
+    "renditions": [
+      {
+        "src": "/photography/riverside-evening-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 52834
+      },
+      {
+        "src": "/photography/riverside-evening-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 404452
+      }
+    ]
+  }
+]

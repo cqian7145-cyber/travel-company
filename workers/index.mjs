@@ -1,5 +1,6 @@
 import {buildPlan,validateInput} from '../shared/planner.mjs';
 import {generate as generateDeepSeek} from '../shared/deepseek.mjs';
+import {cultureRoute} from '../shared/story-catalog.mjs';
 
 const MAX_BODY=8192;
 function json(status,data,extra={}){return Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin',...extra}});}
@@ -17,7 +18,12 @@ async function readJson(request){
 export function createWorker({generate=generateDeepSeek}={}){return {
  async fetch(request,env){
   const url=new URL(request.url);
-  if(url.pathname!=='/api'&&!url.pathname.startsWith('/api/'))return env.ASSETS.fetch(request);
+  if(url.pathname!=='/api'&&!url.pathname.startsWith('/api/')){
+   const route=cultureRoute(url.pathname);
+   if(route?.kind==='not-found')return new Response('Story or experience not found.',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
+   if(route?.file){const assetUrl=new URL(request.url);assetUrl.pathname=route.file;return env.ASSETS.fetch(new Request(assetUrl,request));}
+   return env.ASSETS.fetch(request);
+  }
   const origin=request.headers.get('Origin');
   if((origin&&origin!==url.origin)||request.headers.get('Sec-Fetch-Site')==='cross-site')return json(403,{error:'Origin not allowed.'});
   if(url.pathname==='/api/status'){

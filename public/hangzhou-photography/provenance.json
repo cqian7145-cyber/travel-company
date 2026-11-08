@@ -1,0 +1,191 @@
+[
+  {
+    "id": "lake-blue",
+    "suppliedFilename": "AI_1794146758287.png",
+    "originalSha256": "e59503fc2c10ffa122992165f4a015f802c07efa149ed93e39c71af607f0d87e",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/lake-blue-640.webp",
+        "width": 640,
+        "height": 873,
+        "bytes": 88926
+      },
+      {
+        "src": "/hangzhou-photography/lake-blue-1600.webp",
+        "width": 1080,
+        "height": 1473,
+        "bytes": 184284
+      }
+    ]
+  },
+  {
+    "id": "city-colours",
+    "suppliedFilename": "AI_1794146855883.png",
+    "originalSha256": "3ecb5c37845eebe6f3e88830264773bb81c954be4ae5a9be81da978d1989afa4",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/city-colours-640.webp",
+        "width": 640,
+        "height": 836,
+        "bytes": 113378
+      },
+      {
+        "src": "/hangzhou-photography/city-colours-1600.webp",
+        "width": 1076,
+        "height": 1406,
+        "bytes": 306484
+      }
+    ]
+  },
+  {
+    "id": "lakeside-road",
+    "suppliedFilename": "AI_1794146630118.png",
+    "originalSha256": "0a6e3e9236c35d0ae97be65bf340bb6e1e7a5678dc50422d1d15469cb020e804",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/lakeside-road-640.webp",
+        "width": 640,
+        "height": 1138,
+        "bytes": 235484
+      },
+      {
+        "src": "/hangzhou-photography/lakeside-road-1600.webp",
+        "width": 1012,
+        "height": 1800,
+        "bytes": 559960
+      }
+    ]
+  },
+  {
+    "id": "tea-green",
+    "suppliedFilename": "AI_1794146664849.png",
+    "originalSha256": "ca592501ece7a5e414dd16bdf0168f5b608fa4f8076e0d159337ba36e46c275d",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/tea-green-640.webp",
+        "width": 640,
+        "height": 888,
+        "bytes": 150848
+      },
+      {
+        "src": "/hangzhou-photography/tea-green-1600.webp",
+        "width": 1080,
+        "height": 1498,
+        "bytes": 460732
+      }
+    ]
+  },
+  {
+    "id": "river-towers",
+    "suppliedFilename": "AI_1794146595648.png",
+    "originalSha256": "2f064d09c56a90ad6c7f7bb30a05789b1b8fa852e53f191851d26502fc0df6c1",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/river-towers-640.webp",
+        "width": 640,
+        "height": 854,
+        "bytes": 76154
+      },
+      {
+        "src": "/hangzhou-photography/river-towers-1600.webp",
+        "width": 1071,
+        "height": 1429,
+        "bytes": 182718
+      }
+    ]
+  },
+  {
+    "id": "golden-lane",
+    "suppliedFilename": "AI_1794146617024.png",
+    "originalSha256": "ae0422d8013fdc70969c8597956006d1015c789b446c3c6f1803da2d101ce7ed",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/golden-lane-640.webp",
+        "width": 640,
+        "height": 1140,
+        "bytes": 181190
+      },
+      {
+        "src": "/hangzhou-photography/golden-lane-1600.webp",
+        "width": 1010,
+        "height": 1800,
+        "bytes": 394086
+      }
+    ]
+  },
+  {
+    "id": "river-evening",
+    "suppliedFilename": "AI_1794146579800.png",
+    "originalSha256": "32d0300500b4104afd42c627fa94cdefe2d399cbb74029df92f88d67fab86073",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/river-evening-640.webp",
+        "width": 640,
+        "height": 848,
+        "bytes": 107944
+      },
+      {
+        "src": "/hangzhou-photography/river-evening-1600.webp",
+        "width": 1077,
+        "height": 1427,
+        "bytes": 266556
+      }
+    ]
+  },
+  {
+    "id": "city-blue",
+    "suppliedFilename": "AI_1794146586746.png",
+    "originalSha256": "c27d02bd4ec4107c06958b4ea2bff832dbbe44e3af293c93a26c2dd24d619bce",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/city-blue-640.webp",
+        "width": 640,
+        "height": 844,
+        "bytes": 85288
+      },
+      {
+        "src": "/hangzhou-photography/city-blue-1600.webp",
+        "width": 1071,
+        "height": 1412,
+        "bytes": 188040
+      }
+    ]
+  },
+  {
+    "id": "pagoda-lake",
+    "suppliedFilename": "pexels-oner-st-2156053648-37254296.jpg",
+    "originalSha256": "77b99937f95344caf83b65b52734d69575aca18b0ef1764713744cf18a10575c",
+    "rightsStatus": "unverified-user-supplied",
+    "locationStatus": "illustrative-not-location-verified",
+    "renditions": [
+      {
+        "src": "/hangzhou-photography/pagoda-lake-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 94044
+      },
+      {
+        "src": "/hangzhou-photography/pagoda-lake-1600.webp",
+        "width": 1350,
+        "height": 1800,
+        "bytes": 419432
+      }
+    ]
+  }
+]

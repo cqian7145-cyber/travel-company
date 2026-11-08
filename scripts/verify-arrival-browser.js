@@ -18,7 +18,8 @@
  await p.getByRole('button',{name:'Save offline kit',exact:true}).click();
  await p.getByText('Offline app files checked',{exact:false}).waitFor({timeout:30000});
  const cache=await p.evaluate(async()=>{const keys=await caches.keys();return(await Promise.all(keys.filter(k=>k.startsWith('china-closer')).map(async k=>(await(await caches.open(k)).keys()).map(r=>r.url)))).flat();});
- if(cache.filter(u=>!u.endsWith('/__china_closer_offline_metadata__')).length!==4||cache.some(u=>u.includes('/api/')||!u.startsWith('http://localhost:5175/')))throw Error('Cache boundary');checks.push('four local app files and offline metadata cached; no API/remote files');
+ const expected=await p.evaluate(async()=>(await(await fetch('/offline-manifest.json')).json()).files.length);
+ if(cache.filter(u=>!u.endsWith('/__china_closer_offline_metadata__')).length!==expected||cache.some(u=>u.includes('/api/')||!u.startsWith('http://localhost:5175/')))throw Error('Cache boundary');checks.push('versioned local app files and offline metadata cached; no API/remote files');
  const dl=p.waitForEvent('download');await p.getByRole('button',{name:'Download HTML backup',exact:false}).click();await(await dl).saveAs('D:/旅游/output/playwright/china-closer-offline.html');
  await p.screenshot({path:'D:/旅游/output/playwright/arrival-desktop.png',fullPage:true});
  await ctx.setOffline(true);await p.reload({waitUntil:'domcontentloaded'});

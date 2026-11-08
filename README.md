@@ -1,6 +1,6 @@
 # China, closer
 
-A focused, English-first Shanghai travel companion for international visitors to China.
+An English-first China travel companion with Shanghai travel tools and curated Shanghai/Hangzhou discovery.
 
 ## Run locally
 
@@ -57,4 +57,18 @@ Live Workers deployment: [China, closer](https://china-closer.cqian7145.workers.
 
 Nine-place facts now live in `data/venues.json`, with source references and independent field-level evidence. Existing IDs, planner/API shapes and unchanged booking confirmations remain compatible. Visitors see sources, dates, unknowns, estimates and review-overdue states; offline snapshots expose data version and save time without hiding old addresses.
 
-Run `npm run data:check` and `npm run data:audit`; prepare intentional data changes with `npm run data:version -- YYYY-MM-DD.vdcN`. See [editorial workflow](docs/DATA-VERIFICATION.md), [all 99 field audit rows](docs/VENUE-FIELD-AUDIT.md), and [local acceptance evidence](docs/VDC-VALIDATION.md). CI checks are configured locally; no GitHub run or production VDC deployment has occurred.
+Run `npm run data:check` and `npm run data:audit`; prepare intentional data changes with `npm run data:version -- YYYY-MM-DD.vdcN`. See [editorial workflow](docs/DATA-VERIFICATION.md), [all 99 field audit rows](docs/VENUE-FIELD-AUDIT.md), and [local acceptance evidence](docs/VDC-VALIDATION.md). The earlier VDC/culture release is recorded in [the deployment record](docs/DEPLOYMENT-2026-11-08.md). See the Hangzhou update below for the current local scope and checks.
+
+## Discover China
+
+Three sourced stories and three self-guided experiences connect cultural context, VDC evidence, Chinese communication, private notes and itinerary planning. Voices of China explains the future documentary format without invented people or interviews. Editorial review and venue verification remain distinct.
+
+The build generates independent `/stories`, `/stories/:slug`, `/experiences`, `/experiences/:slug` and `/voices` HTML pages with SEO metadata, sitemap and progressive enhancement. Save the offline kit before departure to retain these pages and their licensed local photo. The HTML backup includes culture text without media.
+
+Run `npm run stories:check` or `npm run check`. See [scope, sources and rights workflow](docs/CULTURE-MODULES.md) and [validation evidence](docs/CULTURE-VALIDATION.md). The prior culture/UI deployment is recorded in `docs/DEPLOYMENT-2026-11-08.md`; the latest Hangzhou/colour update has separate local validation. No new database, analytics collection or paid AI activation is included.
+
+## Hangzhou discovery and colour update
+
+The second city chapter is available at `/?page=hangzhou`. It includes three curated areas (West Lake, Longjing village and the Gongchen Bridge area), separate local bookmarks, Chinese area cards, map searches and an offline visual notebook. Operational facts stay explicitly unknown pending evidence; linked city articles are context, not ticket checkouts. The planner, Trip Mode and airport arrival guides currently cover Shanghai.
+
+UI navigation is larger, with a lake-blue/tea-green palette, short selection/reveal transitions and reduced-motion support. See `docs/HANGZHOU-UI-UPDATE.md` for scope, source boundaries and validation. `npm run check` includes the Hangzhou data and image/offline checks. User-uploaded photo rights and exact shooting locations remain unverified; originals are not checked into the repository.

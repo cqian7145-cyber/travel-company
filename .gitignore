@@ -10,3 +10,4 @@ output/
 .wrangler/
 .dev.vars
 .dev.vars.*
+content/private/

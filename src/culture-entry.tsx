@@ -1,0 +1,12 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import CulturePage from './CulturePage';
+import './styles.css';
+import './companion.css';
+import './arrival-tools.css';
+import './verification.css';
+import './culture.css';
+import './micro-adventures.css';
+import './polish.css';
+import './colour-motion.css';
+createRoot(document.getElementById('culture-root')!).render(<React.StrictMode><CulturePage/></React.StrictMode>);

@@ -1,0 +1,57 @@
+{
+  "language": "en",
+  "city": "Shanghai",
+  "status": "published",
+  "editorialReviewedAt": "2026-11-08",
+  "lastUpdatedAt": "2026-11-08",
+  "version": 1,
+  "rights": {
+    "text": "original-editorial-synthesis",
+    "media": []
+  },
+  "voiceIds": [],
+  "id": "shanghai-breakfast-001",
+  "slug": "shanghai-breakfast-four-staples",
+  "title": "A morning, one question at a time",
+  "hook": "What can breakfast reveal without claiming to explain an entire city?",
+  "category": "Food",
+  "relatedVenueIds": [],
+  "experienceIds": [
+    "breakfast-observation"
+  ],
+  "image": null,
+  "blocks": [
+    {
+      "heading": "Hook",
+      "kind": "interpretation",
+      "text": "Hotel breakfast can be convenient. Another morning, if your dietary needs and plans allow it, you might prefer to understand what is being sold nearby. Begin with a question rather than a list to conquer. What catches your attention: a shape, a smell, a word on a menu, or the rhythm of a queue?",
+      "sourceIds": []
+    },
+    {
+      "heading": "Context",
+      "kind": "fact",
+      "text": "A Shanghai municipal food guide groups dabing, youtiao, cifantuan and doujiang as four classic local breakfast staples. In English, these are commonly described as flatbread, fried dough, a rice roll and soy milk. A familiar grouping is a useful vocabulary lesson; it is not evidence that every resident eats the same breakfast.",
+      "sourceIds": [
+        "breakfast"
+      ]
+    },
+    {
+      "heading": "Human perspective",
+      "kind": "interpretation",
+      "text": "A customer may be rushing to work, while another has time to sit. You cannot establish either person’s story from a glance, and no interview is presented here. Instead, think about your own morning habits. Which choices reflect taste, which reflect time, and which depend on what happens to be available?",
+      "sourceIds": []
+    },
+    {
+      "heading": "Look closer",
+      "kind": "interpretation",
+      "text": "At an open shop serving the public, read the displayed menu and price before deciding whether to buy. Ask what an unfamiliar item contains. Names do not establish ingredients or allergen safety: fillings, sauces and shared equipment matter. If staff cannot confirm your requirements, skip the purchase. Observing a menu can still be a complete activity.",
+      "sourceIds": []
+    },
+    {
+      "heading": "Go deeper",
+      "kind": "interpretation",
+      "text": "Try the Chinese price question in the experience card and confirm the total before paying. Keep a short personal note about one food word you learned or one assumption you changed. This is a self-guided suggestion, not a verified vendor recommendation. There is no requirement to buy four foods, speak to strangers, or turn someone else’s workday into your content.",
+      "sourceIds": []
+    }
+  ]
+}

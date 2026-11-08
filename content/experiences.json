@@ -1,0 +1,114 @@
+[
+  {
+    "id": "lane-observation",
+    "slug": "lane-observation",
+    "title": "Read a doorway, respectfully",
+    "status": "published",
+    "storyIds": [
+      "shanghai-shikumen-001"
+    ],
+    "relatedVenueIds": [
+      "xintiandi"
+    ],
+    "duration": "15–20 minutes · editorial estimate",
+    "discovery": {"interest": "history", "minMinutes": 15, "maxMinutes": 20, "summary": "Look for the stories in a Shanghai doorway, from a permitted public path."},
+    "costNature": "Self-guided observation; purchases optional. Admission/access are not guaranteed.",
+    "editorialReviewedAt": "2026-11-08",
+    "fieldTestedAt": null,
+    "conditions": [
+      "Use only areas currently open to the public.",
+      "Participation is optional; no interaction with residents is required."
+    ],
+    "risks": [
+      "Current access and opening conditions may differ from this saved snapshot.",
+      "Respect privacy, signs and staff instructions."
+    ],
+    "steps": [
+      "Read the shikumen story.",
+      "Check the current venue evidence and public-access signs.",
+      "From a permitted path, compare one stone entrance with a shop entrance.",
+      "Keep a note about what you observed and what you cannot know from looking."
+    ],
+    "alternative": "If access is restricted, compare the historical photograph with a permitted public streetscape; do not enter residential lanes.",
+    "phrase": {
+      "zh": "请问这里可以参观吗？",
+      "pinyin": "Qǐngwèn zhèlǐ kěyǐ cānguān ma?",
+      "en": "May visitors enter this area?"
+    },
+    "reflection": "What did you notice, try, or decide not to do?"
+  },
+  {
+    "id": "breakfast-observation",
+    "slug": "breakfast-observation",
+    "title": "A morning like a Shanghainese",
+    "status": "published",
+    "storyIds": [
+      "shanghai-breakfast-001"
+    ],
+    "relatedVenueIds": [],
+    "duration": "30–45 minutes · editorial estimate",
+    "discovery": {"interest": "food", "minMinutes": 30, "maxMinutes": 45, "summary": "Learn breakfast names, use a Chinese ordering card and choose whether to try something."},
+    "costNature": "Pay the vendor for any purchase. No verified shop, price or opening time is supplied.",
+    "editorialReviewedAt": "2026-11-08",
+    "fieldTestedAt": null,
+    "conditions": [
+      "Use only areas currently open to the public.",
+      "Participation is optional; no interaction with residents is required."
+    ],
+    "risks": [
+      "Current access and opening conditions may differ from this saved snapshot.",
+      "Respect privacy, signs and staff instructions."
+    ],
+    "steps": [
+      "Learn the four breakfast food names in the story.",
+      "Choose an open public-facing shop with clearly displayed prices; no vendor is endorsed here.",
+      "Ask the price and ingredients; confirm dietary needs and the total before paying.",
+      "Record one food word or observation. Buying food is optional."
+    ],
+    "alternative": "If prices or ingredients are unclear, skip the purchase and observe a publicly displayed menu instead.",
+    "phrase": {
+      "zh": "请问这个多少钱？",
+      "pinyin": "Qǐngwèn zhège duōshǎo qián?",
+      "en": "How much is this, please?"
+    },
+    "reflection": "What did you notice, try, or decide not to do?"
+  },
+  {
+    "id": "park-observation",
+    "slug": "park-observation",
+    "title": "Notice a shared space",
+    "status": "published",
+    "storyIds": [
+      "shanghai-park-001"
+    ],
+    "relatedVenueIds": [
+      "fuxing"
+    ],
+    "duration": "15–30 minutes · editorial estimate",
+    "discovery": {"interest": "perspectives", "minMinutes": 15, "maxMinutes": 30, "summary": "Notice how a public park is shared, without interrupting anyone's day."},
+    "costNature": "Self-guided observation; check current admission and gate access in VDC.",
+    "editorialReviewedAt": "2026-11-08",
+    "fieldTestedAt": null,
+    "conditions": [
+      "Use only areas currently open to the public.",
+      "Participation is optional; no interaction with residents is required."
+    ],
+    "risks": [
+      "Current access and opening conditions may differ from this saved snapshot.",
+      "Respect privacy, signs and staff instructions."
+    ],
+    "steps": [
+      "Read the park story and check current access information.",
+      "Choose a public path without blocking other users.",
+      "Observe one design detail; do not photograph identifiable people without consent.",
+      "Separate one observation from one interpretation in your private note."
+    ],
+    "alternative": "If closed, crowded or uncomfortable, choose another permitted public space or reflect on a park you already know.",
+    "phrase": {
+      "zh": "请问公园入口在哪里？",
+      "pinyin": "Qǐngwèn gōngyuán rùkǒu zài nǎlǐ?",
+      "en": "Where is the park entrance, please?"
+    },
+    "reflection": "What did you notice, try, or decide not to do?"
+  }
+]
