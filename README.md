@@ -52,3 +52,9 @@ Workers migration is available alongside the existing Node launchers. Use `npm r
 Static assets and the planner API share one Worker. Paid DeepSeek calls are disabled by default; secrets belong in Worker bindings, never frontend variables. Browser data does not automatically transfer from localhost to a new hosted origin.
 
 Live Workers deployment: [China, closer](https://china-closer.cqian7145.workers.dev). Published with user authorization on 2026-11-08; curated planning and mobile offline reload verified. DeepSeek remains disabled and no key has been uploaded.
+
+## Verified Data Center V1 (local feature branch)
+
+Nine-place facts now live in `data/venues.json`, with source references and independent field-level evidence. Existing IDs, planner/API shapes and unchanged booking confirmations remain compatible. Visitors see sources, dates, unknowns, estimates and review-overdue states; offline snapshots expose data version and save time without hiding old addresses.
+
+Run `npm run data:check` and `npm run data:audit`; prepare intentional data changes with `npm run data:version -- YYYY-MM-DD.vdcN`. See [editorial workflow](docs/DATA-VERIFICATION.md), [all 99 field audit rows](docs/VENUE-FIELD-AUDIT.md), and [local acceptance evidence](docs/VDC-VALIDATION.md). CI checks are configured locally; no GitHub run or production VDC deployment has occurred.

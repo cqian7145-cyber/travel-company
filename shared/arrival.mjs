@@ -1,11 +1,11 @@
-import {reviewed} from './catalog.mjs';
+// Legacy source snapshots. Field-level airport/telecom migration is deferred to P2.
 export const travelSources={
- pvg:{name:'Shanghai Government · Pudong arrival services',url:'https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260424/88cde5e96ef242daa534102069450a03.html',updated:'24 Apr 2026',reviewed},
- transport:{name:'Shanghai Government · airport transport',url:'https://english.shanghai.gov.cn/en-Individuals-Transportation-PublicTransport/20260813/7366238930024ac8b22e5adf82217bd8.html',updated:'Page states 4 Jun 2026; URL dated 13 Aug 2026',reviewed},
- shaWifi:{name:'Hongqiao Airport · official Wi-Fi information',url:'https://www.shanghaiairport.com/enhq/fuwusheshi/index_lcid_444.html',updated:'See operator page',reviewed},
- apple:{name:'Apple Support · international travel eSIM',url:'https://support.apple.com/en-us/118227',updated:'22 Oct 2026',reviewed},
- chinaEsim:{name:'Apple Support · mainland China eSIM',url:'https://support.apple.com/en-us/123879',updated:'See current support page',reviewed},
- allergy:{name:'FARE · avoiding allergen cross-contact',url:'https://www.foodallergy.org/resources/avoiding-cross-contact',updated:'Not stated',reviewed}
+ pvg:{name:'Shanghai Government · Pudong arrival services',url:'https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260424/88cde5e96ef242daa534102069450a03.html',updated:'24 Apr 2026',reviewed:'2026-11-07'},
+ transport:{name:'Shanghai Government · airport transport',url:'https://english.shanghai.gov.cn/en-Individuals-Transportation-PublicTransport/20260813/7366238930024ac8b22e5adf82217bd8.html',updated:'Page states 4 Jun 2026; URL dated 13 Aug 2026',reviewed:'2026-11-07'},
+ shaWifi:{name:'Hongqiao Airport · official Wi-Fi information',url:'https://www.shanghaiairport.com/enhq/fuwusheshi/index_lcid_444.html',updated:'See operator page',reviewed:'2026-11-07'},
+ apple:{name:'Apple Support · international travel eSIM',url:'https://support.apple.com/en-us/118227',updated:'22 Oct 2026',reviewed:'2026-11-07'},
+ chinaEsim:{name:'Apple Support · mainland China eSIM',url:'https://support.apple.com/en-us/123879',updated:'See current support page',reviewed:'2026-11-07'},
+ allergy:{name:'FARE · avoiding allergen cross-contact',url:'https://www.foodallergy.org/resources/avoiding-cross-contact',updated:'Not stated',reviewed:'2026-11-07'}
 };
 export const defaultArrival={airport:'PVG',terminal:'unknown',time:'day',luggage:'light',area:'other'};
 export function validArrival(v){return !!v&&['PVG','SHA'].includes(v.airport)&&['T1','T2','unknown'].includes(v.terminal)&&['day','evening','late'].includes(v.time)&&['light','heavy'].includes(v.luggage)&&['other','peoples-square'].includes(v.area);}

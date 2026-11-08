@@ -1,0 +1,141 @@
+{
+  "bund_visitor_information": {
+    "id": "bund_visitor_information",
+    "name": "bund · official visitor information",
+    "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231205/584672cc6d044eabb5f7f6fc9049a19f.html",
+    "kind": "official_city_guide",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "yuyuan_visitor_information": {
+    "id": "yuyuan_visitor_information",
+    "name": "yuyuan · official visitor information",
+    "url": "https://www.meet-in-shanghai.net/en/huangpu-district/yu-garden-182016/",
+    "kind": "official_city_guide",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "wukang_visitor_information": {
+    "id": "wukang_visitor_information",
+    "name": "wukang · official visitor information",
+    "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231218/596192f5f59048bbbc3fa54d92304e93.html",
+    "kind": "official_city_guide",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "museum_official_visit": {
+    "id": "museum_official_visit",
+    "name": "Shanghai Museum East · operator visit guide",
+    "url": "https://www.shanghaimuseum.cn/mu/frontend/pg/m/service/visit-east",
+    "kind": "operator_visit_guide",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field."
+  },
+  "xintiandi_visitor_information": {
+    "id": "xintiandi_visitor_information",
+    "name": "xintiandi · official visitor information",
+    "url": "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20231207/521159f5af35430ab1641004f5c68d03.html",
+    "kind": "official_city_guide",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "jingan_visitor_information": {
+    "id": "jingan_visitor_information",
+    "name": "jingan · official visitor information",
+    "url": "https://www.meet-in-shanghai.net/en/jingan-district/jing%E2%80%99an-temple-129056/",
+    "kind": "official_city_guide",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "nanjing_visitor_information": {
+    "id": "nanjing_visitor_information",
+    "name": "nanjing · official visitor information",
+    "url": "https://www.meet-in-shanghai.net/en/",
+    "kind": "general_city_portal",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "lujiazui_visitor_information": {
+    "id": "lujiazui_visitor_information",
+    "name": "lujiazui · official visitor information",
+    "url": "https://www.meet-in-shanghai.net/en/",
+    "kind": "general_city_portal",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "fuxing_visitor_information": {
+    "id": "fuxing_visitor_information",
+    "name": "fuxing · official visitor information",
+    "url": "https://www.meet-in-shanghai.net/en/",
+    "kind": "general_city_portal",
+    "published_at": null,
+    "last_accessed_at": null,
+    "evidence_note": "Imported source reference from the existing catalog. A source listing is not verification of every field. Legacy global review stamp is retained as history only; an individual source access date was not recorded.",
+    "legacy_reviewed_at": "2026-11-07"
+  },
+  "ready_immigration": {
+    "id": "ready_immigration",
+    "name": "National Immigration Administration",
+    "url": "https://en.nia.gov.cn/n147418/n147463/index.html",
+    "kind": "official_guidance",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Legacy preparation source; outside field-level venue V1 scope.",
+    "display_published": "2026-08-20 (transit policy listing)"
+  },
+  "ready_payments": {
+    "id": "ready_payments",
+    "name": "Shanghai Government · mobile payments",
+    "url": "https://english.shanghai.gov.cn/en-PaymentsInShanghai/20260920/f22b7e0f606c407e9da9d26b089eac48.html",
+    "kind": "official_guidance",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Legacy preparation source; outside field-level venue V1 scope.",
+    "display_published": "2026-09-20"
+  },
+  "ready_rail": {
+    "id": "ready_rail",
+    "name": "China Railway · official English FAQ",
+    "url": "https://www.12306.cn/en/faq.html",
+    "kind": "operator_visit_guide",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Legacy preparation source; outside field-level venue V1 scope.",
+    "display_published": "Not stated"
+  },
+  "ready_connectivity": {
+    "id": "ready_connectivity",
+    "name": "Apple Support · eSIM in mainland China",
+    "url": "https://support.apple.com/en-in/123879",
+    "kind": "official_guidance",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Legacy preparation source; outside field-level venue V1 scope.",
+    "display_published": "See live support page"
+  },
+  "ready_city": {
+    "id": "ready_city",
+    "name": "Official Shanghai travel website",
+    "url": "https://www.meet-in-shanghai.net/en/",
+    "kind": "official_guidance",
+    "published_at": null,
+    "last_accessed_at": "2026-11-07",
+    "evidence_note": "Legacy preparation source; outside field-level venue V1 scope.",
+    "display_published": "Varies by article"
+  }
+}
