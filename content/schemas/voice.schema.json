@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Voice editorial record (private publication workflow)",
+  "type": "object",
+  "required": ["id", "title", "status", "publicAlias", "transcript", "translationReviewedAt", "consentRecordRef", "publicationScope", "mediaRights", "withdrawnAt"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string" },
+    "status": { "enum": ["draft", "withdrawn"] },
+    "publicAlias": { "type": ["string", "null"] },
+    "transcript": { "type": "object", "properties": { "zh": { "type": "string" }, "en": { "type": "string" } } },
+    "translationReviewedAt": { "type": ["string", "null"] },
+    "consentRecordRef": { "type": ["string", "null"], "description": "Reference only; actual permission and identity documents must never be public." },
+    "publicationScope": { "type": "array", "items": { "enum": ["web", "social-video", "commercial-use", "translation", "editing"] } },
+    "mediaRights": { "type": "array", "items": { "type": "object" } },
+    "withdrawnAt": { "type": ["string", "null"] }
+  },
+  "description": "V0.1 does not enable portrait publication. Add reviewed consent, rights, withdrawal handling and public rendering before extending status to published. Do not create a fictional person as a sample record."
+}

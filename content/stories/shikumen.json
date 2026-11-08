@@ -1,0 +1,70 @@
+{
+  "language": "en",
+  "city": "Shanghai",
+  "status": "published",
+  "editorialReviewedAt": "2026-11-08",
+  "lastUpdatedAt": "2026-11-08",
+  "version": 1,
+  "rights": {
+    "text": "original-editorial-synthesis",
+    "media": []
+  },
+  "voiceIds": [],
+  "id": "shanghai-shikumen-001",
+  "slug": "shanghai-shikumen-doorways",
+  "title": "A doorway between two worlds",
+  "hook": "Why do Shanghai’s old lane houses have such distinctive entrances?",
+  "category": "Architecture",
+  "relatedVenueIds": [
+    "xintiandi"
+  ],
+  "experienceIds": [
+    "lane-observation"
+  ],
+  "image": {
+    "src": "/culture/xintiandi-2006.jpg",
+    "alt": "Brick facades, shutters and café seating along a lane in Xintiandi, photographed in 2006",
+    "creator": "Brad & Sabrina",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xintiandi1.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "capturedAt": "2006",
+    "checkedAt": "2026-11-08",
+    "changes": "Original file; displayed with CSS cropping. Historical photograph, not current access evidence."
+  },
+  "blocks": [
+    {
+      "heading": "Hook",
+      "kind": "interpretation",
+      "text": "Start with a doorway rather than a skyline. From a public path, look at the stone surround, the wall beside it and the space beyond. Before deciding that this is simply an attractive old building, ask what an entrance does: whom does it welcome, what does it conceal, and where does shared space begin?",
+      "sourceIds": []
+    },
+    {
+      "heading": "Context",
+      "kind": "fact",
+      "text": "Shanghai’s municipal account describes shikumen as a housing form combining Jiangnan residential traditions with Western influences. It connects its development to nineteenth-century population movements and housing demand. Its Xintiandi guide describes retained shikumen appearances adapted to commercial uses. These are related accounts of a building type and a particular redevelopment, not identical histories.",
+      "sourceIds": [
+        "shikumen",
+        "xintiandi"
+      ]
+    },
+    {
+      "heading": "Human perspective",
+      "kind": "interpretation",
+      "text": "An architectural description cannot tell you what a particular family felt about its home. We have not interviewed residents for this story. Instead, hold two questions together: how might close entrances make everyday encounters easier, and how might they make privacy harder? Treat your answers as possibilities, not testimony about people you have never met.",
+      "sourceIds": []
+    },
+    {
+      "heading": "Look closer",
+      "kind": "interpretation",
+      "text": "Choose one entrance visible from a permitted public area. Notice its proportions and relationship to the lane. Then compare it with a shop entrance nearby. You do not need to enter either building, photograph anyone, or ask a resident to perform local life for you. If the path is restricted or crowded, move on.",
+      "sourceIds": []
+    },
+    {
+      "heading": "Go deeper",
+      "kind": "interpretation",
+      "text": "A restored facade can invite appreciation while leaving difficult questions open. What is preserved when a neighborhood changes its use? What cannot a visitor learn from looking alone? Try the short observation activity, check current access separately, and keep one observation distinct from one question you would still like an authorized local voice to answer.",
+      "sourceIds": []
+    }
+  ]
+}

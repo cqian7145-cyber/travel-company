@@ -1,0 +1,234 @@
+{
+  "version": "2026-11-08.hangzhou1",
+  "city": "Hangzhou",
+  "zh": "杭州",
+  "sources": {
+    "hz_lake": {
+      "id": "hz_lake",
+      "title": "Hangzhou West Lake · official city guide",
+      "url": "https://www.ehangzhou.gov.cn/2018-06/14/c_242880.htm",
+      "kind": "official_city_guide",
+      "published_at": "2018-06-14",
+      "accessed_at": "2026-11-08"
+    },
+    "hz_tea": {
+      "id": "hz_tea",
+      "title": "Longjing Imperial Tea Garden · official city guide",
+      "url": "https://www.ehangzhou.gov.cn/2018-08/15/c_262281.htm",
+      "kind": "official_city_guide",
+      "published_at": "2018-08-15",
+      "accessed_at": "2026-11-08"
+    },
+    "hz_canal": {
+      "id": "hz_canal",
+      "title": "Six scenic routes · official city guide",
+      "url": "https://www.ehangzhou.gov.cn/2025-03/19/c_293059.htm",
+      "kind": "official_city_guide",
+      "published_at": "2025-03-19",
+      "accessed_at": "2026-11-08"
+    }
+  },
+  "places": [
+    {
+      "id": "hz-west-lake",
+      "name": "West Lake",
+      "zh": "西湖",
+      "category": "Waterfront",
+      "image": "lake-blue",
+      "description": "Trade the skyline for water, trees and a slower rhythm. Choose a short stretch of the lakeside rather than trying to see everything.",
+      "duration": "30–60 min",
+      "caution": "Stay on public paths. Watch for bicycles and slippery lake edges. Boats, islands and individual attractions have separate rules.",
+      "source_id": "hz_lake",
+      "facts": {
+        "address": {
+          "field": "address",
+          "value": "浙江省杭州市西湖景区",
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "opening_hours": {
+          "field": "opening_hours",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "admission": {
+          "field": "admission",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "reservation": {
+          "field": "reservation",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "identity_requirements": {
+          "field": "identity_requirements",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "booking_link": {
+          "field": "booking_link",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_lake",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        }
+      }
+    },
+    {
+      "id": "hz-longjing",
+      "name": "Longjing village",
+      "zh": "龙井村",
+      "category": "Tea culture",
+      "image": "tea-green",
+      "description": "See the landscape behind a familiar cup of green tea. Look from public paths and ask a clearly priced teahouse about a tasting before ordering.",
+      "duration": "45–90 min",
+      "caution": "Tea fields may be working or private land. Ask permission before entering or photographing people; confirm the full price before a purchase.",
+      "source_id": "hz_tea",
+      "facts": {
+        "address": {
+          "field": "address",
+          "value": "浙江省杭州市西湖区龙井村",
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "opening_hours": {
+          "field": "opening_hours",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "admission": {
+          "field": "admission",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "reservation": {
+          "field": "reservation",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "identity_requirements": {
+          "field": "identity_requirements",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "booking_link": {
+          "field": "booking_link",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_tea",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        }
+      }
+    },
+    {
+      "id": "hz-gongchen",
+      "name": "Gongchen Bridge area",
+      "zh": "拱宸桥周边",
+      "category": "Canal heritage",
+      "image": "golden-lane",
+      "description": "Follow the canal at street level. The official city guide includes Gongchen Bridge and nearby Xiaohe street as places to explore on foot.",
+      "duration": "45–90 min",
+      "caution": "Use pedestrian routes and marked crossings. Check access locally; museums, boat services and shops have their own schedules.",
+      "source_id": "hz_canal",
+      "facts": {
+        "address": {
+          "field": "address",
+          "value": "浙江省杭州市拱墅区拱宸桥",
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "opening_hours": {
+          "field": "opening_hours",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "admission": {
+          "field": "admission",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "reservation": {
+          "field": "reservation",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "identity_requirements": {
+          "field": "identity_requirements",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        },
+        "booking_link": {
+          "field": "booking_link",
+          "value": null,
+          "status": "unknown",
+          "source_id": "hz_canal",
+          "reviewed_at": "2026-11-08",
+          "verified_at": null,
+          "next_review_at": null
+        }
+      }
+    }
+  ]
+}

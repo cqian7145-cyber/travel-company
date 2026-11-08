@@ -1,0 +1,26 @@
+(async(page)=>{
+ const context=await page.context().browser().newContext({viewport:{width:1440,height:1000},permissions:['clipboard-read','clipboard-write'],acceptDownloads:true,reducedMotion:'reduce'});
+ await context.addInitScript(()=>Object.defineProperty(navigator,'share',{value:undefined,configurable:true}));
+ const p=await context.newPage();p.setDefaultTimeout(12000);const errors=[];p.on('pageerror',e=>errors.push(e.message));const checks=[];
+ const base='http://127.0.0.1:8789';
+ try{
+  await p.goto(base+'/stories',{waitUntil:'domcontentloaded'});await p.getByRole('link',{name:'A doorway between two worlds',exact:true}).click();
+  await p.getByRole('heading',{name:'A doorway between two worlds',exact:true}).waitFor();await p.getByRole('button',{name:'Save story',exact:true}).click();await p.reload({waitUntil:'domcontentloaded'});await p.getByRole('button',{name:'Saved story',exact:true}).waitFor();
+  await p.getByRole('button',{name:'Share this story',exact:true}).click();await p.getByText('Story link copied.',{exact:true}).waitFor();if(!(await p.evaluate(()=>navigator.clipboard.readText())).endsWith('/stories/shanghai-shikumen-doorways'))throw Error('Wrong share URL');
+  await p.getByLabel('One observation, one question, or something you tried').fill('A doorway can frame both a home and a shop.');await p.getByRole('button',{name:'Save my note',exact:true}).click();await p.reload({waitUntil:'domcontentloaded'});if(!(await p.getByLabel('One observation, one question, or something you tried').inputValue()).includes('A doorway'))throw Error('Reflection lost');checks.push('saved story, canonical sharing and private reflection persist');
+  await p.goto(base+'/?page=planner',{waitUntil:'domcontentloaded'});await p.getByRole('button',{name:'Create my itinerary',exact:false}).click();await p.getByRole('button',{name:'Create my curated itinerary',exact:false}).click();await p.getByRole('heading',{name:'3 days in Shanghai'}).waitFor();
+  await p.goto(base+'/experiences/lane-observation',{waitUntil:'domcontentloaded'});await p.getByRole('button',{name:'Add this place to my itinerary',exact:true}).click();await p.getByRole('button',{name:'Add place',exact:true}).click();
+  const plan=await p.evaluate(()=>JSON.parse(localStorage.getItem('closer-plan-v1')));if(!plan.days[0].stops.some(s=>s.placeId==='xintiandi'))throw Error('No itinerary handoff');checks.push('explicit itinerary-day handoff');
+  await p.goto(base+'/experiences/breakfast-observation',{waitUntil:'domcontentloaded'});await p.getByRole('button',{name:'Mark tried',exact:true}).first().click();await p.reload({waitUntil:'domcontentloaded'});await p.getByRole('button',{name:'Done · undo',exact:true}).waitFor();
+  await p.getByRole('button',{name:'Copy Chinese',exact:true}).click();if(!(await p.evaluate(()=>navigator.clipboard.readText())).includes('多少钱'))throw Error('Chinese copy');await p.getByRole('button',{name:'Show large Chinese card',exact:true}).click();await p.keyboard.press('Tab');if(!(await p.getByRole('dialog').evaluate(d=>d.contains(document.activeElement))))throw Error('Dialog focus');await p.keyboard.press('Escape');checks.push('experience steps persist; Chinese copy/full-screen/keyboard');
+  for(const width of [375,390,1440]){await p.setViewportSize({width,height:1000});for(const path of ['/stories','/stories/shanghai-shikumen-doorways','/experiences/breakfast-observation','/voices']){await p.goto(base+path,{waitUntil:'domcontentloaded'});if(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Overflow '+width+' '+path);}await p.screenshot({path:'D:/旅游/output/playwright/culture-voices-'+width+'.png'});}checks.push('four culture screens at 375/390/1440 without overflow');
+  await p.goto(base+'/stories/shanghai-shikumen-doorways',{waitUntil:'domcontentloaded'});await p.screenshot({path:'D:/旅游/output/playwright/culture-story-desktop.png',fullPage:true});
+  await p.getByRole('button',{name:'Save offline kit',exact:true}).click();await p.getByText('Offline app files checked',{exact:false}).waitFor({timeout:30000});
+  const download=p.waitForEvent('download');await p.getByRole('button',{name:/Download HTML backup/}).click();await(await download).saveAs('D:/旅游/output/playwright/culture-offline.html');
+  await context.setOffline(true);await p.reload({waitUntil:'domcontentloaded'});await p.getByRole('heading',{name:'A doorway between two worlds',exact:true}).waitFor();
+  if(!(await p.locator('.culture-photo img').evaluate(img=>img.complete&&img.naturalWidth>0)))throw Error('Offline local photo');
+  await p.getByRole('link',{name:'Read a doorway, respectfully →',exact:true}).click();await p.getByRole('heading',{name:'Read a doorway, respectfully',exact:true}).waitFor();checks.push('offline direct story reload, licensed photo and experience navigation');
+  await p.goto('file:///D:/%E6%97%85%E6%B8%B8/output/playwright/culture-offline.html',{waitUntil:'domcontentloaded'});await p.getByRole('heading',{name:'A morning like a Shanghainese',exact:true}).waitFor();checks.push('downloaded standalone culture backup opens offline');
+  if(errors.length)throw Error(errors.join('; '));return{checks,pageErrors:errors};
+ }finally{await context.close();}
+})

@@ -1,0 +1,59 @@
+{
+  "language": "en",
+  "city": "Shanghai",
+  "status": "published",
+  "editorialReviewedAt": "2026-11-08",
+  "lastUpdatedAt": "2026-11-08",
+  "version": 1,
+  "rights": {
+    "text": "original-editorial-synthesis",
+    "media": []
+  },
+  "voiceIds": [],
+  "id": "shanghai-park-001",
+  "slug": "fuxing-park-shared-space",
+  "title": "A park is more than a pause",
+  "hook": "How do you notice a public place without making its users the attraction?",
+  "category": "Everyday life",
+  "relatedVenueIds": [
+    "fuxing"
+  ],
+  "experienceIds": [
+    "park-observation"
+  ],
+  "image": null,
+  "blocks": [
+    {
+      "heading": "Hook",
+      "kind": "interpretation",
+      "text": "You can visit a park as a gap between attractions, or as a place worth paying attention to itself. Put the checklist aside for a few minutes. What changes when you notice the relationship between a path, a bench and a patch of shade, rather than looking for the next photograph?",
+      "sourceIds": []
+    },
+    {
+      "heading": "Context",
+      "kind": "fact",
+      "text": "The Huangpu district account published by Shanghai’s government traces Fuxing Park’s opening to 1909 under the name Gujiazhai Park. It describes French-style garden design and features including a rose garden, a pond and a rockery. This is historical and landscape context, not a promise that every feature or gate is accessible today.",
+      "sourceIds": [
+        "park"
+      ]
+    },
+    {
+      "heading": "Human perspective",
+      "kind": "interpretation",
+      "text": "A park’s users do not owe visitors an explanation of their lives. No resident’s opinion is quoted in this story. Your own experience can be modest and still meaningful: perhaps you discover that sitting quietly tells you more about how you travel than another rushed stop would have done. Other visitors may come away differently.",
+      "sourceIds": []
+    },
+    {
+      "heading": "Look closer",
+      "kind": "interpretation",
+      "text": "If current access allows, choose a public path and notice one design detail. Where can someone stop without blocking movement? What does the layout encourage you to see? Keep photographs focused on space and objects; seek consent before photographing identifiable people. Do not join an activity uninvited or assume an occupied corner is a performance.",
+      "sourceIds": []
+    },
+    {
+      "heading": "Go deeper",
+      "kind": "interpretation",
+      "text": "Use the observation card for a short, optional visit. Check VDC and official information for current entry conditions, and choose a different permitted public space if the park is closed or crowded. Before leaving, write down one observation and one unanswered question. Learning to separate them is a useful way to carry curiosity into the rest of the city.",
+      "sourceIds": []
+    }
+  ]
+}

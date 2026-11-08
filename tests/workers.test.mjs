@@ -47,5 +47,5 @@ test('Workers passes explicit secret/model bindings and only validated preferenc
  const failing=createWorker({generate:async()=>{throw Error('secret-provider-body');}});const failure=await failing.fetch(request(),env({AI_ENABLED:'true',DEEPSEEK_API_KEY:'fake'}));assert.equal(failure.status,502);assert.ok(!(await failure.text()).includes('secret-provider-body'));
 });
 test('Workers config keeps APIs ahead of SPA fallback and stable index URL for offline caching',async()=>{
- const config=JSON.parse(await readFile(new URL('../wrangler.jsonc',import.meta.url),'utf8'));assert.equal(config.assets.html_handling,'none');assert.deepEqual(config.assets.run_worker_first,['/api','/api/*']);assert.equal(config.vars.AI_ENABLED,'false');assert.equal(config.ratelimits[0].name,'PLAN_RATE_LIMITER');assert.ok(!JSON.stringify(config).includes('DEEPSEEK_API_KEY'));
+ const config=JSON.parse(await readFile(new URL('../wrangler.jsonc',import.meta.url),'utf8'));assert.equal(config.assets.html_handling,'none');assert.ok(['/api','/api/*','/stories','/stories/*','/experiences','/experiences/*','/voices'].every(path=>config.assets.run_worker_first.includes(path)));assert.equal(config.vars.AI_ENABLED,'false');assert.equal(config.ratelimits[0].name,'PLAN_RATE_LIMITER');assert.ok(!JSON.stringify(config).includes('DEEPSEEK_API_KEY'));
 });

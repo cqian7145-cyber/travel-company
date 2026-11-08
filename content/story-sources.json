@@ -1,0 +1,38 @@
+{
+  "shikumen": {
+    "id": "shikumen",
+    "title": "Explore charm of Shanghai’s shikumen neighbourhoods",
+    "publisher": "Shanghai Government",
+    "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231211/98e70b4d4c54401895104e4dee9f16d8.html",
+    "publishedAt": "2025-11-21",
+    "accessedAt": "2026-11-08",
+    "scope": "Building type, architectural influences and historical housing context; not a current access guide."
+  },
+  "xintiandi": {
+    "id": "xintiandi",
+    "title": "Shanghai Xintiandi",
+    "publisher": "Shanghai Government / Municipal Commission of Commerce",
+    "url": "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20231207/521159f5af35430ab1641004f5c68d03.html",
+    "publishedAt": null,
+    "accessedAt": "2026-11-08",
+    "scope": "Retained shikumen appearance and commercial adaptation; operational claims remain under VDC."
+  },
+  "breakfast": {
+    "id": "breakfast",
+    "title": "Classic local breakfast staples",
+    "publisher": "Shanghai Government",
+    "url": "https://english.shanghai.gov.cn/en-GlobalTasteinShanghai2026-LocalFlavors/20260515/83c642503a5049a68673b4d85c677222.html",
+    "publishedAt": "2026-05-15",
+    "accessedAt": "2026-11-08",
+    "scope": "Names of four commonly described Shanghai breakfast foods; not a statement about every resident or vendor ingredients."
+  },
+  "park": {
+    "id": "park",
+    "title": "Fuxing Park",
+    "publisher": "Shanghai Government / Huangpu district government",
+    "url": "https://english.shanghai.gov.cn/en-Parks/20250220/636b3df5761e4055b731a92d2abddcb3.html",
+    "publishedAt": "2025-12-30",
+    "accessedAt": "2026-11-08",
+    "scope": "Opening history and landscape features only; current gates, hours and admission must be checked through VDC/operator."
+  }
+}

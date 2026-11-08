@@ -1,0 +1,2 @@
+import {storyForVenue} from '../shared/story-catalog.mjs';
+export default function VenueStories({placeId}:{placeId:string}){const items=storyForVenue(placeId);if(!items.length)return null;return <section className="venue-story-links"><span className="eyebrow">STORIES BEHIND PLACES</span><h3>A little context changes the view.</h3>{items.map(s=><a href={'/stories/'+s.slug} key={s.id}>{s.title} · 2 min read →</a>)}</section>;}
