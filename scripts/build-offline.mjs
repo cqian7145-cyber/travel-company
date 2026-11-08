@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {resolve,relative} from 'node:path';
 const root=resolve('dist');
 async function list(dir){const entries=await readdir(dir,{withFileTypes:true});return (await Promise.all(entries.map(e=>e.isDirectory()?list(resolve(dir,e.name)):resolve(dir,e.name)))).flat();}
-const files=(await list(root)).filter(p=>!['sw.js','offline-manifest.json'].includes(relative(root,p))).sort();
+const files=(await list(root)).filter(p=>!['sw.js','offline-manifest.json','_headers','_redirects','.assetsignore'].includes(relative(root,p))).sort();
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(file));
 const version=hash.digest('hex').slice(0,16),urls=files.map(file=>'/'+relative(root,file).replaceAll('\\','/'));
 const worker=`const VERSION=${JSON.stringify(version)};

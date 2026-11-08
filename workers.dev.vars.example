@@ -1,0 +1,5 @@
+# Optional local Wrangler bindings. Copy to .dev.vars (ignored).
+# Paid calls remain off unless explicitly enabled.
+AI_ENABLED=false
+DEEPSEEK_API_KEY=
+DEEPSEEK_MODEL=deepseek-flash

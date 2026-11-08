@@ -44,3 +44,11 @@ All user preferences are stored on the current browser only. Clearing browser da
 Module behavior and validation are recorded in [COMPANION-MODULES.md](docs/COMPANION-MODULES.md), [COMPANION-VALIDATION.md](docs/COMPANION-VALIDATION.md), [ARRIVAL-TOOLS.md](docs/ARRIVAL-TOOLS.md) and [ARRIVAL-VALIDATION.md](docs/ARRIVAL-VALIDATION.md). Offline saving requires the built app on HTTPS or localhost. Browser storage can be evicted; test disconnected use and keep a downloaded backup. Hotel addresses and website links are user-provided and remain unverified.
 
 No community, hotel booking engine, live chat, merchant portal or nationwide database. No deployment or GitHub push performed as part of the local build.
+
+## Cloudflare Workers
+
+Workers migration is available alongside the existing Node launchers. Use `npm run cf:dev` for the local Workers runtime, `npm run cf:dry-run` to validate the bundle without publishing, and `npm run cf:whoami` for account authentication status. See [Cloudflare setup and publishing gates](docs/CLOUDFLARE.md) and [validation evidence](docs/CLOUDFLARE-VALIDATION.md).
+
+Static assets and the planner API share one Worker. Paid DeepSeek calls are disabled by default; secrets belong in Worker bindings, never frontend variables. Browser data does not automatically transfer from localhost to a new hosted origin.
+
+Live Workers deployment: [China, closer](https://china-closer.cqian7145.workers.dev). Published with user authorization on 2026-11-08; curated planning and mobile offline reload verified. DeepSeek remains disabled and no key has been uploaded.
