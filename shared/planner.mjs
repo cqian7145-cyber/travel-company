@@ -18,7 +18,7 @@ export function buildPlan(raw, preferredIds=[]){
   const available=sorted.filter(p=>!used.has(p.id)&&p.closedDay!==date.getUTCDay());
   const first=available[0];
   const grouped=first?[first,...available.filter(p=>p.id!==first.id).sort((a,b)=>(score(b)+(b.cluster===first.cluster?15:0))-(score(a)+(a.cluster===first.cluster?15:0)))]:[];
-  const stops=grouped.slice(0,count).map((p,j)=>{used.add(p.id);return {placeId:p.id,time:['10:00','14:00','16:00'][j],note:''};});
+  const stops=grouped.slice(0,count).map((p,j)=>{used.add(p.id);return {id:crypto.randomUUID(),placeId:p.id,time:['10:00','14:00','16:00'][j],note:''};});
   return {date:date.toISOString().slice(0,10),stops,note:stops.length<count?'Free time: the curated collection is small. Add a personal activity or revisit a favorite.':''};
  });
  return {input,days,mode:'curated',createdAt:new Date().toISOString()};
