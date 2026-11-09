@@ -55,5 +55,5 @@ User explicitly requested synchronizing the Cities/Experience Journeys update to
 - Local preflight: `npm run check` passed (97 tests); `npm run cf:dry-run` passed with Wrangler 4.158.0 and `AI_ENABLED=false`. The generated offline manifest contains 101 local files; Wrangler packaged 125 assets.
 - Deployment succeeded. Worker version: `5acd09c9-074b-4557-b189-6663619dcdb7`; previous version: `185fe772-34d1-474c-868e-b5c6d3b4b036`.
 - Production HTTP checks: `/cities` and `/cities/sanya` returned 200; all nine Sanya place labels appeared in the pre-rendered page, and the cover, Nanshan, Wuzhizhou and provenance assets returned 200 with expected MIME types. `/api/status` returned 200 and reports AI disabled.
-- GitHub target: `cqian7145-cyber/travel-company`, branch `codex/cities-experience-journeys`. Source commit and push result will be recorded after Git delivery.
+- GitHub target: `cqian7145-cyber/travel-company`, branch `codex/cities-experience-journeys`; source commit `42b1e633e2c1ec24296a7247e4513fe921c4dde0` was pushed successfully. GitHub Actions run `42598890531` was in progress when this record was updated.
 - No database, DNS, billing, authentication or secret settings changed. The rollback target is the previous Worker version listed above.
