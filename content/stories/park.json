@@ -4,7 +4,7 @@
   "status": "published",
   "editorialReviewedAt": "2026-11-08",
   "lastUpdatedAt": "2026-11-08",
-  "version": 1,
+  "version": 2,
   "rights": {
     "text": "original-editorial-synthesis",
     "media": []
@@ -55,5 +55,12 @@
       "text": "Use the observation card for a short, optional visit. Check VDC and official information for current entry conditions, and choose a different permitted public space if the park is closed or crowded. Before leaving, write down one observation and one unanswered question. Learning to separate them is a useful way to carry curiosity into the rest of the city.",
       "sourceIds": []
     }
-  ]
+  ],
+  "discoveryQuestion": "What happens when a park becomes a shared living room?",
+  "shortPromise": "Notice how a public space is used, without interrupting anyone’s day.",
+  "firstObservation": "From a permitted path, notice how different areas of the park are used. Avoid blocking paths or photographing identifiable people without consent.",
+  "relatedExperienceId": "park-observation",
+  "estimatedReadMinutes": 2,
+  "cityId": "shanghai",
+  "discoveryReviewedAt": "2026-11-09"
 }

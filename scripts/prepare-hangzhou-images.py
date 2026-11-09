@@ -31,6 +31,9 @@ for identity, filename in sources:
             destination = output / f'{identity}-{width}.webp'
             rendition.save(destination, 'WEBP', quality=79, method=6)
             renditions.append({'src': '/hangzhou-photography/' + destination.name, 'width': rendition.width, 'height': rendition.height, 'bytes': destination.stat().st_size})
-        records.append({'id': identity, 'suppliedFilename': filename, 'originalSha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'rightsStatus': 'unverified-user-supplied', 'locationStatus': 'illustrative-not-location-verified', 'renditions': renditions})
+        record = {'id': identity, 'suppliedFilename': filename, 'originalSha256': hashlib.sha256(source.read_bytes()).hexdigest(), 'rightsStatus': 'unverified-user-supplied', 'locationStatus': 'illustrative-not-location-verified', 'renditions': renditions}
+        if identity == 'golden-lane':
+            record['location'] = {'name': 'Beishan Street', 'chineseName': '北山街', 'cityId': 'hangzhou', 'status': 'user-identified', 'identifiedAt': '2026-11-09', 'evidence': 'Location corrected by the contributor in conversation; not independently verified.'}
+        records.append(record)
 (output / 'provenance.json').write_text(json.dumps(records, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'{len(records)} Hangzhou mood photographs; {sum(r["bytes"] for p in records for r in p["renditions"]):,} rendition bytes. Originals preserved.')

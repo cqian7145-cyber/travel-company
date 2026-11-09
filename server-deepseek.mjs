@@ -1,3 +1,4 @@
+import {cityRoute} from './shared/cities.mjs';
 import {cultureRoute} from './shared/story-catalog.mjs';
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
@@ -25,9 +26,9 @@ export function createHandler(vite){return async(req,res)=>{
    active++;try{const plan=await generate(input,{apiKey:JSON.parse(body).curated?'':process.env.DEEPSEEK_API_KEY});return send(200,plan);}finally{active--;}
   }catch{return send(502,{error:'The planner could not finish. Please try the curated planner.'});}
  }
- const culture=cultureRoute(path);
+ const culture=cultureRoute(path)||cityRoute(path);
  if(culture?.kind==='not-found')return send(404,{error:'Story or experience not found.'});
- if(vite){if(culture)req.url='/culture.html';return vite.middlewares(req,res);}
+ if(vite){if(culture)req.url=culture.kind==='city'||culture.kind==='cities'?'/index.html':'/culture.html';return vite.middlewares(req,res);}
  try{
   const base=resolve(root,'dist'),file=resolve(base,'.'+decodeURIComponent(culture?.file||path));
   if(!file.startsWith(base+sep)&&file!==base)return send(403,{error:'Forbidden'});

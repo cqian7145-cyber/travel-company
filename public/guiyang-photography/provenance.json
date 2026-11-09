@@ -1,0 +1,149 @@
+[
+  {
+    "id": "taiping-road",
+    "suppliedFilename": "AI_1794204545485.png",
+    "originalSha256": "9ae79544d867f46aff0a3bae547d25ef1f787614871022030cd7d494dffd3b09",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/taiping-road-640.webp",
+        "width": 640,
+        "height": 835,
+        "bytes": 120202
+      },
+      {
+        "src": "/guiyang-photography/taiping-road-1600.webp",
+        "width": 1079,
+        "height": 1407,
+        "bytes": 313280
+      }
+    ]
+  },
+  {
+    "id": "eco-center",
+    "suppliedFilename": "codex-clipboard-4a2d55bd-8fb5-4024-a3b9-680bf28b71c6.png",
+    "originalSha256": "fa06c116ea634216963134f8c2903d659426ac053c29db5d7db86fdb5bf5514e",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/eco-center-640.webp",
+        "width": 431,
+        "height": 647,
+        "bytes": 60974
+      },
+      {
+        "src": "/guiyang-photography/eco-center-1600.webp",
+        "width": 431,
+        "height": 647,
+        "bytes": 60974
+      }
+    ]
+  },
+  {
+    "id": "white-house",
+    "suppliedFilename": "codex-clipboard-c3010039-0c21-43c9-ba2a-d43ddf05a0cd.png",
+    "originalSha256": "0c91824c7019021e60423d24f0975f031c597c015ba1996d901e914289891d4e",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/white-house-640.webp",
+        "width": 501,
+        "height": 647,
+        "bytes": 56634
+      },
+      {
+        "src": "/guiyang-photography/white-house-1600.webp",
+        "width": 501,
+        "height": 647,
+        "bytes": 56634
+      }
+    ]
+  },
+  {
+    "id": "jiaxiu-night",
+    "suppliedFilename": "codex-clipboard-e9b2fa22-f6af-42a0-a76c-7d25f4760e8f.png",
+    "originalSha256": "9253dd9dc104eb79eb51578bc748f185d718bf57d00fb48ba9529b9779ca037b",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/jiaxiu-night-640.webp",
+        "width": 640,
+        "height": 377,
+        "bytes": 49130
+      },
+      {
+        "src": "/guiyang-photography/jiaxiu-night-1600.webp",
+        "width": 648,
+        "height": 382,
+        "bytes": 52428
+      }
+    ]
+  },
+  {
+    "id": "dolphin-square",
+    "suppliedFilename": "AI_1794204245398.png",
+    "originalSha256": "34919b8de501582ca1245c4c17a9a4b7b145807197d8e7d1e49ff48f6adce522",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/dolphin-square-640.webp",
+        "width": 640,
+        "height": 481,
+        "bytes": 71518
+      },
+      {
+        "src": "/guiyang-photography/dolphin-square-1600.webp",
+        "width": 1071,
+        "height": 805,
+        "bytes": 187408
+      }
+    ]
+  },
+  {
+    "id": "qianling-mountain",
+    "suppliedFilename": "AI_1794215938802.png",
+    "originalSha256": "e72e2dcba98d48e682c54855e96c758d7296b6aad5d0569e5109853c00e809f7",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/qianling-mountain-640.webp",
+        "width": 640,
+        "height": 807,
+        "bytes": 100710
+      },
+      {
+        "src": "/guiyang-photography/qianling-mountain-1600.webp",
+        "width": 1075,
+        "height": 1355,
+        "bytes": 236596
+      }
+    ]
+  },
+  {
+    "id": "huaxi-park",
+    "suppliedFilename": "AI_1794216013328.png",
+    "originalSha256": "f360cb9e328a299b7e78ee55b5fc890019be9faa16ad69f71ef971b7479ffe30",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/guiyang-photography/huaxi-park-640.webp",
+        "width": 640,
+        "height": 832,
+        "bytes": 143594
+      },
+      {
+        "src": "/guiyang-photography/huaxi-park-1600.webp",
+        "width": 1079,
+        "height": 1403,
+        "bytes": 332234
+      }
+    ]
+  }
+]

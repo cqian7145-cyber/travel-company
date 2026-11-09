@@ -123,7 +123,15 @@
         "height": 1800,
         "bytes": 394086
       }
-    ]
+    ],
+    "location": {
+      "name": "Beishan Street",
+      "chineseName": "北山街",
+      "cityId": "hangzhou",
+      "status": "user-identified",
+      "identifiedAt": "2026-11-09",
+      "evidence": "Location corrected by the contributor in conversation; not independently verified."
+    }
   },
   {
     "id": "river-evening",

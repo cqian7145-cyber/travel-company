@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node server.mjs --dev",
-    "build": "tsc --noEmit && vite build && node scripts/build-culture.mjs && node scripts/build-offline.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/build-culture.mjs && node scripts/build-cities.mjs && node scripts/build-offline.mjs",
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "npm run data:check && npm run stories:check && npm run build && npm run test",

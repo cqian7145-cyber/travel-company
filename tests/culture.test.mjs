@@ -37,7 +37,7 @@ test('static-only controls are hidden without JS and folklore labels stay distin
 test('all public culture URLs appear in sitemap and offline manifest; local photo has provenance',async()=>{
  const sitemap=await readFile('dist/sitemap.xml','utf8'),manifest=JSON.parse(await readFile('dist/offline-manifest.json','utf8'));
  for(const path of cultureRoutes()){assert.ok(sitemap.includes(path));assert.ok(manifest.files.includes(cultureRoute(path).file));}
- assert.ok(manifest.files.includes('/culture/xintiandi-2006.jpg'));assert.ok(!manifest.files.includes('/_headers'));assert.equal(manifest.cultureVersion,'2026-11-08.culture1');assert.equal(stories[0].image.license,'CC BY 2.0');assert.ok((await readFile('public/culture/xintiandi-2006.jpg')).length>10000);
+ assert.ok(manifest.files.includes('/culture/xintiandi-2006.jpg'));assert.ok(!manifest.files.includes('/_headers'));assert.equal(manifest.cultureVersion,'2026-11-09.culture2');assert.equal(stories[0].image.license,'CC BY 2.0');assert.ok((await readFile('public/culture/xintiandi-2006.jpg')).length>10000);
 });
 test('Workers maps clean culture routes to prerendered HTML and returns 404 for unpublished slugs',async()=>{
  let path;const env={ASSETS:{fetch:async r=>{path=new URL(r.url).pathname;return new Response('static');}}};assert.equal((await worker.fetch(new Request('https://travel.example/stories/'+stories[0].slug),env)).status,200);assert.equal(path,'/stories/'+stories[0].slug+'/index.html');assert.equal((await worker.fetch(new Request('https://travel.example/stories/private-draft'),env)).status,404);

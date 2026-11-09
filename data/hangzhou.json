@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-08.hangzhou1",
+  "version": "2026-11-09.hangzhou2",
   "city": "Hangzhou",
   "zh": "杭州",
   "sources": {
@@ -168,7 +168,7 @@
       "name": "Gongchen Bridge area",
       "zh": "拱宸桥周边",
       "category": "Canal heritage",
-      "image": "golden-lane",
+      "image": null,
       "description": "Follow the canal at street level. The official city guide includes Gongchen Bridge and nearby Xiaohe street as places to explore on foot.",
       "duration": "45–90 min",
       "caution": "Use pedestrian routes and marked crossings. Check access locally; museums, boat services and shops have their own schedules.",

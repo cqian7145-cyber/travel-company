@@ -11,7 +11,12 @@
       "xintiandi"
     ],
     "duration": "15–20 minutes · editorial estimate",
-    "discovery": {"interest": "history", "minMinutes": 15, "maxMinutes": 20, "summary": "Look for the stories in a Shanghai doorway, from a permitted public path."},
+    "discovery": {
+      "interest": "history",
+      "minMinutes": 15,
+      "maxMinutes": 20,
+      "summary": "Look for the stories in a Shanghai doorway, from a permitted public path."
+    },
     "costNature": "Self-guided observation; purchases optional. Admission/access are not guaranteed.",
     "editorialReviewedAt": "2026-11-08",
     "fieldTestedAt": null,
@@ -35,7 +40,28 @@
       "pinyin": "Qǐngwèn zhèlǐ kěyǐ cānguān ma?",
       "en": "May visitors enter this area?"
     },
-    "reflection": "What did you notice, try, or decide not to do?"
+    "reflection": "What did you notice that you might have missed before?",
+    "cityId": "shanghai",
+    "topic": "Architecture",
+    "riskType": "public_street",
+    "format": "Self-guided · No guide included",
+    "languageSupport": "Chinese phrase card available",
+    "observations": [
+      {
+        "id": "doorway",
+        "kind": "Notice",
+        "title": "The doorway",
+        "prompt": "From a permitted public path, look at the stone frame, decoration and the lane beyond. What does the entrance seem to separate or connect?"
+      },
+      {
+        "id": "threshold",
+        "kind": "Compare",
+        "title": "Two different entrances",
+        "prompt": "Compare a visible shop entrance with another doorway without entering private space. Separate what you can observe from what you are guessing."
+      }
+    ],
+    "journeyReviewedAt": "2026-11-09",
+    "shortPromise": "Discover stone-gate houses through details you can notice from a permitted public path."
   },
   {
     "id": "breakfast-observation",
@@ -47,7 +73,12 @@
     ],
     "relatedVenueIds": [],
     "duration": "30–45 minutes · editorial estimate",
-    "discovery": {"interest": "food", "minMinutes": 30, "maxMinutes": 45, "summary": "Learn breakfast names, use a Chinese ordering card and choose whether to try something."},
+    "discovery": {
+      "interest": "food",
+      "minMinutes": 30,
+      "maxMinutes": 45,
+      "summary": "Learn breakfast names, use a Chinese ordering card and choose whether to try something."
+    },
     "costNature": "Pay the vendor for any purchase. No verified shop, price or opening time is supplied.",
     "editorialReviewedAt": "2026-11-08",
     "fieldTestedAt": null,
@@ -71,7 +102,28 @@
       "pinyin": "Qǐngwèn zhège duōshǎo qián?",
       "en": "How much is this, please?"
     },
-    "reflection": "What did you notice, try, or decide not to do?"
+    "reflection": "What did you notice that you might have missed before?",
+    "cityId": "shanghai",
+    "topic": "Food",
+    "riskType": "self_selected_food",
+    "format": "Self-guided · No guide included",
+    "languageSupport": "Chinese phrase card available",
+    "observations": [
+      {
+        "id": "menu",
+        "kind": "Notice",
+        "title": "One unfamiliar food",
+        "prompt": "Find one food name on a public menu that is new to you. Ask about ingredients and the total price before making a decision."
+      },
+      {
+        "id": "choice",
+        "kind": "Try",
+        "title": "A small, optional choice",
+        "prompt": "If the ingredients and price are clear and suitable for you, you may order. Otherwise, learning a food word is a complete observation; a purchase is optional."
+      }
+    ],
+    "journeyReviewedAt": "2026-11-09",
+    "shortPromise": "Learn a few local food names and decide whether to try something at a shop you choose."
   },
   {
     "id": "park-observation",
@@ -85,7 +137,12 @@
       "fuxing"
     ],
     "duration": "15–30 minutes · editorial estimate",
-    "discovery": {"interest": "perspectives", "minMinutes": 15, "maxMinutes": 30, "summary": "Notice how a public park is shared, without interrupting anyone's day."},
+    "discovery": {
+      "interest": "perspectives",
+      "minMinutes": 15,
+      "maxMinutes": 30,
+      "summary": "Notice how a public park is shared, without interrupting anyone's day."
+    },
     "costNature": "Self-guided observation; check current admission and gate access in VDC.",
     "editorialReviewedAt": "2026-11-08",
     "fieldTestedAt": null,
@@ -109,6 +166,27 @@
       "pinyin": "Qǐngwèn gōngyuán rùkǒu zài nǎlǐ?",
       "en": "Where is the park entrance, please?"
     },
-    "reflection": "What did you notice, try, or decide not to do?"
+    "reflection": "What did you notice that you might have missed before?",
+    "cityId": "shanghai",
+    "topic": "Everyday life",
+    "riskType": "park",
+    "format": "Self-guided · No guide included",
+    "languageSupport": "Chinese phrase card available",
+    "observations": [
+      {
+        "id": "space",
+        "kind": "Notice",
+        "title": "A shared space",
+        "prompt": "From a permitted path, notice one place people pause and one place they pass through. Keep a respectful distance."
+      },
+      {
+        "id": "detail",
+        "kind": "Compare",
+        "title": "Design and daily use",
+        "prompt": "Compare one design detail with the way the space is used. Do not record identifiable people or assume one observation represents everyone."
+      }
+    ],
+    "journeyReviewedAt": "2026-11-09",
+    "shortPromise": "Notice how a public space is used, without interrupting anyone’s day."
   }
 ]

@@ -10,4 +10,7 @@ import './micro-adventures.css';
 import './polish.css';
 import './colour-motion.css';
 import './editorial.css';
+import './discovery-journey.css';
+import './guiyang.css';
+import './sanya.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);

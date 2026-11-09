@@ -4,7 +4,7 @@
   "status": "published",
   "editorialReviewedAt": "2026-11-08",
   "lastUpdatedAt": "2026-11-08",
-  "version": 1,
+  "version": 2,
   "rights": {
     "text": "original-editorial-synthesis",
     "media": []
@@ -53,5 +53,12 @@
       "text": "Try the Chinese price question in the experience card and confirm the total before paying. Keep a short personal note about one food word you learned or one assumption you changed. This is a self-guided suggestion, not a verified vendor recommendation. There is no requirement to buy four foods, speak to strangers, or turn someone else’s workday into your content.",
       "sourceIds": []
     }
-  ]
+  ],
+  "discoveryQuestion": "What can one breakfast tell you about Shanghai?",
+  "shortPromise": "Learn a few local food names and decide whether to try something at a shop you choose.",
+  "firstObservation": "Look for one unfamiliar breakfast food on a publicly displayed menu. Confirm ingredients before deciding whether to eat it.",
+  "relatedExperienceId": "breakfast-observation",
+  "estimatedReadMinutes": 2,
+  "cityId": "shanghai",
+  "discoveryReviewedAt": "2026-11-09"
 }
