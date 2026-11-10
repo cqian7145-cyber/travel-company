@@ -5,6 +5,7 @@ import experienceRecords from '../content/experiences.json' with {type:'json'};
 import sourceRecords from '../content/story-sources.json' with {type:'json'};
 import version from '../content/version.json' with {type:'json'};
 import {venues} from './verification.mjs';
+import {highlights,highlightBySlug,highlightPath} from './culture-highlights.mjs';
 export const stories=[shikumen,breakfast,park].filter(s=>s.status==='published');
 export const experiences=experienceRecords.filter(e=>e.status==='published');
 export const storySources=sourceRecords;
@@ -15,14 +16,15 @@ export const experienceBySlug=slug=>experiences.find(e=>e.slug===slug);
 export const wordCount=story=>story.blocks.map(b=>b.text).join(' ').trim().split(/\s+/).length;
 export function cultureRoute(pathname){
  const path=pathname.replace(/\/index\.html$/,'').replace(/\/+$/,'')||'/';
- if(path==='/stories')return{kind:'stories',path,file:'/stories/index.html'};
- if(path==='/experiences')return{kind:'experiences',path,file:'/experiences/index.html'};
- if(path==='/voices')return{kind:'voices',path,file:'/voices/index.html'};
+ if(['/stories','/experiences','/voices'].includes(path))return{kind:'redirect',path,location:'/culture'};
+ if(path==='/culture')return{kind:'culture',path,file:'/culture/index.html'};
+ if(/^\/culture\/[^/]+\.(jpg|jpeg|webp|png|svg)$/.test(path))return null;
+ if(path.startsWith('/culture/')){const item=highlightBySlug(path.slice(9));return item?(item.legacySlug?{kind:'redirect',path,location:highlightPath(item)}:{kind:'highlight',path,file:path+'/index.html',item}):{kind:'not-found',path};}
  if(path.startsWith('/stories/')){const item=storyBySlug(path.slice(9));return item?{kind:'story',path,file:path+'/index.html',item}:{kind:'not-found',path};}
  if(path.startsWith('/experiences/')){const item=experienceBySlug(path.slice(13));return item?{kind:'experience',path,file:path+'/index.html',item}:{kind:'not-found',path};}
  return path.startsWith('/voices/')?{kind:'not-found',path}:null;
 }
-export function cultureRoutes(){return['/stories','/experiences','/voices',...stories.map(s=>'/stories/'+s.slug),...experiences.map(e=>'/experiences/'+e.slug)];}
+export function cultureRoutes(){return['/culture',...highlights.map(highlightPath),...experiences.map(e=>'/experiences/'+e.slug)];}
 export function isCultureState(v){return !!v&&typeof v==='object'&&!Array.isArray(v)&&Array.isArray(v.saved)&&v.saved.every(id=>stories.some(s=>s.id===id))&&v.saved.length<=stories.length&&v.steps&&typeof v.steps==='object'&&!Array.isArray(v.steps)&&Object.entries(v.steps).every(([key,value])=>experiences.some(e=>e.steps.some((_,i)=>key===`${e.id}:${i}`))&&typeof value==='boolean')&&v.notes&&typeof v.notes==='object'&&!Array.isArray(v.notes)&&Object.entries(v.notes).every(([key,value])=>[...stories,...experiences].some(item=>item.id===key)&&typeof value==='string'&&value.length<=500);}
 export const emptyCultureState={saved:[],steps:{},notes:{}};
 export function addVenueToDay(plan,venueId,dayIndex,stopId){

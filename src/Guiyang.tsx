@@ -18,6 +18,6 @@ export default function Guiyang(){
    </article>)}</div>
    <p className="guiyang-provenance">Photo order and place labels were supplied by the contributor on 9 November 2026. Exact photo locations, current access, operating details and image-use rights have not been independently verified.</p>
   </section>
-  <section id="city-plan" className="guiyang-plan"><p className="eyebrow">PLAN YOUR VISIT</p><h2>A starting point, not a live travel guide.</h2><p>Stories, self-guided experiences, verified venue details and a Guiyang itinerary are not available yet. Check current opening and access information with official venue channels before setting out.</p><a className="outline-button" href="/cities">Compare city guides <ArrowRight size={17}/></a></section>
+  <section id="city-plan" className="guiyang-plan"><p className="eyebrow">PLAN YOUR VISIT</p><h2>A starting point, not a live travel guide.</h2><p>This collection focuses on contemporary places and photography. Cultural highlights and a Guiyang itinerary have not been published. Check current opening and access information with official venue channels before setting out.</p><a className="outline-button" href="/cities">Compare city guides <ArrowRight size={17}/></a></section>
  </div>;
 }

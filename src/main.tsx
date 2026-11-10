@@ -14,3 +14,5 @@ import './discovery-journey.css';
 import './guiyang.css';
 import './sanya.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
+
+import './culture-highlights.css';

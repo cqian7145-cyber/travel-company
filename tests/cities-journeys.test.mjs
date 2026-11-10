@@ -1,3 +1,4 @@
+import {highlights} from '../shared/culture-highlights.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -17,7 +18,7 @@ test('city routes are canonical, scoped and reject unsupported cities',()=>{
  assert.equal(cities.length,4);
  for(const id of ['shanghai','hangzhou','guiyang','sanya'])for(const suffix of ['','/','/index.html'])assert.equal(cityRoute('/cities/'+id+suffix).city.id,id);
  assert.equal(cityRoute('/cities').kind,'cities');assert.equal(cityRoute('/cities/beijing').kind,'not-found');assert.equal(cityRoute('/stories'),null);
- assert.deepEqual(primaryNavigation.map(n=>n.href),['/','/cities','/experiences','/stories','/trip']);
+ assert.deepEqual(primaryNavigation.map(n=>n.href),['/','/cities','/culture','/trip']);
 });
 test('Guiyang photo pilot has seven distinct contributor-labeled places and matching image assets',async()=>{
  const data=JSON.parse(await readFile('data/guiyang.json','utf8'));
@@ -73,7 +74,7 @@ test('city prerenders have distinct SEO, readable content, sitemap and offline c
   const route=cityRoute(path),html=await readFile('dist'+route.file,'utf8');
   assert.equal((html.match(/<title>/g)||[]).length,1);assert.equal((html.match(/name="description"/g)||[]).length,1);
   assert.ok(html.includes('rel="canonical"'));assert.ok(html.includes(path));assert.ok(sitemap.includes(path));assert.ok(manifest.files.includes(route.file));
-  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya'].includes(route.city.id)?[route.city.id+'-experiences',route.city.id+'-stories','places','city-plan']:['city-experiences','city-stories','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
+  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya'].includes(route.city.id)?['places','city-plan']:[route.city.id+'-culture','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
  }
 });
 test('Workers dispatches city HTML and returns a true 404 for unknown cities',async()=>{
@@ -92,7 +93,8 @@ test('Beishan photo attribution cannot become a Gongchen place photograph',async
  const data=JSON.parse(await readFile('data/hangzhou.json','utf8')),provenance=await readFile('public/hangzhou-photography/provenance.json','utf8');
  assert.equal(data.places.find(p=>p.id==='hz-gongchen').image,null);assert.match(provenance,/Beishan/);assert.match(await readFile('src/Hangzhou.tsx','utf8'),/Beishan Street, in afternoon light/);
 });
-test('standalone backup retains journey decisions, observations, field uncertainty and reflection without scripts',()=>{
- const html=cultureOfflineHtml();for(const x of experiences){for(const o of x.observations)assert.ok(html.includes(o.title));assert.ok(html.includes(x.reflection));}
- for(const label of ['Format','Access','Language','Limitations','Departure checks','never booking or attendance confirmation'])assert.ok(html.includes(label));assert.doesNotMatch(html,/<script|<button|<img/);
+test('standalone backup keeps cultural text, sources and phrases without task mechanics',()=>{
+ const html=cultureOfflineHtml();for(const x of highlights){assert.ok(html.includes(x.summary.replaceAll('&','&amp;')));for(const section of x.sections)assert.ok(html.includes(section.text.replaceAll('&','&amp;')));}
+ assert.match(html,/Folklore, not documented history/);assert.match(html,/Access remains unconfirmed/);
+ assert.doesNotMatch(html,/<script|<button|<img|Reflection:|Two optional observations|Starting or checking/);
 });

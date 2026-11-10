@@ -1,0 +1,43 @@
+{
+  "id": "hz-su-xiaoxiao",
+  "slug": "su-xiaoxiao",
+  "cityId": "hangzhou",
+  "type": "literature",
+  "status": "published",
+  "title": "A woman remembered in poetry",
+  "zhTitle": "西泠桥与苏小小",
+  "placeLabel": "Xiling Bridge · West Lake",
+  "zhPlace": "西泠桥",
+  "placeIds": [
+    "hz-west-lake"
+  ],
+  "summary": "Beside Xiling Bridge, Mucai Pavilion commemorates Su Xiaoxiao, a woman whose name has travelled through poetry and local storytelling. The romantic details of her life are difficult to establish as history. This is a place to encounter literary memory: later generations kept imagining her, writing about her and remaking her memorial. What survives most clearly is her place in the cultural imagination of West Lake.",
+  "sections": [
+    {
+      "heading": "Memory is not a biography",
+      "kind": "interpretation",
+      "text": "Hangzhou’s literary account describes Su Xiaoxiao’s life as difficult to reconstruct, and her image as something enlarged by generations of writers. The pavilion and memorial have also been rebuilt. Read them as a record of commemoration, rather than proof of every love story attached to the name. The standard place name is Xiling Bridge, 西泠桥.",
+      "sourceIds": [
+        "hz_su_memory",
+        "hz_su_pavilion"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "hz_su_memory",
+    "hz_su_pavilion"
+  ],
+  "editorialReviewedAt": "2026-11-10",
+  "reviewStatus": "source_checked",
+  "image": {
+    "src": "/hangzhou-photography/golden-lane-640.webp",
+    "alt": "Beishan Street in golden afternoon light, identified by the contributor",
+    "caption": "Nearby Beishan Street · contributor identification; not a photograph of Mucai Pavilion."
+  },
+  "phrase": {
+    "zh": "您好，请问西泠桥怎么走？",
+    "pinyin": "Nín hǎo, qǐngwèn Xīlíng Qiáo zěnme zǒu?",
+    "en": "Hello, which way is Xiling Bridge?"
+  },
+  "visitNote": "This card links the literary theme to the West Lake area. The map searches the bridge name; it is not a verified entrance or a walking route."
+}

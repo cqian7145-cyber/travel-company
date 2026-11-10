@@ -21,6 +21,7 @@ export function createWorker({generate=generateDeepSeek}={}){return {
   const url=new URL(request.url);
   if(url.pathname!=='/api'&&!url.pathname.startsWith('/api/')){
    const route=cultureRoute(url.pathname)||cityRoute(url.pathname);
+   if(route?.kind==='redirect')return Response.redirect(new URL(route.location+url.search,url.origin),308);
    if(route?.kind==='not-found')return new Response('Story or experience not found.',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
    if(route?.file){const assetUrl=new URL(request.url);assetUrl.pathname=route.file;return env.ASSETS.fetch(new Request(assetUrl,request));}
    return env.ASSETS.fetch(request);

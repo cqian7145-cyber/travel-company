@@ -26,5 +26,5 @@ test('Sanya has readable prerendered galleries, an honest empty state and comple
  assert.ok(html.includes(renderSanyaPage()));assert.match(html,/<title>Sanya/);assert.match(html,/https:\/\/china-closer.cqian7145.workers.dev\/cities\/sanya/);
  for(const p of sanya.places)for(const photo of p.photos)for(const large of [false,true]){const path=sanyaPhoto(photo.image,large);assert.ok(manifest.files.includes(path));assert.ok(await readFile('dist'+path));}
  assert.match(renderDiscoveryCards('stories',{cityId:'sanya'}),/Browse Sanya places/);
- assert.match(html,/Sanya stories, self-guided experiences and itinerary planning are not available yet/);
+ assert.match(html,/Cultural highlights and Sanya itinerary planning are not available yet/);
 });

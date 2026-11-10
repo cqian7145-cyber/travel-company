@@ -1,0 +1,10 @@
+{
+  "id":"hz-white-snake", "slug":"white-snake", "cityId":"hangzhou", "type":"legend", "status":"published",
+  "title":"A love story beneath the pagoda", "zhTitle":"雷峰塔与白蛇传", "placeLabel":"Leifeng Pagoda · West Lake", "zhPlace":"雷峰塔", "placeIds":["hz-west-lake"],
+  "summary":"In a famous version of the White Snake legend, Bai Suzhen, a snake spirit in human form, loves a man named Xu Xian and is imprisoned beneath Leifeng Pagoda. The place is real; the magical events belong to folklore. Knowing the tale adds another layer to the lake view: a landmark can hold an imagined love story as well as a history of its own.",
+  "sections":[{"heading":"One tale, many tellings", "kind":"folklore", "text":"The national heritage record identifies the White Snake tradition as folk literature, listed in 2006. It describes a story retold through opera, fiction, film and other arts, with Hangzhou and Zhenjiang as important places of transmission. These retellings are not a single fixed account. Their cultural importance is evidence of a living tradition, not proof that the supernatural events occurred.", "sourceIds":["hz_white_snake"]}],
+  "sourceIds":["hz_white_snake"], "editorialReviewedAt":"2026-11-10", "reviewStatus":"source_checked",
+  "image":{"src":"/hangzhou-photography/lake-blue-640.webp", "alt":"A supplied lake photograph in blue evening light", "caption":"Lake atmosphere · supplied photograph; the pagoda is not identified in this image."},
+  "phrase":{"zh":"您好，请问雷峰塔怎么走？", "pinyin":"Nín hǎo, qǐngwèn Léifēng Tǎ zěnme zǒu?", "en":"Hello, which way is Leifeng Pagoda?"},
+  "visitNote":"The pagoda is an individual attraction with its own access conditions. Check its official opening, admission and reservation information before travelling."
+}

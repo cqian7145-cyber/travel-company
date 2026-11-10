@@ -1,0 +1,10 @@
+{
+  "id":"hz-longjing-craft", "slug":"longjing-tea", "cityId":"hangzhou", "type":"intangible_heritage", "status":"published",
+  "title":"The craft behind a cup of tea", "zhTitle":"西湖龙井炒制技艺", "placeLabel":"Longjing village · Hangzhou", "zhPlace":"龙井村", "placeIds":["hz-longjing"],
+  "summary":"The skill behind Longjing tea is part of what makes a cup worth noticing. In Hangzhou’s West Lake tea-growing area, makers developed precise hand movements for working leaves in a heated pan. The national heritage register lists West Lake Longjing green-tea making as a traditional craft. That recognition concerns a body of knowledge and practice; it does not certify every commercial tea tasting or demonstration.",
+  "sections":[{"heading":"Hands, heat and leaves", "kind":"fact", "text":"Listed in 2008 as project Ⅷ-148, the craft includes a set of ten characteristic pan-firing hand techniques. The heritage record links the tea to the West Lake district and Longjing village. A field photograph can show the growing landscape, but cannot show whether a particular tea was handmade or where it originated. If you choose a tasting, ask about the maker, origin and total price before ordering.", "sourceIds":["hz_longjing_craft"]}],
+  "sourceIds":["hz_longjing_craft"], "editorialReviewedAt":"2026-11-10", "reviewStatus":"source_checked",
+  "image":{"src":"/hangzhou-photography/tea-green-640.webp", "alt":"A tree and path between green tea fields, supplied atmosphere photograph", "caption":"Tea-growing landscape · supplied photograph; not a certified workshop or demonstration."},
+  "phrase":{"zh":"请问这杯茶一共多少钱？", "pinyin":"Qǐngwèn zhè bēi chá yígòng duōshao qián?", "en":"What is the total price for this cup of tea?"},
+  "visitNote":"Tea fields may be private working land. Ask permission before entering; confirm any tasting price. No workshop, certification, booking or demonstration schedule is verified here."
+}

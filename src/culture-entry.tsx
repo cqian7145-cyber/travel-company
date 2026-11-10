@@ -12,3 +12,5 @@ import './colour-motion.css';
 import './editorial.css';
 import './discovery-journey.css';
 createRoot(document.getElementById('culture-root')!).render(<React.StrictMode><CulturePage/></React.StrictMode>);
+
+import './culture-highlights.css';

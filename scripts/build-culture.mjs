@@ -6,8 +6,8 @@ const origin=new URL(process.env.PUBLIC_SITE_URL||'https://china-closer.cqian714
 if(origin.protocol!=='https:'||origin.username||origin.password)throw Error('PUBLIC_SITE_URL must be a public HTTPS origin without credentials.');
 const template=await readFile('dist/culture.html','utf8');
 for(const path of cultureRoutes()){
- const route=cultureRoute(path),meta=routeMeta(route),canonical=new URL(path,origin).href;
- const tags=`<title>${escape(meta.title)}</title><meta name="description" content="${escape(meta.description)}"><link rel="canonical" href="${escape(canonical)}"><meta property="og:type" content="${route.kind==='story'?'article':'website'}"><meta property="og:title" content="${escape(meta.title)}"><meta property="og:description" content="${escape(meta.description)}"><meta property="og:url" content="${escape(canonical)}">${route.item?.image?`<meta property="og:image" content="${escape(new URL(route.item.image.src,origin).href)}"><meta property="og:image:alt" content="${escape(route.item.image.alt)}">`:''}`;
+ const route=cultureRoute(path),meta=routeMeta(route),canonical=new URL(meta.canonical||path,origin).href;
+ const tags=`<title>${escape(meta.title)}</title><meta name="description" content="${escape(meta.description)}"><link rel="canonical" href="${escape(canonical)}"><meta property="og:type" content="${['story','highlight'].includes(route.kind)?'article':'website'}"><meta property="og:title" content="${escape(meta.title)}"><meta property="og:description" content="${escape(meta.description)}"><meta property="og:url" content="${escape(canonical)}">${route.item?.image?`<meta property="og:image" content="${escape(new URL(route.item.image.src,origin).href)}"><meta property="og:image:alt" content="${escape(route.item.image.alt)}">`:''}`;
  const html=template.replace('<!--CULTURE_META-->',tags).replace('<!--CULTURE_CONTENT-->',()=>renderCultureBody(route));
  const file=resolve('dist','.'+route.file);await mkdir(dirname(file),{recursive:true});await writeFile(file,html);
 }

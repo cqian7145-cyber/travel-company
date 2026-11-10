@@ -25,7 +25,7 @@ Fonts use SIL Open Font License 1.1. Copies and source/hash records live in `pub
 - Headlines generally 56–84 px on desktop and 47–62 px on mobile. Reading text 16–17 px, line height 1.7–1.85. Desktop navigation remains 17 px; source/caption text 12–14 px. Never shrink practical information to imitate tiny reference-board text.
 - Photography stays primary. Use 20–28 px frames, thin warm dividers, capsule actions, restrained shadow, and honest image provenance. The reference board images themselves are not product assets.
 - Distinguish storytelling from travel execution. Do not apply decorative serif typography to Chinese help cards or remove VDC status/source disclosures for visual cleanliness.
-- Mobile quick navigation exposes Discover, Stories, My trip and Tools. Native dialogs remain above it; safe-area padding protects bottom content. Culture pages provide equivalent travel/story/itinerary/preparation links in prerendered HTML.
+- Mobile quick navigation exposes Discover, Cities, Culture and My Trip. Travel Tools has its own header entry. Native dialogs remain above it; safe-area padding protects bottom content. Culture pages provide equivalent travel/story/itinerary/preparation links in prerendered HTML.
 - Keep keyboard focus, all existing tools, saved trip IDs and booking confirmation semantics intact. Avoid inventing portraits, availability or reservations to fill a visual layout.
 
 ## Motion
@@ -41,6 +41,8 @@ Fonts use SIL Open Font License 1.1. Copies and source/hash records live in `pub
 The shared-image helper uses React `flushSync` only inside the browser snapshot callback. It restores temporary transition names/listeners, handles rejected readiness, cancels on reduced-motion change and preserves ordinary anchors/modifier-key navigation. Scroll reveals yield to a shared transition and visible keyboard focus. Reduced motion removes spatial movement; interfaces remain usable immediately.
 
 ## Architecture boundary
+
+Culture Highlights V0.4 uses city/place entry points, complete 50–90-word snapshots, explicit cultural types and optional reading/source/travel disclosures. Do not reintroduce task progress, compulsory reflections or an empty interview section. Preserve historical article links and browser-local travel data. The detailed implementation and verification contract is in `docs/CULTURE-HIGHLIGHTS-V0.4.md`.
 
 React + Vite + Cloudflare Workers remain the current delivery stack. The requested visual language does not require Next.js, Tailwind or another motion dependency. Existing culture prerendering provides standalone article HTML and metadata. A stack migration would need a separate product/engineering decision.
 

@@ -27,6 +27,7 @@ export function createHandler(vite){return async(req,res)=>{
   }catch{return send(502,{error:'The planner could not finish. Please try the curated planner.'});}
  }
  const culture=cultureRoute(path)||cityRoute(path);
+ if(culture?.kind==='redirect'){res.writeHead(308,{Location:culture.location+new URL(req.url,'http://localhost').search});return res.end();}
  if(culture?.kind==='not-found')return send(404,{error:'Story or experience not found.'});
  if(vite){if(culture)req.url=culture.kind==='city'||culture.kind==='cities'?'/index.html':'/culture.html';return vite.middlewares(req,res);}
  try{

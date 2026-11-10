@@ -1,0 +1,80 @@
+{
+  "hz_icomos": {
+    "title": "West Lake Cultural Landscape · ICOMOS evaluation, p. 142",
+    "publisher": "ICOMOS / UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/document/152404",
+    "accessedAt": "2026-11-10",
+    "scope": "Su Causeway, dredging in 1090, six bridges; historical landscape, not current access."
+  },
+  "hz_poet_mayors": {
+    "title": "Poet-Mayors Bai and Su",
+    "publisher": "Hangzhou Municipal Government · English portal",
+    "url": "https://www.ehangzhou.gov.cn/2018-08/16/c_271333.htm",
+    "accessedAt": "2026-11-10",
+    "scope": "Su Dongpo as administrator and poet; dredged silt used to make a causeway."
+  },
+  "hz_white_snake": {
+    "title": "白蛇传传说 · national heritage project I-6",
+    "publisher": "China Intangible Cultural Heritage Network",
+    "url": "https://www.ihchina.cn/project_details/12185.html",
+    "accessedAt": "2026-11-10",
+    "scope": "Folk-literature designation in 2006, characters, retellings and association with West Lake and Leifeng Pagoda; not historical proof of the plot."
+  },
+  "hz_su_memory": {
+    "title": "西湖的历史星空（之三十三）",
+    "publisher": "Hangzhou CPPCC",
+    "url": "https://www.hzzx.gov.cn/hzzx/content/2012-05/04/content_5141252.htm",
+    "accessedAt": "2026-11-10",
+    "scope": "Mucai Pavilion by Xiling Bridge and a literary image developed through later writing; narrated anecdotes are not treated as established biography."
+  },
+  "hz_su_pavilion": {
+    "title": "西泠桥 · literary memory and rebuilt memorial",
+    "publisher": "Hangzhou.com.cn · Hong Shangzhi",
+    "url": "https://hznews.hangzhou.com.cn/wghz/content/2020-09/29/content_7823190_0.htm",
+    "accessedAt": "2026-11-10",
+    "scope": "Mucai Pavilion, memorial reconstruction and later traditions; no claim that the present structure is ancient or an authenticated burial."
+  },
+  "hz_longjing_craft": {
+    "title": "绿茶制作技艺（西湖龙井） · national heritage project Ⅷ-148",
+    "publisher": "China Intangible Cultural Heritage Network",
+    "url": "https://www.ihchina.cn/Article/Index/detail?id=14605",
+    "accessedAt": "2026-11-10",
+    "scope": "2008 national listing, Longjing growing area and ten hand techniques; does not certify individual vendors."
+  },
+  "shikumen": {
+    "id": "shikumen",
+    "title": "Explore charm of Shanghai’s shikumen neighbourhoods",
+    "publisher": "Shanghai Government",
+    "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231211/98e70b4d4c54401895104e4dee9f16d8.html",
+    "publishedAt": "2025-11-21",
+    "accessedAt": "2026-11-10",
+    "scope": "Building type, architectural influences and historical housing context; not a current access guide."
+  },
+  "xintiandi": {
+    "id": "xintiandi",
+    "title": "Shanghai Xintiandi",
+    "publisher": "Shanghai Government / Municipal Commission of Commerce",
+    "url": "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20231207/521159f5af35430ab1641004f5c68d03.html",
+    "publishedAt": null,
+    "accessedAt": "2026-11-10",
+    "scope": "Retained shikumen appearance and commercial adaptation; operational claims remain under VDC."
+  },
+  "breakfast": {
+    "id": "breakfast",
+    "title": "Classic local breakfast staples",
+    "publisher": "Shanghai Government",
+    "url": "https://english.shanghai.gov.cn/en-GlobalTasteinShanghai2026-LocalFlavors/20260515/83c642503a5049a68673b4d85c677222.html",
+    "publishedAt": "2026-05-15",
+    "accessedAt": "2026-11-10",
+    "scope": "Names of four commonly described Shanghai breakfast foods; not a statement about every resident or vendor ingredients."
+  },
+  "park": {
+    "id": "park",
+    "title": "Fuxing Park",
+    "publisher": "Shanghai Government / Huangpu district government",
+    "url": "https://english.shanghai.gov.cn/en-Parks/20250220/636b3df5761e4055b731a92d2abddcb3.html",
+    "publishedAt": "2025-12-30",
+    "accessedAt": "2026-11-10",
+    "scope": "Opening history and landscape features only; current gates, hours and admission must be checked through VDC/operator."
+  }
+}
