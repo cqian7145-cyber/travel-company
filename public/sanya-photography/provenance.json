@@ -1,0 +1,233 @@
+[
+  {
+    "id": "sanya-cover",
+    "uploadIndex": 1,
+    "suppliedFilename": "AI_1794215163473.png",
+    "originalSha256": "e1a042b57671a42b5f1da6eca66c03cd2ee815e744c6eba286d194d1074613a3",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/sanya-cover-640.webp",
+        "width": 640,
+        "height": 850,
+        "bytes": 65744
+      },
+      {
+        "src": "/sanya-photography/sanya-cover-1600.webp",
+        "width": 1073,
+        "height": 1425,
+        "bytes": 190580
+      }
+    ]
+  },
+  {
+    "id": "nanshan",
+    "uploadIndex": 2,
+    "suppliedFilename": "AI_1794215275127.png",
+    "originalSha256": "ab4ee922839179924c55432882b0ab54721e223b28609379f1826c4450292bac",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/nanshan-640.webp",
+        "width": 640,
+        "height": 836,
+        "bytes": 132224
+      },
+      {
+        "src": "/sanya-photography/nanshan-1600.webp",
+        "width": 1073,
+        "height": 1402,
+        "bytes": 316202
+      }
+    ]
+  },
+  {
+    "id": "west-island",
+    "uploadIndex": 3,
+    "suppliedFilename": "AI_1794215287402.png",
+    "originalSha256": "57f7ac95254fb38dcb2be1ba9ee76f3a7019893204d34162f6fd2e9c3ea328fd",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/west-island-640.webp",
+        "width": 640,
+        "height": 1135,
+        "bytes": 80934
+      },
+      {
+        "src": "/sanya-photography/west-island-1600.webp",
+        "width": 1015,
+        "height": 1800,
+        "bytes": 183990
+      }
+    ]
+  },
+  {
+    "id": "dadonghai-bar",
+    "uploadIndex": 4,
+    "suppliedFilename": "AI_1794215427060.png",
+    "originalSha256": "a7b762a0dbb2e4ee94b2c1ff43fa1ce4249285ec834f230451dfdadc53398309",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/dadonghai-bar-640.webp",
+        "width": 640,
+        "height": 841,
+        "bytes": 102030
+      },
+      {
+        "src": "/sanya-photography/dadonghai-bar-1600.webp",
+        "width": 1074,
+        "height": 1412,
+        "bytes": 238660
+      }
+    ]
+  },
+  {
+    "id": "coconut-corridor",
+    "uploadIndex": 5,
+    "suppliedFilename": "AI_1794215556195.png",
+    "originalSha256": "9f4cfb28adf4d62deede99ca6aa7fdad192302ff675aafa7fbdb4f22a8d70b78",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/coconut-corridor-640.webp",
+        "width": 640,
+        "height": 352,
+        "bytes": 22352
+      },
+      {
+        "src": "/sanya-photography/coconut-corridor-1600.webp",
+        "width": 1600,
+        "height": 879,
+        "bytes": 65282
+      }
+    ]
+  },
+  {
+    "id": "tianya-haijiao",
+    "uploadIndex": 6,
+    "suppliedFilename": "AI_1794215623256.png",
+    "originalSha256": "4b0eb4116a0b570a6b8b66a1784f980c0ec36d427f17ff553d9b9449347ff463",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/tianya-haijiao-640.webp",
+        "width": 640,
+        "height": 845,
+        "bytes": 90900
+      },
+      {
+        "src": "/sanya-photography/tianya-haijiao-1600.webp",
+        "width": 1075,
+        "height": 1419,
+        "bytes": 247714
+      }
+    ]
+  },
+  {
+    "id": "sun-bay",
+    "uploadIndex": 7,
+    "suppliedFilename": "AI_1794215704838.png",
+    "originalSha256": "3fe5c9c14461ec87b308087f4c4f586329cb4eaa9c5889b79db501f20bbad081",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/sun-bay-640.webp",
+        "width": 640,
+        "height": 554,
+        "bytes": 41806
+      },
+      {
+        "src": "/sanya-photography/sun-bay-1600.webp",
+        "width": 1077,
+        "height": 932,
+        "bytes": 109764
+      }
+    ]
+  },
+  {
+    "id": "haitang-bay",
+    "uploadIndex": 8,
+    "suppliedFilename": "AI_1794215715187.png",
+    "originalSha256": "3776bf91ce55a16888d0e0e03e940329d20513cd63540c01c30ab05a7ba0b8bb",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/haitang-bay-640.webp",
+        "width": 640,
+        "height": 482,
+        "bytes": 80262
+      },
+      {
+        "src": "/sanya-photography/haitang-bay-1600.webp",
+        "width": 1068,
+        "height": 804,
+        "bytes": 215020
+      }
+    ]
+  },
+  {
+    "id": "dadonghai-beach",
+    "uploadIndex": 9,
+    "suppliedFilename": "AI_1794215729653.png",
+    "originalSha256": "ceddaff26b711fa5e545579b016c79c50b7ab667948b158c880c21351690e31c",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/dadonghai-beach-640.webp",
+        "width": 640,
+        "height": 481,
+        "bytes": 61922
+      },
+      {
+        "src": "/sanya-photography/dadonghai-beach-1600.webp",
+        "width": 1071,
+        "height": 805,
+        "bytes": 167672
+      }
+    ]
+  },
+  {
+    "id": "tianya-duplicate",
+    "uploadIndex": 10,
+    "suppliedFilename": "codex-clipboard-be36d2f9-4ffd-4701-b9a3-d956a10534b7.png",
+    "originalSha256": "4b0eb4116a0b570a6b8b66a1784f980c0ec36d427f17ff553d9b9449347ff463",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "duplicateOf": "tianya-haijiao",
+    "renditions": [],
+    "note": "Contributor confirmed showing one copy under Tianya Haijiao."
+  },
+  {
+    "id": "wuzhizhou",
+    "uploadIndex": 11,
+    "suppliedFilename": "AI_1794215228214.png",
+    "originalSha256": "92cb42c1b4368633f15716f987c7b40d2da3c61a41f9d6876af51985e5121c2b",
+    "rightsStatus": "unverified-user-supplied",
+    "labelStatus": "user-supplied-by-photo-order",
+    "renditions": [
+      {
+        "src": "/sanya-photography/wuzhizhou-640.webp",
+        "width": 640,
+        "height": 1130,
+        "bytes": 88146
+      },
+      {
+        "src": "/sanya-photography/wuzhizhou-1600.webp",
+        "width": 1019,
+        "height": 1800,
+        "bytes": 197170
+      }
+    ]
+  }
+]

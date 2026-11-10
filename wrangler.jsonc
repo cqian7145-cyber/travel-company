@@ -13,6 +13,10 @@
     "run_worker_first": [
       "/api",
       "/api/*",
+      "/culture",
+      "/culture/*",
+      "/cities",
+      "/cities/*",
       "/stories",
       "/stories/*",
       "/experiences",

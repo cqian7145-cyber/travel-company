@@ -1,0 +1,3 @@
+import {highlightsForCity} from '../shared/culture-highlights.mjs';
+import CultureHighlights from './CultureHighlights';
+export default function StoryInvitation(){return <section className="home-culture" aria-labelledby="home-culture-heading"><div className="section-heading"><div><p className="eyebrow">HANGZHOU / CULTURE WORTH KNOWING</p><h2 id="home-culture-heading">Beyond the beauty of West Lake.</h2><p>Four short reads. A different way to see the same lake.</p></div><a className="text-link" href="/culture">Explore culture →</a></div><CultureHighlights items={highlightsForCity('hangzhou')}/></section>;}

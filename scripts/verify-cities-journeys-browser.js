@@ -1,0 +1,46 @@
+async(page)=>{
+ const assert={equal:(a,b,message)=>{if(a!==b)throw Error(message||String(a)+' != '+String(b));},ok:(value,message)=>{if(!value)throw Error(message||'Assertion failed');},deepEqual:(a,b)=>{if(JSON.stringify(a)!==JSON.stringify(b))throw Error('Values differ');},match:(value,re)=>{if(!re.test(value))throw Error('Missing '+re+' in '+value);}};
+ const base='http://127.0.0.1:8795',out='D:/旅游/artifacts/cities-journeys';
+ const context=await page.context().browser().newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce',permissions:['clipboard-read','clipboard-write']});
+ const p=await context.newPage(),errors=[],checks=[];p.setDefaultTimeout(12000);p.on('pageerror',e=>errors.push(e.message));
+ const go=async path=>{await p.goto(base+path,{waitUntil:'domcontentloaded'});await p.waitForSelector('h1');};
+ try{
+ await go('/cities');await p.waitForSelector('.city-directory-grid');
+ assert.equal(await p.locator('.header-links>a').count(),4);await p.locator('.city-dropdown summary').click();assert.equal(await p.locator('.city-dropdown[open]').count(),1);await p.keyboard.press('Escape');assert.equal(await p.locator('.city-dropdown[open]').count(),0);checks.push('Desktop five-link navigation; Cities dropdown Escape and focus');
+ const response=await context.request.post(base+'/api/plan',{data:{days:3,budget:2400,pace:'balanced',interests:['Culture'],date:'2026-11-10',curated:true}});assert.equal(response.status(),200);const plan=await response.json();
+ await p.evaluate(plan=>{localStorage.setItem('closer-plan-v1',JSON.stringify(plan));localStorage.setItem('closer-booking-confirmations-v1',JSON.stringify({fixture:'2026-11-09T08:00:00Z'}));localStorage.setItem('closer-hangzhou-saved-v1',JSON.stringify(['hz-west-lake']));},plan);
+ const savedBefore=await p.evaluate(()=>[localStorage.getItem('closer-plan-v1'),localStorage.getItem('closer-booking-confirmations-v1')]);
+ for(const city of ['shanghai','hangzhou','guiyang']){await go('/cities/'+city);await p.waitForSelector('.city-section-nav');assert.equal(await p.locator('.city-section-nav a').count(),4);await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('.city-section-nav');assert.deepEqual(await p.evaluate(()=>[localStorage.getItem('closer-plan-v1'),localStorage.getItem('closer-booking-confirmations-v1')]),savedBefore);if(city==='guiyang'){assert.equal(await p.locator('.guiyang-card').count(),7);assert.deepEqual(await p.locator('.guiyang-card h3').allTextContents(),['Taiping Road太平路','National Ecological Conference Center国家生态会议中心','Guiyang White House白宫','Jiaxiu Tower甲秀楼','Dolphin Square海豚广场','Qianling Mountain Park黔灵山公园','Huaxi Park花溪公园']);}}
+ await go('/cities/hangzhou');
+ assert.equal(await p.locator('.discovery-empty').count(),2);assert.equal(await p.locator('.hz-place').count(),3);
+ await p.getByRole('button',{name:'Enlarge Hangzhou inspiration: Beishan Street, in afternoon light.'}).click();await p.getByRole('dialog').waitFor();assert.match(await p.getByRole('dialog').innerText(),/Beishan Street/);await p.keyboard.press('Escape');assert.equal(await p.locator('.hz-place').filter({hasText:'Gongchen'}).locator('.photo-unavailable').count(),1);checks.push('Both city routes/reload/four regions; Hangzhou empty states and Beishan/Gongchen correction; Shanghai state unchanged');
+ await go('/stories');await p.getByLabel(/^Destination/).selectOption('hangzhou');assert.equal(await p.locator('.journey-discovery-card').count(),0);assert.match(await p.locator('.discovery-empty').innerText(),/No published stories/);await p.getByRole('button',{name:'Clear filters'}).click();await p.getByLabel(/^What interests you/).selectOption('Food');assert.equal(await p.locator('.journey-discovery-card').count(),1);assert.ok(p.url().includes('topic=Food'));await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('.directory-filters');assert.equal(await p.locator('.journey-discovery-card').count(),1);checks.push('Shared city/topic filters, empty state, clear and URL reload');
+ await go('/experiences');await p.waitForSelector('.journey-discovery-card');const href=await p.locator('.journey-discovery-card h2 a').first().getAttribute('href');await go(href);await p.waitForSelector('.experience-session');
+ assert.equal(await p.locator('.experience-facts dt').count(),6);assert.ok(await p.locator('.departure-fact').count()>0);assert.match(await p.locator('.journey-departure').innerText(),/Unknown never means reservation-free/);
+ await p.getByRole('button',{name:'Start experience',exact:true}).click();await p.getByRole('button',{name:'Pause guide'}).click();await p.getByRole('button',{name:'Resume guide'}).click();await p.getByRole('button',{name:'Next observation',exact:true}).click();await p.getByRole('button',{name:'Continue to reflection'}).click();await p.locator('.culture-reflection textarea').fill('I noticed a shared doorway.');await p.getByRole('button',{name:'Save my note'}).click();await p.getByRole('button',{name:'I only read or observed',exact:true}).click();assert.match(await p.locator('.experience-session').innerText(),/not verified attendance/);
+ await p.reload({waitUntil:'domcontentloaded'});await p.waitForSelector('.experience-session');assert.match(await p.locator('.experience-session').innerText(),/You reported reading or observing/);assert.equal(await p.locator('.culture-reflection textarea').inputValue(),'I noticed a shared doorway.');
+ await p.getByRole('button',{name:'Show large Chinese card'}).click();assert.match(await p.getByRole('dialog').innerText(),/[\u3400-\u9fff]/);await p.keyboard.press('Escape');
+ await p.getByRole('button',{name:'Copy Chinese',exact:true}).click();assert.ok(await p.evaluate(()=>navigator.clipboard.readText()));
+ await p.getByRole('button',{name:'Add this place to my itinerary'}).first().click();await p.getByRole('dialog').getByRole('combobox').selectOption('1');await p.getByRole('button',{name:'Add place',exact:true}).click();const changed=await p.evaluate(()=>JSON.parse(localStorage.getItem('closer-plan-v1')));assert.deepEqual(changed.days[0],plan.days[0]);checks.push('Six facts, risk-based departure checks, start/pause/resume/observations/self-report, persisted reflection, Chinese card/copy and add-to-selected-day');
+ await p.screenshot({path:out+'/experience-desktop.png',fullPage:true});
+ for(const width of [375,390,768,1440]){
+  await p.setViewportSize({width,height:950});
+  for(const path of ['/cities','/cities/shanghai','/cities/hangzhou','/cities/guiyang','/stories',href,'/trip']){await go(path);await p.waitForSelector(path.startsWith('/stories')?'.directory-filters':path.startsWith('/experiences/')?'.experience-session':path==='/trip'?'.trip-view-tabs':path==='/cities'?'.city-directory-grid':'.city-section-nav');assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),path+' overflow '+width);}
+  if(width<1101){assert.equal(await p.locator('.mobile-bottom-nav a:visible').count(),4);assert.equal(await p.getByRole('combobox',{name:'Choose a city',exact:true}).isVisible(),true);}
+ }
+ checks.push('375/390/768/1440 widths: key routes have no horizontal overflow; four mobile links and top city selector');
+ await p.setViewportSize({width:390,height:950});await go('/cities/hangzhou');await p.screenshot({path:out+'/hangzhou-mobile.png',fullPage:true});await p.getByRole('button',{name:'Open navigation',exact:true}).click();assert.equal(await p.getByRole('dialog').locator('.tool-choice').count(),10);await p.keyboard.press('Escape');assert.equal(await p.getByRole('button',{name:'Open navigation',exact:true}).evaluate(el=>el===document.activeElement),true);checks.push('All ten Travel Tools remain reachable; modal Escape restores focus');
+ await go(href);await p.getByRole('button',{name:'Save offline kit',exact:true}).click();await p.locator('.offline-status').filter({hasText:'Offline app files checked'}).waitFor({timeout:30000});
+ await context.setOffline(true);
+ for(const path of ['/cities','/cities/shanghai','/cities/hangzhou','/cities/guiyang',href]){await go(path);await p.waitForSelector(path===href?'.experience-session':path==='/cities'?'.city-directory-grid':'.city-section-nav');}
+ assert.match(await p.locator('.experience-session').innerText(),/You reported reading or observing/);
+ await p.getByRole('button',{name:'Show large Chinese card'}).click();await p.getByRole('dialog').waitFor();await p.keyboard.press('Escape');
+ checks.push('Explicit offline save: all three city routes, journey state and Chinese card work with network disabled');
+ await context.setOffline(false);await p.emulateMedia({reducedMotion:'no-preference'});await go('/cities/hangzhou');await p.waitForSelector('.hangzhou-cover img');await p.locator('.hangzhou-cover img').evaluate(img=>img.decode());await p.evaluate(()=>scrollTo(0,0));
+ await p.emulateMedia({reducedMotion:'reduce'});await p.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'));
+ await p.screenshot({path:out+'/hangzhou-top-mobile.png'});
+ const names=await p.locator('button').allTextContents();
+ checks.push('Reduced-motion browser used throughout');
+ const result={checks,errors,buttons:names.filter(x=>/offline|download|save/i.test(x))};assert.deepEqual(errors,[]);return result;
+ }finally{await context.close();}
+}

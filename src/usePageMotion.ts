@@ -24,8 +24,8 @@ export function usePageMotion(scope: string, identity: string){
    observer=new IntersectionObserver(entries=>{
     for(const entry of entries)if(entry.isIntersecting){
      observer?.unobserve(entry.target);
-     if(document.activeElement?.matches(':focus-visible'))continue;
-     const a=entry.target.animate?.([{opacity:.35,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:450,easing:'cubic-bezier(.22,1,.36,1)'});
+     if(document.activeElement?.matches(':focus-visible')||document.documentElement.dataset.sharedTransition)continue;
+     const a=entry.target.animate?.([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:600,easing:'cubic-bezier(.22,1,.36,1)'});
      if(a){animations.add(a);a.onfinish=()=>animations.delete(a);}
     }
    },{threshold:.08});

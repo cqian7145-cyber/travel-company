@@ -1,6 +1,8 @@
 import {readFile,readdir} from 'node:fs/promises';
 import {venues,validDate,safeEvidenceUrl} from '../shared/verification.mjs';
 import {validDiscovery} from '../shared/micro-adventures.mjs';
+import {cityById} from '../shared/cities.mjs';
+import {riskPriorities} from '../shared/experience-journey.mjs';
 export function validateCulture(records,experiences,sources,voices,now=new Date().toISOString().slice(0,10)){
  const errors=[],ids=new Set(),slugs=new Set(),venueIds=new Set(venues.map(v=>v.id));
  for(const [id,s]of Object.entries(sources))if(s.id!==id||!safeEvidenceUrl(s.url)||!validDate(s.accessedAt)||s.accessedAt>now)errors.push(`source:${id}: invalid URL/date/identity`);
@@ -8,6 +10,8 @@ export function validateCulture(records,experiences,sources,voices,now=new Date(
   const prefix=`story:${s.id}`;
   if(!s.id||ids.has(s.id)||!s.slug||slugs.has(s.slug)||!/^[a-z0-9-]+$/.test(s.slug))errors.push(`${prefix}: invalid/duplicate ID or slug`);ids.add(s.id);slugs.add(s.slug);
   if(s.status!=='published')continue;
+  if(!cityById(s.cityId)||!['discoveryQuestion','shortPromise','firstObservation'].every(k=>typeof s[k]==='string'&&s[k].trim()&&s[k].length<=600)||!Number.isInteger(s.estimatedReadMinutes)||s.estimatedReadMinutes<1||s.estimatedReadMinutes>5)errors.push(`${prefix}: missing city/discovery metadata`);
+  if(!s.experienceIds?.includes(s.relatedExperienceId)||!experiences.some(e=>e.id===s.relatedExperienceId&&e.cityId===s.cityId))errors.push(`${prefix}: related experience must belong to the same city`);
   if(s.language!=='en'||!validDate(s.editorialReviewedAt)||s.editorialReviewedAt>now||s.rights?.text!=='original-editorial-synthesis')errors.push(`${prefix}: editorial review / text rights missing`);
   if(!Array.isArray(s.blocks)||s.blocks.length!==5){errors.push(`${prefix}: five story sections required`);continue;}
   const count=s.blocks.map(b=>b.text).join(' ').trim().split(/\s+/).length;if(count<200||count>350)errors.push(`${prefix}: needs 200–350 English words`);
@@ -31,6 +35,8 @@ export function validateCulture(records,experiences,sources,voices,now=new Date(
   if(!validDate(e.editorialReviewedAt)||e.editorialReviewedAt>now)errors.push(`experience:${e.id}: invalid editorial date`);
   if(e.verified||e.openingHours||e.admissionPrice)errors.push(`experience:${e.id}: operational facts must resolve through VDC`);
   if(!validDiscovery(e.discovery))errors.push(`experience:${e.id}: invalid discovery interest or duration range`);
+  if(!cityById(e.cityId)||!riskPriorities[e.riskType]||!e.format||!e.languageSupport||!e.shortPromise)errors.push(`experience:${e.id}: missing city/decision metadata`);
+  if(!Array.isArray(e.observations)||e.observations.length!==2||new Set(e.observations?.map(o=>o.id)).size!==2||e.observations?.some(o=>!o.id||!['Notice','Compare','Try'].includes(o.kind)||!o.title||!o.prompt))errors.push(`experience:${e.id}: two distinct optional observations required`);
  }
  for(const voice of voices){if(voice.status==='published')errors.push(`voice:${voice.id}: publication is not enabled in V0.1; supply actual consent, media rights, withdrawal handling and a reviewed publishing implementation first`);}
  return errors;

@@ -1,0 +1,17 @@
+{
+  "version": "2026-11-09.sanya1",
+  "city": "Sanya",
+  "zh": "三亚",
+  "cover": {"image":"sanya-cover","label":"Sanya · 三亚","alt":"Sanya waterfront at sunset, supplied city cover"},
+  "places": [
+    {"id":"sy-nanshan","name":"Nanshan Temple","zh":"南山寺","description":"Palms, turquoise water and a coastal Guanyin statue in the supplied photograph.","photos":[{"image":"nanshan","caption":"Nanshan Temple · coastal view","alt":"A Guanyin statue by the sea framed by palms, identified by the contributor as Nanshan Temple"}]},
+    {"id":"sy-west-island","name":"West Island","zh":"西岛","description":"A beach at blue hour, with a wooden boat and palm silhouettes.","photos":[{"image":"west-island","caption":"West Island · blue hour","alt":"A wooden boat on a beach at dusk, identified by the contributor as West Island"}]},
+    {"id":"sy-dadonghai","name":"Dadonghai","zh":"大东海","description":"Two views of Dadonghai: the beach and a beach-bar setting. The bar’s name and current service details are not confirmed.","photos":[{"image":"dadonghai-bar","caption":"Dadonghai beach bar · 大东海沙滩酒吧","alt":"Beach-bar seating and closed umbrellas at sunset, identified by the contributor as Dadonghai"},{"image":"dadonghai-beach","caption":"Dadonghai · beach view","alt":"Palm trees, people and a sandy beach beside blue water, identified by the contributor as Dadonghai"}]},
+    {"id":"sy-coconut-corridor","name":"Coconut Dream Corridor","zh":"椰梦长廊","description":"A palm-lined shoreline in evening light, as identified by the contributor.","photos":[{"image":"coconut-corridor","caption":"Coconut Dream Corridor · evening light","alt":"Palm trees along a shoreline at dusk, identified by the contributor as Coconut Dream Corridor"}]},
+    {"id":"sy-tianya-haijiao","name":"Tianya Haijiao","zh":"天涯海角","description":"A palm-lined walkway leading toward the water, as identified by the contributor.","photos":[{"image":"tianya-haijiao","caption":"Tianya Haijiao · toward the sea","alt":"A palm-lined path leading to the sea, identified by the contributor as Tianya Haijiao"}]},
+    {"id":"sy-sun-bay","name":"Sun Bay","zh":"太阳湾","description":"A green lawn, palms and an open sea view. The photograph does not confirm public access to this exact spot.","photos":[{"image":"sun-bay","caption":"Sun Bay · a green edge to the sea","alt":"A lawn and palm trees overlooking the sea, identified by the contributor as Sun Bay"}]},
+    {"id":"sy-haitang-bay","name":"Haitang Bay","zh":"海棠湾","description":"A sunset shoreline framed by palms, following the contributor’s place label.","photos":[{"image":"haitang-bay","caption":"Haitang Bay · sunset silhouettes","alt":"Palm silhouettes beside a beach at sunset, identified by the contributor as Haitang Bay"}]},
+    {"id":"sy-wuzhizhou","name":"Wuzhizhou Island","zh":"蜈支洲岛","description":"A wooden swing facing the sea, with the island’s name on the frame.","photos":[{"image":"wuzhizhou","caption":"Wuzhizhou Island · facing the sea","alt":"A beach swing with a Wuzhizhou Island sign and the sea behind it"}]}
+  ],
+  "scope": {"locationLabelStatus":"user-supplied","operationalFactsStatus":"unknown","rightsStatus":"unverified-user-supplied","reviewedAt":"2026-11-09","note":"Contributor-supplied photo labels. Exact photo locations, public access, opening hours, prices, reservations, ferry services and image-use rights have not been independently verified. Photos 6 and 10 are identical; the contributor confirmed keeping one copy under Tianya Haijiao."}
+}

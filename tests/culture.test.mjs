@@ -1,3 +1,5 @@
+import {highlights,highlightById} from '../shared/culture-highlights.mjs';
+import {renderHighlightDetail} from '../shared/highlight-render.mjs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
@@ -23,21 +25,23 @@ test('experience rules need alternatives and cannot substitute their own operati
  const bad=structuredClone(experiences);bad[0].alternative='';bad[1].verified=true;const errors=validateCulture(stories,bad,storySources,[],'2026-11-08');assert.ok(errors.some(e=>e.includes('alternative')));assert.ok(errors.some(e=>e.includes('VDC')));
 });
 test('culture routes resolve canonical pages, trailing slash and true unknown content',()=>{
- assert.equal(cultureRoute('/stories/').file,'/stories/index.html');assert.equal(cultureRoute('/stories/'+stories[0].slug).item.id,stories[0].id);assert.equal(cultureRoute('/experiences/'+experiences[0].slug).item.id,experiences[0].id);assert.equal(cultureRoute('/stories/not-published').kind,'not-found');assert.equal(cultureRoute('/api/status'),null);assert.equal(cultureRoutes().length,9);
+ assert.equal(cultureRoute('/stories/').location,'/culture');assert.equal(cultureRoute('/stories/'+stories[0].slug).item.id,stories[0].id);assert.equal(cultureRoute('/experiences/'+experiences[0].slug).item.id,experiences[0].id);assert.equal(cultureRoute('/stories/not-published').kind,'not-found');assert.equal(cultureRoute('/api/status'),null);assert.equal(cultureRoutes().length,11);
 });
 test('pre-rendered story HTML contains real text, unique metadata, canonical and source links',async()=>{
- const titles=new Set();for(const story of stories){const html=await readFile('dist/stories/'+story.slug+'/index.html','utf8');assert.ok(html.includes(story.blocks[1].text.replaceAll('&','&amp;')));assert.ok(html.includes('rel="canonical"'));assert.ok(html.includes('property="og:title"'));assert.ok(html.includes('name="description"'));assert.ok(html.includes('SOURCED CONTEXT'));assert.ok(html.includes(storySources[story.blocks[1].sourceIds[0]].url));assert.ok(!html.includes('<!--CULTURE_CONTENT-->'));titles.add(html.match(/<title>(.*?)<\/title>/)[1]);}assert.equal(titles.size,3);
+ const titles=new Set();for(const story of stories){const html=await readFile('dist/stories/'+story.slug+'/index.html','utf8');assert.ok(html.includes(story.blocks[1].text.replaceAll('&','&amp;')));assert.ok(html.includes('rel="canonical"'));assert.ok(html.includes('property="og:title"'));assert.ok(html.includes('name="description"'));assert.ok(html.includes('Sourced context'));assert.ok(html.includes(storySources[story.blocks[1].sourceIds[0]].url));assert.ok(!html.includes('<!--CULTURE_CONTENT-->'));titles.add(html.match(/<title>(.*?)<\/title>/)[1]);}assert.equal(titles.size,3);
 });
 test('both original Node launchers serve clean culture paths and preserve API errors',async()=>{
- for(const handler of [nodeHandler,deepseekHandler]){const server=http.createServer(handler());await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{const base=`http://127.0.0.1:${server.address().port}`;const story=await fetch(base+'/stories/'+stories[0].slug);assert.equal(story.status,200);assert.ok((await story.text()).includes('SOURCED CONTEXT'));assert.equal((await fetch(base+'/stories/not-published')).status,404);assert.equal((await fetch(base+'/api/missing')).status,404);}finally{await new Promise(resolve=>server.close(resolve));}}
+ for(const handler of [nodeHandler,deepseekHandler]){const server=http.createServer(handler());await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));try{const base=`http://127.0.0.1:${server.address().port}`;const story=await fetch(base+'/stories/'+stories[0].slug);assert.equal(story.status,200);assert.ok((await story.text()).includes('Sourced context'));assert.equal((await fetch(base+'/stories/not-published')).status,404);assert.equal((await fetch(base+'/api/missing')).status,404);}finally{await new Promise(resolve=>server.close(resolve));}}
 });
-test('static-only controls are hidden without JS and folklore labels stay distinct from fact',()=>{
- const html=renderCultureBody({kind:'story',item:stories[0]});assert.match(html,/data-js-only hidden/);assert.doesNotMatch(renderCultureBody({kind:'story',item:stories[0]},emptyCultureState,true),/data-js-only hidden/);const s=structuredClone(stories[0]);s.blocks[2].kind='folklore';assert.match(renderCultureBody({kind:'story',item:s}),/FOLKLORE · NOT ESTABLISHED HISTORY/);
+test('static reading works without JS and legends remain explicitly labelled',()=>{
+ const x=highlights.find(x=>x.type==='legend');
+ const html=renderHighlightDetail(x);assert.match(html,/data-js-only hidden/);assert.doesNotMatch(renderHighlightDetail(x,false,true),/data-js-only hidden/);
+ assert.match(html,/Folklore · not documented history/);assert.doesNotMatch(html,/data-highlight-action/);assert.match(html,/<details class="highlight-more">/);
 });
 test('all public culture URLs appear in sitemap and offline manifest; local photo has provenance',async()=>{
  const sitemap=await readFile('dist/sitemap.xml','utf8'),manifest=JSON.parse(await readFile('dist/offline-manifest.json','utf8'));
  for(const path of cultureRoutes()){assert.ok(sitemap.includes(path));assert.ok(manifest.files.includes(cultureRoute(path).file));}
- assert.ok(manifest.files.includes('/culture/xintiandi-2006.jpg'));assert.ok(!manifest.files.includes('/_headers'));assert.equal(manifest.cultureVersion,'2026-11-08.culture1');assert.equal(stories[0].image.license,'CC BY 2.0');assert.ok((await readFile('public/culture/xintiandi-2006.jpg')).length>10000);
+ assert.ok(manifest.files.includes('/culture/xintiandi-2006.jpg'));assert.ok(!manifest.files.includes('/_headers'));assert.equal(manifest.cultureVersion,'2026-11-10.culture4');assert.equal(stories[0].image.license,'CC BY 2.0');assert.ok((await readFile('public/culture/xintiandi-2006.jpg')).length>10000);
 });
 test('Workers maps clean culture routes to prerendered HTML and returns 404 for unpublished slugs',async()=>{
  let path;const env={ASSETS:{fetch:async r=>{path=new URL(r.url).pathname;return new Response('static');}}};assert.equal((await worker.fetch(new Request('https://travel.example/stories/'+stories[0].slug),env)).status,200);assert.equal(path,'/stories/'+stories[0].slug+'/index.html');assert.equal((await worker.fetch(new Request('https://travel.example/stories/private-draft'),env)).status,404);
@@ -48,9 +52,12 @@ test('local cultural state rejects unknown IDs, oversized notes and nonboolean p
 test('adding a cultural place preserves legacy stops, prevents duplicates and rejects invented places',()=>{
  const plan={createdAt:'original',days:[{date:'2026-11-09',stops:[{placeId:'bund',time:'10:00',note:'keep'}]}]};const added=addVenueToDay(plan,'xintiandi',0,'new-stop');assert.equal(added.days[0].stops[0],plan.days[0].stops[0]);assert.equal(added.createdAt,plan.createdAt);assert.equal(added.days[0].stops[1].id,'new-stop');assert.equal(addVenueToDay(added,'xintiandi',0,'duplicate'),added);assert.throws(()=>addVenueToDay(plan,'invented',0,'bad'));assert.equal(plan.days[0].stops.length,1);
 });
-test('story renderer escapes content; voices empty state does not impersonate interviewees',()=>{
- const s=structuredClone(stories[0]);s.title='<script>alert(1)</script>';const html=renderCultureBody({kind:'story',item:s});assert.ok(html.includes('&lt;script&gt;'));assert.doesNotMatch(html,/<script/);const voices=renderCultureBody({kind:'voices'});assert.match(voices,/No interviews, profiles, recordings or transcripts/);assert.doesNotMatch(voices,/<audio|<video/);
+test('highlight renderer escapes content and Voices exits the published surface',()=>{
+ const x=structuredClone(highlights[0]);x.title='<script>alert(1)</script>';x.summary='<img onerror=alert(1)>';
+ const html=renderHighlightDetail(x);assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script|<img onerror/);
+ assert.equal(cultureRoute('/voices').kind,'redirect');assert.ok(!cultureRoutes().includes('/voices'));
+ assert.doesNotMatch(renderCultureBody({kind:'culture'}),/href="\/voices"|Voices of China/);
 });
 test('standalone culture backup stays script-free and separates editorial from VDC confidence',()=>{
- const html=cultureOfflineHtml();for(const s of stories)assert.ok(html.includes(s.title));assert.match(html,/not a food-safety guarantee/);assert.match(html,/No interviews are published/);assert.doesNotMatch(html,/<script|<img|<audio|<video/);assert.equal(dataVersion.version,'2026-11-08.vdc1');
+ const html=cultureOfflineHtml();for(const x of highlights)assert.ok(html.includes(x.title));assert.match(html,/not a food-safety guarantee/);assert.match(html,/Cultural sources are distinct from current travel facts/);assert.doesNotMatch(html,/<script|<img|<audio|<video/);assert.equal(dataVersion.version,'2026-11-08.vdc1');
 });

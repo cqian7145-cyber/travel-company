@@ -4,7 +4,7 @@
   "status": "published",
   "editorialReviewedAt": "2026-11-08",
   "lastUpdatedAt": "2026-11-08",
-  "version": 1,
+  "version": 2,
   "rights": {
     "text": "original-editorial-synthesis",
     "media": []
@@ -66,5 +66,12 @@
       "text": "A restored facade can invite appreciation while leaving difficult questions open. What is preserved when a neighborhood changes its use? What cannot a visitor learn from looking alone? Try the short observation activity, check current access separately, and keep one observation distinct from one question you would still like an authorized local voice to answer.",
       "sourceIds": []
     }
-  ]
+  ],
+  "discoveryQuestion": "Why do these Shanghai doorways look so different?",
+  "shortPromise": "Discover stone-gate houses through details you can notice from a permitted public path.",
+  "firstObservation": "Find a stone-framed doorway from a public path. Notice the entrance and its relationship to the lane without entering private space.",
+  "relatedExperienceId": "lane-observation",
+  "estimatedReadMinutes": 2,
+  "cityId": "shanghai",
+  "discoveryReviewedAt": "2026-11-09"
 }

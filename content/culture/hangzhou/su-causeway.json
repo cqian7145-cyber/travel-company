@@ -1,0 +1,10 @@
+{
+  "id": "hz-su-causeway", "slug": "su-causeway", "cityId": "hangzhou", "type": "history", "status": "published",
+  "title": "The poet who reshaped a lake", "zhTitle": "苏堤与苏东坡", "placeLabel": "Su Causeway · West Lake", "zhPlace": "苏堤", "placeIds": ["hz-west-lake"],
+  "summary": "Su Causeway is more than a scenic walk. In the late eleventh century, Su Shi, also known as Su Dongpo, served as Hangzhou’s governor and directed work to dredge West Lake. Silt removed from the water became a causeway across it. The poet’s name now belongs to a piece of public engineering: a path that connects the lake’s beauty with the practical work of caring for a city.",
+  "sections": [{"heading":"A landscape made by people", "kind":"fact", "text":"The ICOMOS evaluation of West Lake dates this dredging to 1090 and describes six bridges along the causeway. Hangzhou’s city guide connects the project with Su’s work as a poet and administrator. The path is a reminder that a celebrated landscape can also be shaped by water management. It is not simply untouched nature.", "sourceIds":["hz_icomos", "hz_poet_mayors"]}],
+  "sourceIds": ["hz_icomos", "hz_poet_mayors"], "editorialReviewedAt": "2026-11-10", "reviewStatus": "source_checked",
+  "image": {"src":"/hangzhou-photography/lakeside-road-640.webp", "alt":"A supplied photograph of a tree-lined lakeside road", "caption":"Lakeside atmosphere · supplied photograph; not a location record of Su Causeway."},
+  "phrase": {"zh":"您好，请问苏堤怎么走？", "pinyin":"Nín hǎo, qǐngwèn Sū Dī zěnme zǒu?", "en":"Hello, which way is Su Causeway?"},
+  "visitNote":"Use the map as a name search. Check the route, weather and current public access locally; a cultural source does not establish an entrance or opening rule."
+}

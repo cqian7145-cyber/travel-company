@@ -1,3 +1,4 @@
+import {cityRoute} from './shared/cities.mjs';
 import {cultureRoute} from './shared/story-catalog.mjs';
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
@@ -41,14 +42,15 @@ export function createHandler(vite){return async(req,res)=>{
    active++;try{const plan=await generate(input,{apiKey:JSON.parse(body).curated?'':process.env.OPENAI_API_KEY});return send(200,plan);}finally{active--;}
   }catch{return send(502,{error:'The planner could not finish. Please try the curated planner.'});}
  }
- const culture=cultureRoute(path);
+ const culture=cultureRoute(path)||cityRoute(path);
+ if(culture?.kind==='redirect'){res.writeHead(308,{Location:culture.location+new URL(req.url,'http://localhost').search});return res.end();}
  if(culture?.kind==='not-found')return send(404,{error:'Story or experience not found.'});
- if(vite){if(culture)req.url='/culture.html';return vite.middlewares(req,res);}
+ if(vite){if(culture)req.url=culture.kind==='city'||culture.kind==='cities'?'/index.html':'/culture.html';return vite.middlewares(req,res);}
  try{
   const base=resolve(root,'dist'),file=resolve(base,'.'+decodeURIComponent(culture?.file||path));
   if(!file.startsWith(base+sep)&&file!==base)return send(403,{error:'Forbidden'});
   let data;let extension=extname(file);try{data=await readFile(file);}catch{if(extension)return send(404,{error:'Not found'});data=await readFile(resolve(base,'index.html'));extension='.html';}
-  const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.json':'application/json','.png':'image/png','.ico':'image/x-icon'};
+  const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.jpg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2','.xml':'application/xml','.txt':'text/plain; charset=utf-8','.json':'application/json','.png':'image/png','.ico':'image/x-icon'};
   res.writeHead(200,{'Content-Type':types[extension]||'application/octet-stream','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});res.end(data);
  }catch{send(500,{error:'Build the app with npm run build before starting.'});}
 };}

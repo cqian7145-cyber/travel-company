@@ -1,0 +1,21 @@
+{
+  "version": "2026-11-09.guiyang2",
+  "city": "Guiyang",
+  "zh": "贵阳",
+  "places": [
+    {"id":"gy-taiping-road","name":"Taiping Road","zh":"太平路","image":"taiping-road","timeOfDay":"Night","description":"A night view along a lit commercial waterway. The exact stretch and access points have not been checked."},
+    {"id":"gy-eco-center","name":"National Ecological Conference Center","zh":"国家生态会议中心","image":"eco-center","timeOfDay":"Day","description":"A green park, water and bridge framed by the city skyline. The supplied place label has not been independently checked."},
+    {"id":"gy-white-house","name":"Guiyang White House","zh":"白宫","image":"white-house","timeOfDay":"Night","description":"An illuminated building reflected across the water. The supplied place label has not been independently checked."},
+    {"id":"gy-jiaxiu-night","name":"Jiaxiu Tower","zh":"甲秀楼","image":"jiaxiu-night","timeOfDay":"Night","description":"Jiaxiu Tower by the water after dark, as identified by the contributor. Access and current lighting conditions are not checked."},
+    {"id":"gy-dolphin-square","name":"Dolphin Square","zh":"海豚广场","image":"dolphin-square","timeOfDay":"Evening","description":"A modern commercial district in evening light. The supplied place label has not been independently checked."},
+    {"id":"gy-qianling-mountain","name":"Qianling Mountain Park","zh":"黔灵山公园","image":"qianling-mountain","timeOfDay":"Day","description":"The park entrance and wooded mountain backdrop, as identified by the contributor. Entrance access, hours and visitor arrangements are not checked."},
+    {"id":"gy-huaxi-park","name":"Huaxi Park","zh":"花溪公园","image":"huaxi-park","timeOfDay":"Autumn","description":"A tree-lined path in autumn color, supplied as Huaxi Park. Exact location, seasonality and visitor access have not been checked."}
+  ],
+  "scope": {
+    "locationLabelStatus": "user-supplied",
+    "operationalFactsStatus": "unknown",
+    "rightsStatus": "unverified-user-supplied",
+    "reviewedAt": "2026-11-09",
+    "note": "Photo order and place labels were supplied by the contributor. Names, exact photo locations, public-use rights and operational details have not been independently verified."
+  }
+}
