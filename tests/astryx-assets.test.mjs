@@ -2,6 +2,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {cityRoutes,cityRoute} from '../shared/cities.mjs';
+import {cultureRoutes,cultureRoute} from '../shared/story-catalog.mjs';
 
 test('Matcha fonts are licensed, intact and available in the offline kit',async()=>{
  const base='public/fonts/astryx-matcha/';
@@ -21,9 +23,20 @@ test('Matcha fonts are licensed, intact and available in the offline kit',async(
 });
 
 test('compiled Matcha styles never request third-party font hosts',async()=>{
- const files=(await readdir('dist/assets')).filter(name=>name.startsWith('AstryxTripPilot-')&&name.endsWith('.css'));
- assert.equal(files.length,1);
- const css=await readFile('dist/assets/'+files[0],'utf8');
+ const files=(await readdir('dist/assets')).filter(name=>name.endsWith('.css'));
+ const css=(await Promise.all(files.map(name=>readFile('dist/assets/'+name,'utf8')))).join('\n');
  assert.doesNotMatch(css,/fonts\.(googleapis|gstatic)\.com/);
  assert.match(css,/\/fonts\/astryx-matcha\//);
+});
+
+test('every standalone city and culture route has Matcha at first paint without JavaScript',async()=>{
+ for(const [routes,route] of [[cityRoutes,cityRoute],[cultureRoutes,cultureRoute]]) {
+  for(const path of routes()) {
+   const html=await readFile('dist'+route(path).file,'utf8');
+   assert.match(html,/<html[^>]*data-astryx-theme="matcha"/);
+   assert.match(html,/<body class="matcha-site">/);
+   assert.match(html,/assets\/matcha-[^" ]+\.css/);
+   assert.match(html,/<h1[\s>]/);
+  }
+ }
 });

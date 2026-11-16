@@ -1,3 +1,4 @@
+import MatchaTheme from './MatchaTheme';
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App';
@@ -13,6 +14,8 @@ import './editorial.css';
 import './discovery-journey.css';
 import './guiyang.css';
 import './sanya.css';
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App/></React.StrictMode>);
+createRoot(document.getElementById('root')!).render(<React.StrictMode><MatchaTheme><App/></MatchaTheme></React.StrictMode>);
 
 import './culture-highlights.css';
+
+import './matcha.css';

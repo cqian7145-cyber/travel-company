@@ -1,3 +1,4 @@
+import {MatchaButton} from './MatchaButton';
 import {useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,Plus,BookOpen,Footprints,MapPin} from 'lucide-react';
 import {Modal} from './ui';
@@ -30,6 +31,6 @@ export default function ShanghaiPhotography(){
   <div className="photo-rail" ref={rail} onScroll={()=>{const r=rail.current;if(r){const size=r.querySelector('article')!.getBoundingClientRect().width+20;setPosition(r.scrollLeft+r.clientWidth>=r.scrollWidth-3?frames.length-1:Math.round(r.scrollLeft/size));}}}>
    {frames.map((photo,index)=><article className="essay-frame" key={photo.id}><button className="essay-image" aria-label={'Enlarge photograph: '+photo.title} onClick={()=>setSelected(index)}><Photo id={photo.id} alt={photo.alt}/><span className="essay-enlarge"><Plus size={20}/></span></button><h3>{photo.title}</h3><p>{photo.caption}</p></article>)}
   </div><p className="essay-counter" aria-live="polite">{Math.min(position+1,frames.length)} / {frames.length} · Photography, not live travel conditions</p>
-  {selected!==null&&<Modal title="Shanghai photograph" className="photo-dialog" onClose={()=>setSelected(null)}><figure><Photo key={frames[selected].id} id={frames[selected].id} alt={frames[selected].alt} large/><figcaption><h2>{frames[selected].title}</h2><p>{frames[selected].caption}</p></figcaption></figure><div className="photo-dialog-controls"><button className="outline-button" disabled={selected===0} onClick={()=>setSelected(selected-1)}><ArrowLeft size={17}/>Previous</button><span>{selected+1} / {frames.length}</span><button className="outline-button" disabled={selected===frames.length-1} onClick={()=>setSelected(selected+1)}>Next<ArrowRight size={17}/></button></div></Modal>}
+  {selected!==null&&<Modal title="Shanghai photograph" className="photo-dialog" onClose={()=>setSelected(null)}><figure><Photo key={frames[selected].id} id={frames[selected].id} alt={frames[selected].alt} large/><figcaption><h2>{frames[selected].title}</h2><p>{frames[selected].caption}</p></figcaption></figure><div className="photo-dialog-controls"><MatchaButton className="outline-button" disabled={selected===0} onClick={()=>setSelected(selected-1)}><ArrowLeft size={17}/>Previous</MatchaButton><span>{selected+1} / {frames.length}</span><MatchaButton className="outline-button" disabled={selected===frames.length-1} onClick={()=>setSelected(selected+1)}>Next<ArrowRight size={17}/></MatchaButton></div></Modal>}
  </section>;
 }

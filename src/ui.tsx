@@ -1,6 +1,9 @@
+import {MatchaButton,buttonText} from './MatchaButton';
+import {Button} from '@astryxdesign/core/Button';
 import {useEffect,useRef,type ReactNode,type KeyboardEvent} from 'react';
 import {ArrowUpRight,X} from 'lucide-react';
 export function External({href,children,className=''}:{href:string;children:ReactNode;className?:string}){
+ if(/(?:^|\s)(primary-button|outline-button)(?:\s|$)/.test(className))return <Button href={href} target="_blank" rel="noopener noreferrer" className={className} label={buttonText(children)} size="lg" variant={className.includes('primary-button')?'primary':'secondary'}><span className="matcha-button-content">{children}<ArrowUpRight size={15}/></span></Button>;
  return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}<ArrowUpRight size={15}/></a>;
 }
 export function Modal({title,onClose,children,fullScreen=false,className=''}:{title:string;onClose:()=>void;children:ReactNode;fullScreen?:boolean;className?:string}){
@@ -23,6 +26,6 @@ export function ChineseCard({title,text,translation,address,onClose}:{title:stri
   <div className="eyebrow">PLEASE SHOW THIS TO STAFF · 请出示此页面</div>
   <h2 lang="zh-Hans">{text}</h2>{address&&<p className="chinese-address" lang="zh-Hans">{address}</p>}
   {translation&&<p className="chinese-translation">{translation}</p>}
-  <button className="primary-button" onClick={onClose}>Close Chinese card</button>
+  <MatchaButton className="primary-button" onClick={onClose}>Close Chinese card</MatchaButton>
  </div></Modal>;
 }

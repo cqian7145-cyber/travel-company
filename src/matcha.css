@@ -1,0 +1,202 @@
+/* Official compiled component styles; no StyleX source compilation required. */
+@import '@astryxdesign/core/astryx.css';
+
+/* Shared skin for both React roots and pre-rendered city/culture HTML. */
+:root:not([data-astryx-theme]) { color-scheme: light; }
+.trip-theme-content {
+  --font-family-body: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --font-family-heading: 'Playwrite US Trad', 'Songti SC', 'SimSun', Georgia, serif;
+  padding: clamp(20px, 4vw, 52px);
+  background: var(--color-background-body);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* Unlayered legacy button rules otherwise override Astryx's official CSS layers. */
+.trip-theme-content .astryx-button,
+.trip-theme-content .astryx-button:hover,
+.trip-theme-content .astryx-button:active,
+.trip-theme-content .astryx-card { all: revert-layer; box-sizing: border-box; }
+.trip-theme-content .page-intro { padding-block: 40px; gap: 24px; }
+.trip-theme-content .page-intro h1 {
+  font-family: var(--font-family-heading);
+  font-size: clamp(30px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--color-text-primary);
+}
+.trip-theme-content :is(p,small,.eyebrow,.text-link,.chinese-name,.transit,.hours-note) {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+}
+.trip-theme-content :is(h2,h3) { font-family: var(--font-family-heading); color: var(--color-text-primary); line-height: 1.65; }
+.trip-theme-content .itinerary-stop h3 { font-family: var(--font-family-body); }
+.trip-theme-content .page-intro h1 span { color: inherit; }
+.trip-theme-content .trip-view-tabs {
+  display: flex; flex-wrap: wrap; gap: 20px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-family-body);
+}
+.trip-theme-content .trip-view-tabs [aria-current] { color: var(--color-text-primary); font-weight: 600; }
+.trip-theme-content .empty-state { background: transparent; border: 0; border-radius: 0; padding: clamp(28px, 5vw, 70px); }
+.trip-theme-content .empty-state h2 { font-size: clamp(23px, 3vw, 36px); letter-spacing: -.03em; }
+.trip-theme-content .empty-state p { max-width: 44ch; margin-inline: auto; }
+.trip-theme-content .empty-state > svg { color: var(--color-text-primary); }
+.trip-theme-content .plan-summary,
+.trip-theme-content .budget-panel { background: var(--color-background-surface); border: 1px solid var(--color-border); border-radius: var(--radius-container); }
+.trip-theme-content .status-tag { background: var(--color-background-muted); color: var(--color-text-primary); border: 1px solid currentColor; }
+.trip-theme-content .plan-companion-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-block: 24px; }
+.trip-theme-content .matcha-stop { margin-block: 16px; }
+.trip-theme-content .itinerary-stop { background: transparent; border: 0; padding: 0; box-shadow: none; }
+.trip-theme-content .day-heading { border-color: var(--color-border); }
+.trip-theme-content .day-heading > span { background: var(--color-background-green); color: var(--color-text-green); border-radius: var(--radius-element); }
+.trip-theme-content .timeline-dot { background: var(--color-text-primary); }
+.trip-theme-content .budget-total { border-color: var(--color-border); color: var(--color-text-primary); }
+.trip-theme-content .budget-total strong { color: inherit; }
+.trip-theme-content :is(input,select) { font-family: var(--font-family-body); background: var(--color-background-surface); color: var(--color-text-primary); border: 1px solid var(--color-border); border-radius: var(--radius-element); max-width: 100%; }
+.trip-theme-content :is(button,a,input,select):focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 4px; }
+.trip-theme-content .address-copy { color: var(--color-text-primary); overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .trip-theme-content { padding: 24px 16px; }
+  .trip-theme-content .page-intro { flex-direction: column; align-items: flex-start; padding-block: 28px; }
+  .trip-theme-content .plan-companion-actions { flex-wrap: wrap; }
+  .trip-theme-content .planner-layout { grid-template-columns: minmax(0,1fr); }
+  .trip-theme-content .itinerary-stop { grid-template-columns: 48px minmax(0,1fr); gap: 12px; }
+  .trip-theme-content .budget-panel { position: static; }
+  .trip-theme-content .trip-view-tabs :is(a,button,span) { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trip-theme-content *, .trip-theme-content *::before, .trip-theme-content *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Keep the established layouts; map their semantic aliases to official Matcha. */
+:root[data-astryx-theme="matcha"], [data-astryx-theme="matcha"] {
+  --font-family-body: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --font-family-heading: 'Playwrite US Trad', 'Songti SC', 'SimSun', Georgia, serif;
+  --paper: var(--color-background-body);
+  --ink: var(--color-text-primary);
+  --muted: var(--color-text-secondary);
+  --line: var(--color-border);
+  --soft: var(--color-background-muted);
+  --wine: var(--color-accent);
+  --wine-dark: color-mix(in srgb, var(--color-accent), black 12%);
+  --blue: var(--color-accent);
+  --blue-deep: var(--wine-dark);
+  --tea: var(--color-text-primary);
+  --tea-deep: var(--color-text-primary);
+  --green: var(--color-accent);
+  --ice: var(--color-background-muted);
+  --mint: var(--color-background-muted);
+  --sans: var(--font-family-body);
+  --serif: var(--font-family-heading);
+  color-scheme: light;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+.matcha-site { background: var(--paper); color: var(--ink); font: 400 16px/1.75 var(--sans); }
+.matcha-site :is(input,select,textarea,button) { font-family: var(--sans); }
+.matcha-site :is(h1,h2) { font-family: var(--serif); font-weight: 400; letter-spacing: normal; line-height: 1.65; color: var(--ink); text-wrap: balance; }
+.matcha-site :is(.welcome h1,.culture-heading h1,.culture-intro h1,.culture-article h1,.highlight-detail h1,.page-intro h1,.city-directory .page-intro h1,.city-editorial-intro h1,.hangzhou-hero-copy h1,.experience-decision h1) {
+  font: 400 clamp(34px,4.2vw,60px)/1.6 var(--serif); letter-spacing: normal;
+}
+.matcha-site :is(.section-heading h2,.story-invitation h2,.city-content-zone .section-heading h2,.city-directory-grid h2,.hangzhou-intro h2,.hangzhou-places h2,.hangzhou-gallery h2,.sanya-plan h2,.guiyang-plan h2,.culture-article h2,.highlight-detail h2,.home-travel-help h2) {
+  font: 400 clamp(25px,2.8vw,38px)/1.65 var(--serif); letter-spacing: normal;
+}
+.matcha-site :is(h3,h4,.place-title h3,.hz-place-title h3,.highlight-card h3,.guiyang-card h3,.sanya-place h3,.stop-content h3 button) { font-family: var(--sans); line-height: 1.45; letter-spacing: -.02em; color: var(--ink); }
+.matcha-site :is(.welcome-deck,.city-tagline,.hangzhou-hero-copy .city-tagline) { font-family: var(--sans)!important; font-size: clamp(19px,2vw,25px)!important; line-height: 1.6!important; color: var(--muted)!important; }
+.matcha-site :is([lang^="zh"],.chinese-name,.chinese-address,.speak-display-address,.hz-chinese-card strong,.chinese-card h2,.hz-chinese-card h2,.speak-display h2) {
+  font-family: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; letter-spacing: normal; line-height: 1.65;
+}
+.matcha-site :is(.topbar,.culture-header,.culture-page,.main-footer,.culture-footer,.welcome,.welcome-copy,.hangzhou-hero,.hangzhou-hero-copy) { background: var(--paper); color: var(--ink); }
+.matcha-site :is(.topbar,.culture-header,.site-header) { border-color: var(--line); }
+.matcha-site :is(.header-wordmark,.culture-page .site-header .header-wordmark,.culture-wordmark) { font: 400 25px/1.6 var(--serif); letter-spacing: -.8px; color: var(--ink); }
+.matcha-site :is(.header-links,.tools-toggle,.city-dropdown,.mobile-city-select) { color: var(--ink); font-family: var(--sans); }
+.matcha-site .mobile-bottom-nav { background: var(--paper); border-color: var(--line); }
+.matcha-site .mobile-bottom-nav [aria-current] { color: var(--ink); background: var(--color-accent-muted); border-radius: var(--radius-element); }
+.matcha-site .city-dropdown>div { background: var(--color-background-surface); border-color: var(--line); border-radius: var(--radius-container); }
+.matcha-site .city-dropdown>div>a:hover { background: var(--color-accent-muted); }
+.matcha-site :is(.primary-button,.outline-button):not(.astryx-button) {
+  border-radius: var(--radius-full); min-height: 44px; padding: 11px 22px;
+  font: 500 16px/1.4 var(--sans); border: 1px solid transparent;
+  background: var(--color-accent); color: var(--color-on-accent); box-shadow: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  max-width: 100%; text-align: center; overflow-wrap: anywhere;
+}
+.matcha-site .outline-button:not(.astryx-button) { background: var(--color-neutral); border-color: var(--line); color: var(--ink); }
+.matcha-site .primary-button:not(.astryx-button):hover { background: var(--wine-dark); }
+.matcha-site .outline-button:not(.astryx-button):hover { background: var(--color-accent-muted); }
+/* Restore official cascade layers only for components, not their page layouts. */
+.matcha-site .astryx-button,
+.matcha-site .astryx-button:hover,
+.matcha-site .astryx-button:active { all: revert-layer; box-sizing: border-box; }
+.matcha-site .astryx-card { background: revert-layer; border: revert-layer; border-radius: revert-layer; padding: revert-layer; box-shadow: revert-layer; color: revert-layer; }
+.matcha-site .matcha-button-content { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-width: 0; max-width: 100%; }
+.matcha-site .matcha-button-content svg { flex: 0 0 auto; }
+.matcha-site :is(.text-link,.culture-page a,.city-back,.source-line a,.booking-source a,.culture-actions a) { color: var(--color-text-accent); }
+.matcha-site .culture-page a.primary-button { color: var(--color-on-accent); }
+.matcha-site :is(.place-card>p,.place-meta,.place-bottom>span,.module-disclaimer,.privacy-note,.source-line small,.booking-caution,.booking-source small,.travel-source small,.chinese-name,.transit,.hours-note,.guide-heading small,.guide-body li,.guide-note,.detail-body>p,.detail-facts,.highlight-location,.highlight-kicker,.city-data-note,.hz-evidence dd) { color: var(--muted); }
+.matcha-site :is(.eyebrow,.workspace .eyebrow,.module-mark,.place-title h3 span,.hz-place-title h3 small,.guide-heading>svg,.checked-icon,.booking-requirement,.booking-facts dd,.check-label,.sos-step-content h3,.sos-step-content p) { color: var(--ink); }
+.matcha-site .eyebrow { font: 500 12px/1.7 var(--sans); letter-spacing: 1.4px; }
+.matcha-site :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea) {
+  color: var(--ink); background: var(--color-background-surface); border-color: var(--line);
+  border-radius: var(--radius-element); font-size: 16px; min-height: 44px;
+  max-width: 100%; accent-color: var(--color-accent);
+}
+.matcha-site input:is([type="checkbox"],[type="radio"]) { accent-color: var(--color-accent); }
+.matcha-site :is(button,a,input,select,textarea,summary):focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+.matcha-site :is(.icon-button,.save-button,.highlight-save,.filter-tabs button,.day-tabs button,.interest-options button,.saved-view-tabs button) { min-height: 44px; }
+.matcha-site :is(.icon-button,.save-button) { min-width: 44px; }
+.matcha-site :is(.filter-tabs .selected,.day-tabs button.selected,.interest-options button.selected,.pace-options button.selected,.choice-row button.selected,.micro-choices input:checked+span,.saved-view-tabs button[aria-pressed="true"],.highlight-save[aria-pressed="true"]) {
+  background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); box-shadow: none;
+}
+.matcha-site :is(.pace-options button,.filter-tabs button,.day-tabs button,.interest-options button,.micro-choices span,.saved-view-tabs button,.highlight-save) { border-radius: var(--radius-full); }
+.matcha-site :is(.place-image,.city-directory-photo,.hz-place-photo,.guiyang-image,.sanya-photo-grid a,.highlight-photo img,.highlight-type-art,.essay-image,.story-invitation figure>img,.chapter-image) { border-radius: var(--radius-container); }
+.matcha-site :is(.welcome,.hangzhou-hero,.sanya-cover,.guiyang-cover,.city-editorial-intro>img) { border-radius: var(--radius-page); }
+.matcha-site :is(.place-card,.city-directory-card,.guiyang-card,.hz-place) { min-width: 0; overflow: hidden; }
+.matcha-site .city-directory-grid>.city-directory-card { padding-top: revert-layer; }
+.matcha-site :is(.city-directory-grid>article,.guiyang-card:not(.astryx-card),.hz-place:not(.astryx-card)) { background: var(--color-background-surface); border: 1px solid var(--line); border-radius: var(--radius-page); padding: 24px; }
+.matcha-site .city-directory-grid>article:nth-child(2) { padding-top: 24px; }
+.matcha-site .city-directory-photo { margin-bottom: 24px; }
+.matcha-site :is(.highlight-card,.city-static-place,.nearby-section,.booking-task,.guide,.transport-options article,.connection-check,.sos-step-panel,.phrase-card,.connection-recovery,.verification-card,.journey-discovery-card) {
+  background: var(--color-background-surface); border: 1px solid var(--line); border-radius: var(--radius-page); box-shadow: none;
+}
+.matcha-site :is(.highlight-card,.city-static-place,.nearby-section,.booking-task,.guide,.transport-options article,.phrase-card) { padding: clamp(20px,2.5vw,30px); }
+.matcha-site :is(.ready-banner,.micro-discover,.traveler-panel,.policy-notice,.booking-overview,.next-stop-panel,.day-finished,.hotel-form,.offline-tools,.connectivity-intro,.sos-chinese-panel,.speak-personalization,.speak-card,.arrival-form,.arrival-action-card,.directory-filters,.discovery-empty,.experience-phrase,.highlight-phrase,.city-practical,.experience-facts,.journey-plan-b,.experience-session) {
+  background: var(--color-background-muted); color: var(--ink); border-color: var(--line); border-radius: var(--radius-container); box-shadow: none;
+}
+.matcha-site :is(.next-stop-panel h2,.booking-overview h2,.sos-step-panel h3,.offline-tools h2,.traveler-panel h2,.detail-body h2,.trip-form h2,.travel-tools-panel h2,.speak-personalization h2) { font-size: clamp(24px,2.6vw,34px); line-height: 1.65; }
+.matcha-site :is(.sparkle-box,.arrival-entry-icon,.ready-seal,.guide-icon,.task-index,.sos-option-icon,.execution-stop-icon) { background: var(--color-accent-muted); color: var(--color-accent); }
+.matcha-site :is(.tool-choice,.tool-choice:hover,.nav-item.active,.execution-stop.done .execution-stop-icon) { background: var(--color-accent-muted); color: var(--ink); border-radius: var(--radius-element); }
+.matcha-site :is(.lake-adventure,.toast) { background: var(--color-accent); color: var(--color-on-accent); border-radius: var(--radius-container); }
+.matcha-site .lake-adventure :is(h2,h3,p,.eyebrow,.text-link) { color: var(--color-on-accent); }
+.matcha-site :is(.modal,.hz-detail-dialog,.hz-chinese-dialog,.photo-dialog.modal,.travel-tools-modal.modal) { background: var(--color-background-surface); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius-page); }
+.matcha-site .modal::backdrop { background: var(--color-overlay); }
+.matcha-site .modal-close { background: var(--paper); color: var(--ink); }
+.matcha-site :is(.detail-address,.hz-evidence,.planner-mode,.guide-note,.chinese-card,.speak-display) { background: var(--color-background-muted); color: var(--ink); border-radius: var(--radius-element); }
+.matcha-site :is(.speak-display h2,.chinese-card h2,.hz-chinese-card h2) { color: var(--ink); font-size: clamp(30px,5vw,56px); }
+.matcha-site :is(.status-tag,.highlight-type,.evidence-state,.booking-state,.stop-state,.place-badge) { font: 500 12px/1.5 var(--sans); padding: 5px 10px; border-radius: var(--radius-full); background: var(--color-background-muted); color: var(--ink); }
+.matcha-site :is(.warning,.allergy-warning,.culture-warning,.booking-state:not(.confirmed)) { background: var(--color-warning-muted); color: var(--color-text-warning)!important; }
+.matcha-site :is(.form-error,[role="alert"]) { color: var(--color-text-error); }
+.matcha-site :is(.evidence-state[data-status="expired"],.evidence-state[data-status="conflicting"]) { background: var(--color-error-muted); color: var(--color-text-error); }
+.matcha-site :is(.booking-state.confirmed,.stop-state.done,.evidence-state[data-status="verified"]) { background: var(--color-success-muted); color: var(--color-text-success); }
+.matcha-site .sanya-page { --sanya-sea: var(--color-text-accent); --sanya-sand: var(--color-background-muted); }
+.matcha-site .trip-theme-content { padding: 32px 0; }
+.matcha-site .stop-time input { font-size: 13px; padding-inline: 0; }
+@media(max-width:760px) {
+  .matcha-site :is(.header-wordmark,.culture-page .site-header .header-wordmark,.culture-wordmark) { font-size: 19px; letter-spacing: -1px; white-space: nowrap; }
+  .matcha-site .site-header { gap: 8px; padding-inline: 16px; }
+  .matcha-site .mobile-city-select select { font-size: 14px; min-height: 44px; }
+  .matcha-site :is(.welcome h1,.culture-heading h1,.culture-article h1,.highlight-detail h1,.page-intro h1,.city-directory .page-intro h1,.city-editorial-intro h1,.hangzhou-hero-copy h1) { font-size: clamp(29px,7.6vw,36px); line-height: 1.65; }
+  .matcha-site :is(.section-heading h2,.story-invitation h2,.city-content-zone .section-heading h2,.city-directory-grid h2) { font-size: 27px; line-height: 1.65; }
+  .matcha-site :is(.modal,.travel-tools-modal.modal) { border-radius: var(--radius-container); }
+  .matcha-site .trip-theme-content { padding: 24px 0; }
+  .matcha-site .astryx-button { max-width: 100%; }
+  .matcha-site .matcha-button-content { gap: 6px; }
+  .matcha-site .city-directory-card { padding: 20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .matcha-site *, .matcha-site *::before, .matcha-site *::after { animation-duration: .01ms!important; transition-duration: .01ms!important; scroll-behavior: auto!important; }
+}
