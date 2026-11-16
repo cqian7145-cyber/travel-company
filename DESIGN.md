@@ -1,5 +1,9 @@
 # China, Closer · visual contract
 
+Page-specific exception (2026-11-16): My Trip is an official Astryx Matcha pilot.
+See `docs/ASTRYX-MATCHA-PILOT.md` for its scope, fonts and integration. The rest of
+the product retains the editorial direction below.
+
 Current direction: **Story-led × Cultural × Minimal**, with cinematic destination photography and practical travel interfaces. This supersedes the earlier vivid blue/green treatment while retaining readable navigation and body sizes. The user's four attached reference boards guide composition, not copied branding or illustrative travel facts.
 
 ## Brand and type

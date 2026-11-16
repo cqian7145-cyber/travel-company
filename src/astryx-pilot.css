@@ -1,0 +1,72 @@
+/* Official compiled component styles; no StyleX source compilation required. */
+@import '@astryxdesign/core/astryx.css';
+
+/* The existing reset is retained. Normalization and visual changes stay in My Trip. */
+:root:not([data-astryx-theme]) { color-scheme: light; }
+.astryx-pilot {
+  --font-family-body: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --font-family-heading: 'Playwrite US Trad', 'Songti SC', 'SimSun', Georgia, serif;
+  padding: clamp(20px, 4vw, 52px);
+  background: var(--color-background-body);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* Unlayered legacy button rules otherwise override Astryx's official CSS layers. */
+.astryx-pilot .astryx-button,
+.astryx-pilot .astryx-button:hover,
+.astryx-pilot .astryx-button:active,
+.astryx-pilot .astryx-card { all: revert-layer; box-sizing: border-box; }
+.astryx-pilot .page-intro { padding-block: 40px; gap: 24px; }
+.astryx-pilot .page-intro h1 {
+  font-family: var(--font-family-heading);
+  font-size: clamp(30px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: var(--color-text-primary);
+}
+.astryx-pilot :is(p,small,.eyebrow,.text-link,.chinese-name,.transit,.hours-note) {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+}
+.astryx-pilot :is(h2,h3) { font-family: var(--font-family-heading); color: var(--color-text-primary); line-height: 1.65; }
+.astryx-pilot .itinerary-stop h3 { font-family: var(--font-family-body); }
+.astryx-pilot .page-intro h1 span { color: inherit; }
+.astryx-pilot .trip-view-tabs {
+  display: flex; flex-wrap: wrap; gap: 20px;
+  padding-bottom: 20px; border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-family-body);
+}
+.astryx-pilot .trip-view-tabs [aria-current] { color: var(--color-text-primary); font-weight: 600; }
+.astryx-pilot .empty-state { background: transparent; border: 0; border-radius: 0; padding: clamp(28px, 5vw, 70px); }
+.astryx-pilot .empty-state h2 { font-size: clamp(23px, 3vw, 36px); letter-spacing: -.03em; }
+.astryx-pilot .empty-state p { max-width: 44ch; margin-inline: auto; }
+.astryx-pilot .empty-state > svg { color: var(--color-text-primary); }
+.astryx-pilot .plan-summary,
+.astryx-pilot .budget-panel { background: var(--color-background-surface); border: 1px solid var(--color-border); border-radius: var(--radius-container); }
+.astryx-pilot .status-tag { background: var(--color-background-muted); color: var(--color-text-primary); border: 1px solid currentColor; }
+.astryx-pilot .plan-companion-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-block: 24px; }
+.astryx-pilot .matcha-stop { margin-block: 16px; }
+.astryx-pilot .itinerary-stop { background: transparent; border: 0; padding: 0; box-shadow: none; }
+.astryx-pilot .day-heading { border-color: var(--color-border); }
+.astryx-pilot .day-heading > span { background: var(--color-background-green); color: var(--color-text-green); border-radius: var(--radius-element); }
+.astryx-pilot .timeline-dot { background: var(--color-text-primary); }
+.astryx-pilot .budget-total { border-color: var(--color-border); color: var(--color-text-primary); }
+.astryx-pilot .budget-total strong { color: inherit; }
+.astryx-pilot :is(input,select) { font-family: var(--font-family-body); background: var(--color-background-surface); color: var(--color-text-primary); border: 1px solid var(--color-border); border-radius: var(--radius-element); max-width: 100%; }
+.astryx-pilot :is(button,a,input,select):focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 4px; }
+.astryx-pilot .address-copy { color: var(--color-text-primary); overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .astryx-pilot { padding: 24px 16px; }
+  .astryx-pilot .page-intro { flex-direction: column; align-items: flex-start; padding-block: 28px; }
+  .astryx-pilot .plan-companion-actions { flex-wrap: wrap; }
+  .astryx-pilot .planner-layout { grid-template-columns: minmax(0,1fr); }
+  .astryx-pilot .itinerary-stop { grid-template-columns: 48px minmax(0,1fr); gap: 12px; }
+  .astryx-pilot .budget-panel { position: static; }
+  .astryx-pilot .trip-view-tabs :is(a,button,span) { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .astryx-pilot *, .astryx-pilot *::before, .astryx-pilot *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

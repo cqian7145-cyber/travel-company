@@ -19,6 +19,10 @@
     "stories:check": "node scripts/validate-stories.mjs && node scripts/validate-highlights.mjs"
   },
   "dependencies": {
+    "@astryxdesign/cli": "0.7.16",
+    "@astryxdesign/core": "0.7.16",
+    "@astryxdesign/theme-matcha": "0.7.16",
+    "@stylexjs/stylex": "^0.19.2",
     "@vitejs/plugin-react": "latest",
     "lucide-react": "latest",
     "react": "latest",
