@@ -1,0 +1,136 @@
+{
+  "version": "2026-11-17.shenzhen1",
+  "city": "Shenzhen",
+  "zh": "深圳",
+  "cover": {
+    "image": "bay-sunset",
+    "label": "Shenzhen · 深圳",
+    "alt": "Shenzhen waterfront skyline at sunset, supplied city photograph"
+  },
+  "places": [
+    {
+      "id": "sz-boardwalk",
+      "name": "Seafront Boardwalk",
+      "zh": "海滨栈道",
+      "description": "A boardwalk beside blue water, shown in a supplied collage. The exact section is not identified.",
+      "mapLabel": null,
+      "photos": [
+        {
+          "image": "seafront-boardwalk",
+          "caption": "Seafront Boardwalk · 海滨栈道",
+          "alt": "Seafront Boardwalk, supplied Shenzhen photograph (collage)"
+        }
+      ]
+    },
+    {
+      "id": "sz-coastal-walk",
+      "name": "Coastal headland walk",
+      "zh": "海岸步道",
+      "description": "A path along a green, rocky headland. This is a descriptive label; the exact location is not confirmed.",
+      "mapLabel": null,
+      "photos": [
+        {
+          "image": "coastal-walk",
+          "caption": "Coastal headland walk · 海岸步道",
+          "alt": "Coastal headland walk, supplied Shenzhen photograph"
+        }
+      ]
+    },
+    {
+      "id": "sz-bay",
+      "name": "Shenzhen Bay views",
+      "zh": "深圳湾风景",
+      "description": "A waterfront skyline at sunset, followed by a collage labeled Shenzhen Bay Park. These views are grouped by area; the sunset photo’s exact viewpoint is unconfirmed.",
+      "mapLabel": "深圳湾公园",
+      "photos": [
+        {
+          "image": "bay-sunset",
+          "caption": "Shenzhen Bay views · 深圳湾风景",
+          "alt": "Shenzhen Bay views, supplied Shenzhen photograph"
+        },
+        {
+          "image": "shenzhen-bay-park",
+          "caption": "Shenzhen Bay Park · 深圳湾公园",
+          "alt": "Collage labeled Shenzhen Bay Park showing waterfront, birds, palms and skyline"
+        }
+      ]
+    },
+    {
+      "id": "sz-qianhai",
+      "name": "Qianhai Stone Park",
+      "zh": "前海石公园",
+      "description": "Waterfront paths, palms and views across the bay in a collage labeled Qianhai Stone Park.",
+      "mapLabel": "前海石公园",
+      "photos": [
+        {
+          "image": "qianhai-stone-park",
+          "caption": "Qianhai Stone Park · 前海石公园",
+          "alt": "Qianhai Stone Park, supplied Shenzhen photograph (collage)"
+        }
+      ]
+    },
+    {
+      "id": "sz-sea-world",
+      "name": "Sea World",
+      "zh": "海上世界",
+      "description": "The Minghua ship and waterfront scenes in a collage labeled Sea World. Individual viewpoints may be in the surrounding area.",
+      "mapLabel": "海上世界",
+      "photos": [
+        {
+          "image": "sea-world",
+          "caption": "Sea World · 海上世界",
+          "alt": "Sea World, supplied Shenzhen photograph (collage)"
+        }
+      ]
+    },
+    {
+      "id": "sz-fairy-lake",
+      "name": "Fairy Lake Botanical Garden",
+      "zh": "仙湖植物园",
+      "description": "Lawns, wooded paths and planted walkways in the supplied botanical garden collage.",
+      "mapLabel": "仙湖植物园",
+      "photos": [
+        {
+          "image": "fairy-lake",
+          "caption": "Fairy Lake Botanical Garden · 仙湖植物园",
+          "alt": "Fairy Lake Botanical Garden, supplied Shenzhen photograph (collage)"
+        }
+      ]
+    },
+    {
+      "id": "sz-dameisha",
+      "name": "Dameisha",
+      "zh": "大梅沙",
+      "description": "Sand, rocks and clear water in a collage labeled Dameisha. A photograph does not establish swimming conditions.",
+      "mapLabel": "大梅沙",
+      "photos": [
+        {
+          "image": "dameisha",
+          "caption": "Dameisha · 大梅沙",
+          "alt": "Dameisha, supplied Shenzhen photograph (collage)"
+        }
+      ]
+    },
+    {
+      "id": "sz-waterfront-night",
+      "name": "Waterfront after dark",
+      "zh": "滨水夜景",
+      "description": "Illuminated shops and a lively waterfront at night. The exact venue is not confirmed; this is a descriptive label.",
+      "mapLabel": null,
+      "photos": [
+        {
+          "image": "waterfront-night",
+          "caption": "Waterfront after dark · 滨水夜景",
+          "alt": "Waterfront after dark, supplied Shenzhen photograph"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "locationLabelStatus": "user-supplied-city-and-visible-collage-labels",
+    "operationalFactsStatus": "unknown",
+    "rightsStatus": "unverified-user-supplied",
+    "reviewedAt": "2026-11-17",
+    "note": "Photos 3–11 were assigned to Shenzhen by the contributor. Exact viewpoints, current access, opening hours, admission and image-use rights are not independently verified. Unlabeled views retain descriptive captions."
+  }
+}

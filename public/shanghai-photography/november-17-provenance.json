@@ -1,0 +1,46 @@
+[
+  {
+    "id": "fuxing-park",
+    "uploadIndex": 1,
+    "suppliedFilename": "AI_1794893631997.png",
+    "originalSha256": "a1e0b34257975944051b81f9163f55c43e588b6d7bc604eea5fd1452184241aa",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shanghai-photography/fuxing-park-640.webp",
+        "width": 640,
+        "height": 838,
+        "bytes": 183046
+      },
+      {
+        "src": "/shanghai-photography/fuxing-park-1600.webp",
+        "width": 1071,
+        "height": 1402,
+        "bytes": 421742
+      }
+    ]
+  },
+  {
+    "id": "breakfast",
+    "uploadIndex": 2,
+    "suppliedFilename": "AI_1794893676623.png",
+    "originalSha256": "0478e9f69439d850fa7de43a28e5c4c348950cf7b2c3e209a6ec8ad6f24c31a9",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shanghai-photography/breakfast-640.webp",
+        "width": 640,
+        "height": 424,
+        "bytes": 36124
+      },
+      {
+        "src": "/shanghai-photography/breakfast-1600.webp",
+        "width": 1073,
+        "height": 711,
+        "bytes": 68458
+      }
+    ]
+  }
+]

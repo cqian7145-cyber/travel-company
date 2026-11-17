@@ -12,8 +12,8 @@ const date='2026-11-08';
 test('dataset fingerprint detects unversioned evidence changes without altering verification dates',()=>{
  assert.equal(dataHash(venues,evidenceSources),dataVersion.content_hash);const changed=structuredClone(venues);changed[0].facts.address.value+=' Updated';assert.notEqual(dataHash(changed,evidenceSources),dataVersion.content_hash);
 });
-test('VDC preserves all nine stable IDs and legacy flat catalog values',()=>{
- assert.equal(places.length,9);for(const old of legacyPlaces){const current=places.find(p=>p.id===old.id);for(const [key,value]of Object.entries(old))if(key!=='hoursVerified')assert.deepEqual(current[key],value,`${old.id}.${key}`);}
+test('VDC preserves nine stable IDs and legacy values except the supplied Fuxing photograph',()=>{
+ assert.equal(places.length,9);for(const old of legacyPlaces){const current=places.find(p=>p.id===old.id);for(const [key,value]of Object.entries(old))if(key!=='hoursVerified')assert.deepEqual(current[key],old.id==='fuxing'&&key==='image'?'/shanghai-photography/fuxing-park-640.webp':value,`${old.id}.${key}`);}
 });
 test('unchanged venue, railway and hotel confirmation keys survive migration',()=>{
  const tasks=bookingTasks(legacyBookings.plan,true,new Date(date));

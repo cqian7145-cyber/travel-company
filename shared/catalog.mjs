@@ -11,7 +11,7 @@ const tourism='https://www.meet-in-shanghai.net/en/';
 // Compatibility view: stable IDs and the legacy places interface are retained.
 export const places=venues.map(venue=>{
  const f=venue.facts,source=evidenceSources[f.opening_hours.source_id];
- return {id:venue.id,name:f.name.value,zh:f.chinese_name.value,address:f.address.value,category:venue.category,tags:venue.tags,area:venue.area,description:venue.description,tip:venue.tip,hours:f.opening_hours.value,hoursVerified:factStatus(f.opening_hours)==='verified',cost:f.admission.value,duration:venue.duration,image:venue.image,source:source.url,booking:f.booking_link.value.url,bookingLabel:f.booking_link.value.label,lat:f.coordinates.value.lat,lng:f.coordinates.value.lng,transit:f.transport.value,cluster:venue.cluster,...(f.usual_closed_day.value===null?{}:{closedDay:f.usual_closed_day.value}),facts:f};
+ return {id:venue.id,name:f.name.value,zh:f.chinese_name.value,address:f.address.value,category:venue.category,tags:venue.tags,area:venue.area,description:venue.description,tip:venue.tip,hours:f.opening_hours.value,hoursVerified:factStatus(f.opening_hours)==='verified',cost:f.admission.value,duration:venue.duration,image:venue.id==='fuxing'?'/shanghai-photography/fuxing-park-640.webp':venue.image,source:source.url,booking:f.booking_link.value.url,bookingLabel:f.booking_link.value.label,lat:f.coordinates.value.lat,lng:f.coordinates.value.lng,transit:f.transport.value,cluster:venue.cluster,...(f.usual_closed_day.value===null?{}:{closedDay:f.usual_closed_day.value}),facts:f};
 });
 export const interests=['Culture','Food','Architecture','Photography','Nature','Art'];
 export const categories=['All places','Iconic sights','Culture & history','Food & drink','Local life'];

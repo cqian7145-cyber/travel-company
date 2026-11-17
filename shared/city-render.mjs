@@ -4,14 +4,16 @@ import {renderCityCulture} from './highlight-render.mjs';
 import {places} from './catalog.mjs';
 import {hangzhou} from './hangzhou.mjs';
 import {guiyang,guiyangMap} from './guiyang.mjs';
+import {renderShenzhenPage} from './shenzhen-render.mjs';
 import {renderSanyaPage} from './sanya-render.mjs';
 const e=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
-export function cityMeta(route){const c=route.city;return {title:c?`${c.name} · Places & culture highlights | China, Closer`:'Explore our cities | China, Closer',description:c?c.tagline+' '+c.travelScope:'Explore Shanghai, Hangzhou, Guiyang and Sanya through places, culture highlights and practical travel tools.'};}
+export function cityMeta(route){const c=route.city;return {title:c?`${c.name} · Places & culture highlights | China, Closer`:'Explore our cities | China, Closer',description:c?c.tagline+' '+c.travelScope:'Explore Shanghai, Hangzhou, Guiyang, Sanya and Shenzhen through places, culture highlights and practical travel tools.'};}
 export function renderCityBody(route){
  let body='';
  if(route.kind==='cities')body=`<section class="city-directory"><header class="page-intro"><p class="eyebrow">CITIES / CHINA, CLOSER</p><h1>Explore our cities.</h1><p>Every city has its own rhythm. Find yours.</p></header><div class="city-directory-grid">${cities.map(c=>`<article><a href="/cities/${c.id}"><div class="city-directory-photo"><img src="${e(c.image)}" alt="${e(c.imageAlt)}" width="640" height="850"></div><h2>${e(c.name)} · ${e(c.zh)}</h2><p>${e(c.tagline)}</p><span>Explore ${e(c.name)} →</span></a><p>${e(c.travelScope)}</p></article>`).join('')}</div></section>`;
  else{
   const c=cityById(route.city?.id);if(!c)throw Error('Unknown city');
+  if(c.id==='shenzhen')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="shenzhen-page">${renderShenzhenPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
   if(c.id==='sanya')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="sanya-page">${renderSanyaPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
   const records=c.id==='shanghai'?places:c.id==='hangzhou'?hangzhou.places:guiyang.places;
   if(c.id==='guiyang'){

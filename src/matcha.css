@@ -102,10 +102,10 @@
 .matcha-site :is(.welcome h1,.culture-heading h1,.culture-intro h1,.culture-article h1,.highlight-detail h1,.page-intro h1,.city-directory .page-intro h1,.city-editorial-intro h1,.hangzhou-hero-copy h1,.experience-decision h1) {
   font: 400 clamp(34px,4.2vw,60px)/1.6 var(--serif); letter-spacing: normal;
 }
-.matcha-site :is(.section-heading h2,.story-invitation h2,.city-content-zone .section-heading h2,.city-directory-grid h2,.hangzhou-intro h2,.hangzhou-places h2,.hangzhou-gallery h2,.sanya-plan h2,.guiyang-plan h2,.culture-article h2,.highlight-detail h2,.home-travel-help h2) {
+.matcha-site :is(.section-heading h2,.story-invitation h2,.city-content-zone .section-heading h2,.city-directory-grid h2,.hangzhou-intro h2,.hangzhou-places h2,.hangzhou-gallery h2,.sanya-plan h2,.shenzhen-plan h2,.guiyang-plan h2,.culture-article h2,.highlight-detail h2,.home-travel-help h2) {
   font: 400 clamp(25px,2.8vw,38px)/1.65 var(--serif); letter-spacing: normal;
 }
-.matcha-site :is(h3,h4,.place-title h3,.hz-place-title h3,.highlight-card h3,.guiyang-card h3,.sanya-place h3,.stop-content h3 button) { font-family: var(--sans); line-height: 1.45; letter-spacing: -.02em; color: var(--ink); }
+.matcha-site :is(h3,h4,.place-title h3,.hz-place-title h3,.highlight-card h3,.guiyang-card h3,.sanya-place h3,.shenzhen-place h3,.stop-content h3 button) { font-family: var(--sans); line-height: 1.45; letter-spacing: -.02em; color: var(--ink); }
 .matcha-site :is(.welcome-deck,.city-tagline,.hangzhou-hero-copy .city-tagline) { font-family: var(--sans)!important; font-size: clamp(19px,2vw,25px)!important; line-height: 1.6!important; color: var(--muted)!important; }
 .matcha-site :is([lang^="zh"],.chinese-name,.chinese-address,.speak-display-address,.hz-chinese-card strong,.chinese-card h2,.hz-chinese-card h2,.speak-display h2) {
   font-family: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; letter-spacing: normal; line-height: 1.65;
@@ -153,8 +153,8 @@
   background: var(--color-accent); color: var(--color-on-accent); border-color: var(--color-accent); box-shadow: none;
 }
 .matcha-site :is(.pace-options button,.filter-tabs button,.day-tabs button,.interest-options button,.micro-choices span,.saved-view-tabs button,.highlight-save) { border-radius: var(--radius-full); }
-.matcha-site :is(.place-image,.city-directory-photo,.hz-place-photo,.guiyang-image,.sanya-photo-grid a,.highlight-photo img,.highlight-type-art,.essay-image,.story-invitation figure>img,.chapter-image) { border-radius: var(--radius-container); }
-.matcha-site :is(.welcome,.hangzhou-hero,.sanya-cover,.guiyang-cover,.city-editorial-intro>img) { border-radius: var(--radius-page); }
+.matcha-site :is(.place-image,.city-directory-photo,.hz-place-photo,.guiyang-image,.sanya-photo-grid a,.shenzhen-photo-grid a,.highlight-photo img,.highlight-type-art,.essay-image,.story-invitation figure>img,.chapter-image) { border-radius: var(--radius-container); }
+.matcha-site :is(.welcome,.hangzhou-hero,.sanya-cover,.shenzhen-cover,.guiyang-cover,.city-editorial-intro>img) { border-radius: var(--radius-page); }
 .matcha-site :is(.place-card,.city-directory-card,.guiyang-card,.hz-place) { min-width: 0; overflow: hidden; }
 .matcha-site .city-directory-grid>.city-directory-card { padding-top: revert-layer; }
 .matcha-site :is(.city-directory-grid>article,.guiyang-card:not(.astryx-card),.hz-place:not(.astryx-card)) { background: var(--color-background-surface); border: 1px solid var(--line); border-radius: var(--radius-page); padding: 24px; }
@@ -200,3 +200,5 @@
 @media(prefers-reduced-motion:reduce) {
   .matcha-site *, .matcha-site *::before, .matcha-site *::after { animation-duration: .01ms!important; transition-duration: .01ms!important; scroll-behavior: auto!important; }
 }
+
+.matcha-site .shenzhen-page { --shenzhen-sea: var(--color-text-accent); --shenzhen-sand: var(--color-background-muted); }

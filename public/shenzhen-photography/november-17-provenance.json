@@ -1,0 +1,200 @@
+[
+  {
+    "id": "seafront-boardwalk",
+    "uploadIndex": 3,
+    "suppliedFilename": "codex-clipboard-0c178161-9b31-4cd9-a3b4-7508a52fc736.png",
+    "originalSha256": "ca65d3d3c8f7fa0c9f0c73e3857e5218bf0797818fa1607fb8541ad9898cea6f",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/seafront-boardwalk-640.webp",
+        "width": 640,
+        "height": 862,
+        "bytes": 85390
+      },
+      {
+        "src": "/shenzhen-photography/seafront-boardwalk-1600.webp",
+        "width": 1069,
+        "height": 1440,
+        "bytes": 194758
+      }
+    ]
+  },
+  {
+    "id": "coastal-walk",
+    "uploadIndex": 4,
+    "suppliedFilename": "codex-clipboard-421cb05b-ab0b-43d1-bbd3-4738b7b7bf82.png",
+    "originalSha256": "57911ac05e29294f163db390b30f6e3cda112a5bf37a61233aa3885afb17a08a",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/coastal-walk-640.webp",
+        "width": 640,
+        "height": 784,
+        "bytes": 86622
+      },
+      {
+        "src": "/shenzhen-photography/coastal-walk-1600.webp",
+        "width": 1079,
+        "height": 1321,
+        "bytes": 247142
+      }
+    ]
+  },
+  {
+    "id": "bay-sunset",
+    "uploadIndex": 5,
+    "suppliedFilename": "codex-clipboard-5abeb8c4-04ed-4956-b233-c677810c83b4.png",
+    "originalSha256": "e56dca8a39f4b1a27fbe858d74450f2d86d8ce3535f22a411b12f3037d8c2483",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/bay-sunset-640.webp",
+        "width": 640,
+        "height": 839,
+        "bytes": 56664
+      },
+      {
+        "src": "/shenzhen-photography/bay-sunset-1600.webp",
+        "width": 1077,
+        "height": 1412,
+        "bytes": 129228
+      }
+    ]
+  },
+  {
+    "id": "qianhai-stone-park",
+    "uploadIndex": 6,
+    "suppliedFilename": "codex-clipboard-60c7f586-e62d-4da2-8431-69743d10a9fa.png",
+    "originalSha256": "b32b4f0e9616128892fd1fb120075f0d05ba6c6d29b475edb70f5c538de7c2c7",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/qianhai-stone-park-640.webp",
+        "width": 640,
+        "height": 870,
+        "bytes": 96676
+      },
+      {
+        "src": "/shenzhen-photography/qianhai-stone-park-1600.webp",
+        "width": 1070,
+        "height": 1454,
+        "bytes": 216002
+      }
+    ]
+  },
+  {
+    "id": "sea-world",
+    "uploadIndex": 7,
+    "suppliedFilename": "codex-clipboard-a75285a4-d5c9-46a1-93d3-9d32371bfc38.png",
+    "originalSha256": "6d1cab49c51474c5d08b5d7961b5e074a2f715b9729a09825af71feb1a5263fb",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/sea-world-640.webp",
+        "width": 640,
+        "height": 863,
+        "bytes": 83288
+      },
+      {
+        "src": "/shenzhen-photography/sea-world-1600.webp",
+        "width": 1070,
+        "height": 1442,
+        "bytes": 185618
+      }
+    ]
+  },
+  {
+    "id": "fairy-lake",
+    "uploadIndex": 8,
+    "suppliedFilename": "codex-clipboard-9d31d9d0-05f9-4a0e-8c2b-79ecc0939358.png",
+    "originalSha256": "dcc3710d24fe378149f4db1f691175c0d5eb48752cd94f8741c44124d49b584e",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/fairy-lake-640.webp",
+        "width": 640,
+        "height": 861,
+        "bytes": 174900
+      },
+      {
+        "src": "/shenzhen-photography/fairy-lake-1600.webp",
+        "width": 1069,
+        "height": 1438,
+        "bytes": 422826
+      }
+    ]
+  },
+  {
+    "id": "dameisha",
+    "uploadIndex": 9,
+    "suppliedFilename": "codex-clipboard-c092451f-6ff9-419d-9cf7-18b9a1f2e5ad.png",
+    "originalSha256": "e0c73011ccebbc3aa638a4530f2843c5d5c71328d83459e9a1b17ac1a6cf9a93",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/dameisha-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 108308
+      },
+      {
+        "src": "/shenzhen-photography/dameisha-1600.webp",
+        "width": 1080,
+        "height": 1440,
+        "bytes": 246640
+      }
+    ]
+  },
+  {
+    "id": "waterfront-night",
+    "uploadIndex": 10,
+    "suppliedFilename": "codex-clipboard-72c218d9-f412-49dc-b04e-ee9e310f5b79.png",
+    "originalSha256": "d66d2ffe9c7c36fdee7ff8a8f946237491357f5c53a3c9e6dd6469317201caac",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/waterfront-night-640.webp",
+        "width": 640,
+        "height": 845,
+        "bytes": 143318
+      },
+      {
+        "src": "/shenzhen-photography/waterfront-night-1600.webp",
+        "width": 1075,
+        "height": 1419,
+        "bytes": 368186
+      }
+    ]
+  },
+  {
+    "id": "shenzhen-bay-park",
+    "uploadIndex": 11,
+    "suppliedFilename": "codex-clipboard-f8c7b926-63a0-4d90-806b-6cccfb928292.png",
+    "originalSha256": "6175910749f048d68be972e6ae5be044fb31ffb5867b2889d7ebf920a010f7e7",
+    "rightsStatus": "unverified-user-supplied",
+    "cityLabelStatus": "user-supplied",
+    "renditions": [
+      {
+        "src": "/shenzhen-photography/shenzhen-bay-park-640.webp",
+        "width": 640,
+        "height": 866,
+        "bytes": 109220
+      },
+      {
+        "src": "/shenzhen-photography/shenzhen-bay-park-1600.webp",
+        "width": 1080,
+        "height": 1461,
+        "bytes": 242192
+      }
+    ]
+  }
+]

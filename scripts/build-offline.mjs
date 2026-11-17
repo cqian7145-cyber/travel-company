@@ -5,6 +5,7 @@ import {dataVersion,nextDataReview} from '../shared/verification.mjs';
 import {cultureVersion} from '../shared/story-catalog.mjs';
 import {hangzhou} from '../shared/hangzhou.mjs';
 import {guiyang} from '../shared/guiyang.mjs';
+import {shenzhen} from '../shared/shenzhen.mjs';
 import {sanya} from '../shared/sanya.mjs';
 const root=resolve('dist');
 async function list(dir){const entries=await readdir(dir,{withFileTypes:true});return (await Promise.all(entries.map(e=>e.isDirectory()?list(resolve(dir,e.name)):resolve(dir,e.name)))).flat();}
@@ -26,5 +27,5 @@ self.addEventListener('fetch',event=>{const request=event.request,url=new URL(re
  if(FILES.includes(url.pathname))event.respondWith((async()=>{const cache=await caches.open(CACHE);return (await cache.match(url.pathname))||fetch(request);})());
 });`;
 await writeFile(resolve(root,'sw.js'),worker);
-await writeFile(resolve(root,'offline-manifest.json'),JSON.stringify({version,files:urls,dataVersion:dataVersion.version,cultureVersion:cultureVersion.version,hangzhouVersion:hangzhou.version,guiyangVersion:guiyang.version,sanyaVersion:sanya.version,preparedAt:dataVersion.prepared_at,reviewDueAt:nextDataReview()}));
+await writeFile(resolve(root,'offline-manifest.json'),JSON.stringify({version,files:urls,dataVersion:dataVersion.version,cultureVersion:cultureVersion.version,hangzhouVersion:hangzhou.version,guiyangVersion:guiyang.version,sanyaVersion:sanya.version,shenzhenVersion:shenzhen.version,preparedAt:dataVersion.prepared_at,reviewDueAt:nextDataReview()}));
 console.log(`Offline shell ${version}: ${urls.length} local files. No API or remote assets cached.`);
