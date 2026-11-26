@@ -8,7 +8,7 @@ export const escape=htmlEscape;
 const e=escape;
 export function routeMeta(route){
  const item=route.kind==='story'?highlightById(route.item.id):route.item;
- return {title:(item?.title||(route.kind==='culture'?'Culture Highlights · A place, a little more meaning':'Page not found'))+' | China, Closer',description:item?.summary||'Discover the history, legends, literary memory and living traditions behind places in China. Short reads with sources, starting with West Lake.',canonical:route.kind==='story'?highlightPath(item):route.path};
+ return {title:(item?.title||(route.kind==='culture'?'Culture Highlights · A place, a little more meaning':'Page not found'))+' | China, Closer',description:item?.summary||'Discover the history, legends, literary memory and living traditions behind places in China. Short reads with sources from six cities.',canonical:route.kind==='story'?highlightPath(item):route.path};
 }
 export function renderPracticalGuide(x,interactive=false){
  const story=stories.find(s=>s.id===x.storyIds[0]),highlight=highlightById(story?.id);

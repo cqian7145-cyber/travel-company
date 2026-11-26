@@ -19,12 +19,13 @@ test('Sanya groups destination views and preserves the approved duplicate mappin
  assert.equal(sanya.scope.operationalFactsStatus,'unknown');assert.throws(()=>sanyaMap({id:'invented'}));
  for(const place of sanya.places){const url=new URL(sanyaMap(place));assert.equal(url.hostname,'uri.amap.com');assert.equal(url.searchParams.get('keyword'),'三亚 '+place.zh);}
 });
-test('Sanya has readable prerendered galleries, an honest empty state and complete offline assets',async()=>{
+test('Sanya has readable prerendered galleries, a linked culture highlight and complete offline assets',async()=>{
  const route=cityRoute('/cities/sanya'),html=await readFile('dist'+route.file,'utf8');
  const manifest=JSON.parse(await readFile('dist/offline-manifest.json','utf8'));
  assert.equal(manifest.sanyaVersion,sanya.version);assert.ok(manifest.files.includes(route.file));
- assert.ok(html.includes(renderSanyaPage()));assert.match(html,/<title>Sanya/);assert.match(html,/https:\/\/china-closer.cqian7145.workers.dev\/cities\/sanya/);
+ assert.ok(html.includes(renderSanyaPage()));assert.match(html,/<title>Sanya/);assert.match(html,/https:\/\/china-closer\.xizimist\.com\/cities\/sanya/);
  for(const p of sanya.places)for(const photo of p.photos)for(const large of [false,true]){const path=sanyaPhoto(photo.image,large);assert.ok(manifest.files.includes(path));assert.ok(await readFile('dist'+path));}
  assert.match(renderDiscoveryCards('stories',{cityId:'sanya'}),/Browse Sanya places/);
- assert.match(html,/Cultural highlights and Sanya itinerary planning are not available yet/);
+ assert.match(html,/id="sanya-culture"/);
+ assert.match(html,/href="\/culture\/yazhou-academy"/);
 });

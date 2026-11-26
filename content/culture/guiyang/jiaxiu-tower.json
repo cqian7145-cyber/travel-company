@@ -1,0 +1,37 @@
+{
+  "id": "jiaxiu-tower",
+  "cityId": "guiyang",
+  "slug": "jiaxiu-tower",
+  "title": "A tower built for Guiyang’s scholars",
+  "zhTitle": "甲秀楼",
+  "placeLabel": "Jiaxiu Tower · Guiyang",
+  "summary": "A three-storey tower stands on a rock in Guiyang’s Nanming River. Its name, Jiaxiu, expresses the hope that local scholars would excel in the imperial examinations. The tower was first built during the Ming dynasty and rebuilt several times. From the riverbank, you can see how the bridge, the rock and the tower make one continuous composition.",
+  "zhPlace": "甲秀楼",
+  "placeIds": [
+    "gy-jiaxiu-night"
+  ],
+  "type": "history",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Follow the bridge across the river",
+      "kind": "fact",
+      "text": "Fuyu Bridge connects the riverbank to the tower. The building you see today follows the form of the 1909 reconstruction, restored in the 1980s. Look at the pale stone columns beneath the timber eaves and the rock supporting the tower: the structure makes the river part of its architecture.",
+      "sourceIds": [
+        "guiyang_jiaxiu_tower"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "guiyang_jiaxiu_tower"
+  ],
+  "editorialReviewedAt": "2026-11-17",
+  "reviewStatus": "source_checked",
+  "visitNote": "Check current access and the visitor entrance with the site before setting out.",
+  "image": {
+    "src": "/guiyang-photography/jiaxiu-night-640.webp",
+    "alt": "Illuminated Jiaxiu Tower beside the Nanming River",
+    "caption": "Jiaxiu Tower after dark, as identified by the photo contributor."
+  },
+  "phrase": null
+}
