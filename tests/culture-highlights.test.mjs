@@ -16,7 +16,6 @@ test('West Lake has four sourced cultural distinctions, linked to existing place
  const items=highlightsForCity('hangzhou');assert.equal(items.length,4);
  assert.deepEqual(items.map(x=>x.type),['history','legend','literature','intangible_heritage']);
  assert.equal(highlightsForPlace('hz-west-lake').length,3);assert.equal(highlightsForPlace('hz-longjing').length,1);
- assert.equal(highlightsForCity('guiyang').length,0);assert.equal(highlightsForCity('sanya').length,0);
  assert.ok(items.every(x=>x.summary.split(/\s+/).length>=50&&x.summary.split(/\s+/).length<=90));
  assert.ok(items.every(x=>x.placeIds.every(id=>hangzhou.places.some(p=>p.id===id))));
  assert.ok(items.every(x=>!('openingHours' in x)&&!('verified' in x)));
@@ -32,6 +31,24 @@ test('publication validation rejects missing evidence, false place links, factua
  const records=structuredClone(cultureRecords);records.find(x=>x.type==='legend').sections[0].kind='fact';assert.ok(validateHighlights(records,cultureSources).some(e=>e.includes('legend')));
  const sources=structuredClone(cultureSources);sources.hz_icomos.url='javascript:alert(1)';assert.ok(validateHighlights(cultureRecords,sources).some(e=>e.includes('invalid cultural source')));
  const draft=structuredClone(cultureRecords[0]);draft.id='draft';draft.slug='draft';draft.status='draft';draft.sourceIds=[];assert.deepEqual(validateHighlights([draft],cultureSources),[]);
+});
+test('four new city highlights link to the correct city, map search and related places',()=>{
+ const entries=[
+  ['guiyang','jiaxiu-tower','贵阳 甲秀楼','#gy-jiaxiu-night'],
+  ['beijing','forbidden-city','北京 故宫博物院','#forbidden-city'],
+  ['shenzhen','nantou-ancient-town','深圳 南头古城',''],
+  ['sanya','yazhou-academy','三亚 崖城学宫','']
+ ];
+ for(const [city,slug,keyword,anchor] of entries){
+  const items=highlightsForCity(city);
+  assert.equal(items.length,1);
+  const [item]=items;
+  assert.equal(highlightPath(item),'/culture/'+slug);
+  assert.equal(new URL(highlightMap(item)).searchParams.get('keyword'),keyword);
+  const html=renderHighlightDetail(item);
+  assert.ok(html.includes('href="/cities/'+city+anchor+'"'));
+  assert.ok(html.includes(cultureSources[item.sourceIds[0]].url));
+ }
 });
 test('bookmark import preserves legacy notes and progress and does not reimport intentionally unsaved items',()=>{
  const legacy={saved:[stories[0].id,'unknown',stories[0].id],steps:{'lane-observation:0':true},notes:{[stories[0].id]:'Keep my private note'}};
@@ -62,7 +79,7 @@ test('Cloudflare and both Node launchers redirect retired indexes without breaki
 test('canonical culture pages, source text, phrases and images are included offline; retired indexes leave sitemap',async()=>{
  const sitemap=await readFile('dist/sitemap.xml','utf8'),manifest=JSON.parse(await readFile('dist/offline-manifest.json','utf8'));
  assert.doesNotMatch(sitemap,/<loc>[^<]+\/(voices|stories|experiences)<\/loc>/);
- for(const path of cultureRoutes()){const route=cultureRoute(path),html=await readFile('dist'+route.file,'utf8');assert.equal((html.match(/<h1[ >]/g)||[]).length,1);assert.ok(sitemap.includes('>'+new URL(path,'https://china-closer.cqian7145.workers.dev').href+'<'));assert.ok(manifest.files.includes(route.file));}
+ for(const path of cultureRoutes()){const route=cultureRoute(path),html=await readFile('dist'+route.file,'utf8');assert.equal((html.match(/<h1[ >]/g)||[]).length,1);assert.ok(sitemap.includes('>'+new URL(path,'https://china-closer.xizimist.com').href+'<'));assert.ok(manifest.files.includes(route.file));}
  for(const x of highlights){const html=await readFile('dist'+cultureRoute(highlightPath(x)).file,'utf8');assert.ok(html.includes(x.summary.replaceAll('&','&amp;')));for(const id of x.sourceIds)assert.ok(html.includes(cultureSources[id].url.replaceAll('&','&amp;')));if(x.phrase)assert.ok(html.includes(x.phrase.zh));if(x.image)assert.ok(manifest.files.includes(x.image.src));}
  const sw=await readFile('dist/sw.js','utf8');assert.match(sw,/cities\|culture\|stories/);assert.match(sw,/Response.redirect/);
 });

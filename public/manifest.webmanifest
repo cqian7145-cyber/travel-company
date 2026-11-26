@@ -1,0 +1,44 @@
+{
+  "name": "China, closer — China Travel Companion",
+  "short_name": "China, closer",
+  "description": "Offline-ready China travel survival kit, airport arrival plans, Chinese communication cards, and curated city discovery for Beijing, Shanghai, and beyond.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f0f0e0",
+  "theme_color": "#f0f0e0",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "First 90 Minutes",
+      "short_name": "Arrival",
+      "url": "/arrival",
+      "description": "Airport to hotel step-by-step arrival plan"
+    },
+    {
+      "name": "Speak Local",
+      "short_name": "Phrases",
+      "url": "/speak",
+      "description": "24 full-screen bilingual Chinese cards"
+    },
+    {
+      "name": "China SOS",
+      "short_name": "SOS",
+      "url": "/sos",
+      "description": "Offline troubleshooting for payment, SMS, and data"
+    },
+    {
+      "name": "China Connectivity",
+      "short_name": "eSIM & Wi-Fi",
+      "url": "/connectivity",
+      "description": "Mobile data, eSIM, SMS, and airport Wi-Fi recovery"
+    }
+  ]
+}

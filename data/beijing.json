@@ -1,0 +1,197 @@
+{
+  "version": "2026-11-17.beijing1",
+  "places": [
+    {
+      "id": "tiananmen",
+      "name": "Tiananmen Gate",
+      "zh": "天安门",
+      "description": "The gate glows red and gold after dark.",
+      "photos": [
+        {
+          "image": "tiananmen-night",
+          "caption": "Tiananmen Gate lit up at night",
+          "width": 640,
+          "height": 455,
+          "largeWidth": 1078
+        }
+      ]
+    },
+    {
+      "id": "great-wall",
+      "name": "Great Wall",
+      "zh": "长城",
+      "description": "A steep flight of stone steps climbs through fall foliage to a watchtower.",
+      "photos": [
+        {
+          "image": "great-wall-autumn",
+          "caption": "Great Wall watchtower above an autumn hillside",
+          "width": 361,
+          "height": 640,
+          "largeWidth": 903
+        }
+      ]
+    },
+    {
+      "id": "guomao",
+      "name": "Guomao CBD",
+      "zh": "国贸 CBD",
+      "description": "See Beijing’s business district from the ring road, beside the CCTV headquarters, and across a reflecting pool.",
+      "photos": [
+        {
+          "image": "guomao-skyline",
+          "caption": "Guomao skyline and evening traffic",
+          "width": 492,
+          "height": 640,
+          "largeWidth": 1080
+        },
+        {
+          "image": "guomao-cctv",
+          "caption": "CCTV headquarters at blue hour",
+          "width": 486,
+          "height": 640,
+          "largeWidth": 1080
+        },
+        {
+          "image": "guomao-reflection",
+          "caption": "CITIC Tower reflected in a pool",
+          "width": 483,
+          "height": 640,
+          "largeWidth": 1077
+        }
+      ]
+    },
+    {
+      "id": "temple-of-heaven",
+      "name": "Temple of Heaven Park",
+      "zh": "天坛公园",
+      "description": "Two views of the Hall of Prayer for Good Harvests, one from below and one framed by a gateway.",
+      "photos": [
+        {
+          "image": "temple-of-heaven-hall",
+          "caption": "The hall’s blue tiled roofs above the courtyard wall",
+          "width": 445,
+          "height": 640,
+          "largeWidth": 1080
+        },
+        {
+          "image": "temple-of-heaven-courtyard",
+          "caption": "The Hall of Prayer for Good Harvests framed by a gateway",
+          "width": 640,
+          "height": 423,
+          "largeWidth": 1067
+        }
+      ]
+    },
+    {
+      "id": "taoranting",
+      "name": "Taoranting Park",
+      "zh": "陶然亭公园",
+      "description": "A pavilion, willows and their reflections line the lake.",
+      "photos": [
+        {
+          "image": "taoranting-lake",
+          "caption": "Lakeside pavilion and willows at Taoranting Park",
+          "width": 640,
+          "height": 359,
+          "largeWidth": 1600
+        }
+      ]
+    },
+    {
+      "id": "summer-palace",
+      "name": "Summer Palace",
+      "zh": "颐和园",
+      "description": "Look across Kunming Lake from a shaded corridor and then from beside the lotus leaves.",
+      "photos": [
+        {
+          "image": "summer-palace-corridor",
+          "caption": "Kunming Lake framed by a corridor at sunset",
+          "width": 640,
+          "height": 425,
+          "largeWidth": 1074
+        },
+        {
+          "image": "summer-palace-lotus",
+          "caption": "Lotus leaves in front of Longevity Hill across Kunming Lake",
+          "width": 427,
+          "height": 640,
+          "largeWidth": 1067
+        }
+      ]
+    },
+    {
+      "id": "forbidden-city",
+      "name": "Forbidden City",
+      "zh": "故宫",
+      "description": "Golden palace roofs fill the first view. In the second, a corner tower is reflected in the moat.",
+      "photos": [
+        {
+          "image": "forbidden-city-rooftops",
+          "caption": "Forbidden City rooftops seen from above",
+          "width": 640,
+          "height": 363,
+          "largeWidth": 1071
+        },
+        {
+          "image": "forbidden-city-moat",
+          "caption": "A Forbidden City corner tower reflected in the moat",
+          "width": 640,
+          "height": 422,
+          "largeWidth": 1076
+        }
+      ]
+    },
+    {
+      "id": "shichahai",
+      "name": "Shichahai",
+      "zh": "什刹海",
+      "description": "The lakeshore at sunset and under a clear blue sky.",
+      "photos": [
+        {
+          "image": "shichahai-sunset",
+          "caption": "Shichahai lakeshore at sunset",
+          "width": 485,
+          "height": 640,
+          "largeWidth": 1079
+        },
+        {
+          "image": "shichahai-day",
+          "caption": "Shichahai in daylight with ducks on the water",
+          "width": 488,
+          "height": 640,
+          "largeWidth": 1077
+        }
+      ]
+    },
+    {
+      "id": "sanlitun",
+      "name": "Taikoo Li Sanlitun",
+      "zh": "三里屯太古里",
+      "description": "After the rain, shop lights reflect across the open-air plaza.",
+      "photos": [
+        {
+          "image": "sanlitun-taikoo-li",
+          "caption": "Taikoo Li Sanlitun storefronts reflected on a rain-soaked plaza",
+          "width": 482,
+          "height": 640,
+          "largeWidth": 1075
+        }
+      ]
+    },
+    {
+      "id": "national-museum",
+      "name": "National Museum of China",
+      "zh": "中国国家博物馆",
+      "description": "The broad façade looks out toward Tiananmen Square.",
+      "photos": [
+        {
+          "image": "national-museum-facade",
+          "caption": "National Museum of China façade with flower beds in front",
+          "width": 640,
+          "height": 482,
+          "largeWidth": 1071
+        }
+      ]
+    }
+  ]
+}

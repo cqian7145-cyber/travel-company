@@ -15,6 +15,7 @@ import './discovery-journey.css';
 import './guiyang.css';
 import './sanya.css';
 import './shenzhen.css';
+import './beijing.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><MatchaTheme><App/></MatchaTheme></React.StrictMode>);
 
 import './culture-highlights.css';

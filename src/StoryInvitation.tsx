@@ -1,4 +1,4 @@
 import {highlightById} from '../shared/culture-highlights.mjs';
 import CultureHighlights from './CultureHighlights';
-const featuredHighlights=['hz-su-causeway','shanghai-shikumen-001','hz-longjing-craft','shanghai-breakfast-001'].map(highlightById).filter(item=>item!==undefined);
+const featuredHighlights=['hz-su-causeway','shanghai-shikumen-001','forbidden-city','jiaxiu-tower','nantou-ancient-town','yazhou-academy'].map(highlightById).filter(item=>item!==undefined);
 export default function StoryInvitation(){return <section className="home-culture" aria-labelledby="home-culture-heading"><div className="section-heading"><div><p className="eyebrow">CHINA / CULTURE WORTH KNOWING</p><h2 id="home-culture-heading">Every place has something to tell.</h2><p>Short reads on the history, craft and everyday life behind the places you discover.</p></div><a className="text-link" href="/culture">Explore culture →</a></div><CultureHighlights items={featuredHighlights}/></section>;}

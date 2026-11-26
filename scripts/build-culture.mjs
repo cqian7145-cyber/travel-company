@@ -2,7 +2,7 @@ import {readFile,writeFile,mkdir,unlink} from 'node:fs/promises';
 import {resolve,dirname} from 'node:path';
 import {cultureRoutes,cultureRoute} from '../shared/story-catalog.mjs';
 import {escape,renderCultureBody,routeMeta} from '../shared/culture-render.mjs';
-const origin=new URL(process.env.PUBLIC_SITE_URL||'https://china-closer.cqian7145.workers.dev');
+const origin=new URL(process.env.PUBLIC_SITE_URL||'https://china-closer.xizimist.com');
 if(origin.protocol!=='https:'||origin.username||origin.password)throw Error('PUBLIC_SITE_URL must be a public HTTPS origin without credentials.');
 const template=await readFile('dist/culture.html','utf8');
 for(const path of cultureRoutes()){

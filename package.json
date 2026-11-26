@@ -16,6 +16,7 @@
     "data:check": "node scripts/verify-data.mjs && node scripts/verify-hangzhou.mjs",
     "data:audit": "node scripts/verify-data.mjs --report",
     "data:version": "node scripts/stamp-data.mjs",
+    "data:freshness": "node scripts/check-links.mjs",
     "stories:check": "node scripts/validate-stories.mjs && node scripts/validate-highlights.mjs"
   },
   "dependencies": {

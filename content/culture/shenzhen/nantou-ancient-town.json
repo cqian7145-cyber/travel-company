@@ -1,0 +1,31 @@
+{
+  "id": "nantou-ancient-town",
+  "cityId": "shenzhen",
+  "slug": "nantou-ancient-town",
+  "title": "The old county inside modern Shenzhen",
+  "zhTitle": "南头古城",
+  "placeLabel": "Nantou Ancient Town · Shenzhen",
+  "summary": "Behind Nantou’s south gate is a chapter of Shenzhen history written long before the city’s modern skyline. A Ming coastal garrison was established here in 1394. In 1573 the town became the seat of Xin’an County, which once included territory now in Hong Kong. The gate gives you a way into that older geography from a street in present-day Shenzhen.",
+  "zhPlace": "南头古城",
+  "placeIds": [],
+  "type": "history",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Look for the stone above the arch",
+      "kind": "fact",
+      "text": "Shenzhen’s Nanshan district identifies the south gate as retaining its original appearance. Above the arch, a rectangular stone bears the characters 宁南 in seal script. Look up from the approach to spot the inscription and see how the narrow opening contrasts with the streets beyond.",
+      "sourceIds": [
+        "shenzhen_nantou_ancient_town"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "shenzhen_nantou_ancient_town",
+    "shenzhen_xinan_archives"
+  ],
+  "editorialReviewedAt": "2026-11-17",
+  "reviewStatus": "source_checked",
+  "visitNote": "Check current access and the visitor entrance with the site before setting out.",
+  "phrase": null
+}

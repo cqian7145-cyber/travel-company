@@ -22,7 +22,17 @@
       "/experiences",
       "/experiences/*",
       "/voices",
-      "/voices/*"
+      "/voices/*",
+      "/arrival",
+      "/arrival/*",
+      "/speak",
+      "/speak/*",
+      "/sos",
+      "/sos/*",
+      "/connectivity",
+      "/connectivity/*",
+      "/ready",
+      "/ready/*"
     ]
   },
   "vars": {
@@ -40,6 +50,6 @@
     }
   ],
   "observability": {
-    "enabled": false
+    "enabled": true
   }
 }

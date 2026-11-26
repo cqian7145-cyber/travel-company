@@ -1,4 +1,39 @@
 {
+  "guiyang_jiaxiu_tower": {
+    "title": "贵阳贵安漫游计划｜甲秀楼与文昌阁",
+    "publisher": "Yuping County Government",
+    "url": "https://www.yp.gov.cn/contents/2026/09/21/receive-8306cdd9-b5a3-4ebc-bc76-57003668d510.html",
+    "scope": "The tower’s name, Nanming River setting, Fuyu Bridge and reconstruction history.",
+    "accessedAt": "2026-11-17"
+  },
+  "beijing_forbidden_city": {
+    "title": "午门",
+    "publisher": "The Palace Museum",
+    "url": "https://www.dpm.org.cn/explore/building/236454.html",
+    "scope": "The Meridian Gate, the palace axis and the layout of the surrounding gates and courts.",
+    "accessedAt": "2026-11-17"
+  },
+  "shenzhen_nantou_ancient_town": {
+    "title": "南头古城垣",
+    "publisher": "Nanshan District Bureau of Culture, Radio, Television, Tourism and Sports",
+    "url": "https://www.szns.gov.cn/mlns/whns/wwbhdw/content/post_12573705.html",
+    "scope": "Ming fortification, south gate, seal-script inscription and the former seat of Xin’an County.",
+    "accessedAt": "2026-11-17"
+  },
+  "shenzhen_xinan_archives": {
+    "title": "深圳故事｜消失在历史长河中的“新安县”",
+    "publisher": "Shenzhen Municipal Archives",
+    "url": "https://www.szdag.gov.cn/dawh/tqssn/content/post_933640.html",
+    "scope": "The coastal garrison and establishment of Xin’an County in 1573.",
+    "accessedAt": "2026-11-17"
+  },
+  "sanya_yazhou_academy": {
+    "title": "历史建筑",
+    "publisher": "Yazhou District Government, Sanya",
+    "url": "https://yz.sanya.gov.cn/yzqsite/zjyz/202607/52e0f2b78f654d1fb6bd8bc58a915044.shtml",
+    "scope": "Location and the historical roles of Yazhou Academy as a Confucian temple and an official school.",
+    "accessedAt": "2026-11-17"
+  },
   "hz_icomos": {
     "title": "West Lake Cultural Landscape · ICOMOS evaluation, p. 142",
     "publisher": "ICOMOS / UNESCO World Heritage Centre",

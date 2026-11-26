@@ -1,0 +1,269 @@
+.beijing-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(250px, 1fr);
+  align-items: center;
+  gap: clamp(26px, 4vw, 64px);
+  margin: clamp(30px, 5vw, 72px) 0 36px;
+}
+
+.beijing-cover { grid-area: 1 / 1; }
+
+.beijing-intro .beijing-intro-copy h1 {
+  margin: 18px 0;
+  font-size: clamp(58px, 6.5vw, 98px);
+  line-height: .98;
+}
+
+.beijing-intro h1 span {
+  display: block;
+  margin-top: 14px;
+  color: var(--tea);
+  font: 400 .32em/1.4 var(--sans);
+}
+
+.beijing-intro-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.beijing-intro-copy .beijing-tagline {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font: 500 clamp(20px, 2vw, 29px)/1.35 var(--sans);
+  text-wrap: balance;
+}
+
+.beijing-intro-copy .primary-button {
+  margin-top: 12px;
+}
+
+.beijing-cover,
+.beijing-photos figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.beijing-cover {
+  position: relative;
+}
+
+.beijing-cover img,
+.beijing-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.beijing-cover img {
+  border-radius: var(--radius-page, 24px);
+}
+
+.beijing-cover figcaption {
+  position: absolute;
+  inset: auto auto 16px 16px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: #25150edc;
+  color: #fff8ee;
+  font-size: 13px;
+}
+
+.beijing-cover figcaption span {
+  margin-inline-start: 6px;
+}
+
+.beijing-gallery {
+  scroll-margin-top: 100px;
+}
+
+.beijing-gallery > .section-heading {
+  margin-bottom: 22px;
+}
+
+.beijing-places {
+  --gallery-gap: clamp(14px, 2vw, 26px);
+  display: grid;
+  gap: clamp(46px, 8vw, 110px);
+  padding-bottom: 40px;
+}
+
+.beijing-place {
+  min-width: 0;
+  padding-top: clamp(20px, 3vw, 42px);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 100px;
+}
+
+.beijing-place[data-layout="landscape"],
+.beijing-place[data-layout="portrait"] {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 74px);
+}
+
+.beijing-place[data-layout="portrait"] {
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 1.1fr);
+  max-width: 1040px;
+  width: 100%;
+  justify-self: center;
+}
+
+.beijing-place[data-layout="landscape"] .beijing-photos {
+  grid-area: 1 / 1;
+}
+
+.beijing-place-heading {
+  margin-bottom: 20px;
+}
+
+.beijing-place[data-layout="spread"] .beijing-place-heading {
+  display: flex;
+  gap: 8px 24px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.beijing-place .beijing-place-heading h3 {
+  margin: 0;
+  font: 400 clamp(25px, 3.3vw, 43px)/1.18 var(--serif);
+  text-wrap: balance;
+}
+
+.beijing-place h3 small {
+  display: inline-block;
+  margin-inline-start: .4em;
+  color: var(--tea);
+  font: 400 clamp(14px, 1.4vw, 17px)/1.5 var(--sans);
+}
+
+.beijing-place-heading p {
+  max-width: 58ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.beijing-place-heading .text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.beijing-photos {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: var(--gallery-gap);
+}
+
+.beijing-photos figure {
+  flex: var(--photo-width) 1 0;
+}
+
+.beijing-place[data-layout="portrait"] .beijing-photos {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+}
+
+.beijing-place[data-layout="portrait"] figure {
+  flex: 1;
+}
+
+.beijing-photos a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-container, 16px);
+}
+
+.beijing-photos a:focus-visible {
+  outline: 2px solid var(--tea);
+  outline-offset: 4px;
+}
+
+.beijing-photos figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.beijing-photo-expand {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #171b18d9;
+  color: white;
+  font-size: 18px;
+}
+
+.beijing-photo-dialog figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(68vh, 850px);
+  margin: auto;
+  object-fit: contain;
+}
+
+.beijing-photo-dialog figcaption {
+  text-align: center;
+  padding: 12px 18px;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .beijing-photo-expand {
+    transition: transform 220ms cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .beijing-photos a:hover .beijing-photo-expand {
+    transform: translate(2px, -2px);
+  }
+}
+
+@media (max-width: 760px) {
+  .beijing-intro,
+  .beijing-place[data-layout="landscape"],
+  .beijing-place[data-layout="portrait"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .beijing-cover,
+  .beijing-place[data-layout="landscape"] .beijing-photos {
+    grid-area: auto;
+  }
+
+  .beijing-intro .beijing-intro-copy h1 {
+    font-size: clamp(52px, 14vw, 80px);
+  }
+
+  .beijing-place h3 small {
+    display: block;
+    margin: 4px 0 0;
+  }
+
+  .beijing-place[data-layout] .beijing-place-heading {
+    margin-bottom: 0;
+  }
+
+  .beijing-place[data-layout="spread"] .beijing-place-heading {
+    margin-bottom: 16px;
+  }
+
+  .beijing-photos {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .beijing-photos figure {
+    flex: auto;
+    width: 100%;
+  }
+}

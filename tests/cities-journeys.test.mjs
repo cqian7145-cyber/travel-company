@@ -15,10 +15,41 @@ import {createHandler as nodeHandler} from '../server.mjs';
 import {createHandler as deepseekHandler} from '../server-deepseek.mjs';
 
 test('city routes are canonical, scoped and reject unsupported cities',()=>{
- assert.equal(cities.length,5);
- for(const id of ['shanghai','hangzhou','guiyang','sanya','shenzhen'])for(const suffix of ['','/','/index.html'])assert.equal(cityRoute('/cities/'+id+suffix).city.id,id);
- assert.equal(cityRoute('/cities').kind,'cities');assert.equal(cityRoute('/cities/beijing').kind,'not-found');assert.equal(cityRoute('/stories'),null);
+ const expected=['shanghai','hangzhou','guiyang','sanya','shenzhen','beijing'];
+ assert.deepEqual(cities.map(city=>city.id),expected);
+ for(const id of expected)for(const suffix of ['','/','/index.html'])assert.equal(cityRoute('/cities/'+id+suffix).city.id,id);
+ assert.equal(cityRoute('/cities').kind,'cities');assert.equal(cityRoute('/cities/missing').kind,'not-found');assert.equal(cityRoute('/stories'),null);
  assert.deepEqual(primaryNavigation.map(n=>n.href),['/','/cities','/culture','/trip']);
+});
+test('Beijing photos appear under their supplied places in the pre-rendered page and offline kit',async()=>{
+ const data=JSON.parse(await readFile('data/beijing.json','utf8'));
+ const html=await readFile('dist/cities/beijing/index.html','utf8');
+ const manifest=JSON.parse(await readFile('dist/offline-manifest.json','utf8'));
+ const groups=[
+  ['tiananmen',['tiananmen-night']],
+  ['great-wall',['great-wall-autumn']],
+  ['guomao',['guomao-skyline','guomao-cctv','guomao-reflection']],
+  ['temple-of-heaven',['temple-of-heaven-hall','temple-of-heaven-courtyard']],
+  ['taoranting',['taoranting-lake']],
+  ['summer-palace',['summer-palace-corridor','summer-palace-lotus']],
+  ['forbidden-city',['forbidden-city-rooftops','forbidden-city-moat']],
+  ['shichahai',['shichahai-sunset','shichahai-day']],
+  ['sanlitun',['sanlitun-taikoo-li']],
+  ['national-museum',['national-museum-facade']],
+ ];
+ assert.deepEqual(data.places.map(p=>[p.id,p.photos.map(photo=>photo.image)]),groups);
+ assert.equal(manifest.beijingVersion,data.version);
+ assert.ok(manifest.files.includes('/cities/beijing/index.html'));
+ for(const [id,images] of groups){
+  const article=html.split(`id="${id}">`)[1]?.split('</article>')[0];
+  assert.ok(article,id);
+  for(const image of images)for(const size of [640,1600]){
+   const path=`/beijing-photography/${image}-${size}.webp`;
+   assert.ok(article.includes(path),path);
+   assert.ok(manifest.files.includes(path),path);
+   assert.equal((await readFile('dist'+path)).subarray(8,12).toString(),'WEBP',path);
+  }
+ }
 });
 test('Guiyang photo pilot has seven distinct contributor-labeled places and matching image assets',async()=>{
  const data=JSON.parse(await readFile('data/guiyang.json','utf8'));
@@ -74,7 +105,7 @@ test('city prerenders have distinct SEO, readable content, sitemap and offline c
   const route=cityRoute(path),html=await readFile('dist'+route.file,'utf8');
   assert.equal((html.match(/<title>/g)||[]).length,1);assert.equal((html.match(/name="description"/g)||[]).length,1);
   assert.ok(html.includes('rel="canonical"'));assert.ok(html.includes(path));assert.ok(sitemap.includes(path));assert.ok(manifest.files.includes(route.file));
-  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya','shenzhen'].includes(route.city.id)?['places','city-plan']:[route.city.id+'-culture','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
+  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya','shenzhen','beijing'].includes(route.city.id)?['places','city-plan']:[route.city.id+'-culture','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
  }
 });
 test('Workers dispatches city HTML and returns a true 404 for unknown cities',async()=>{

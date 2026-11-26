@@ -34,6 +34,17 @@ export default function BookingAssistant({plan,hotel,onHotelChange,hotelStorageE
    </article>;
   })}</div>
   {(storageError||railStorageError||hotelStorageError)&&<p role="alert" className="warning">Browser storage is unavailable. These changes may not survive reload.</p>}
+  <section className="partner-options-card" aria-labelledby="booking-help-heading">
+   <div className="eyebrow">EASIER ENGLISH BOOKING &amp; HUMAN CHECK</div>
+   <h2 id="booking-help-heading">Prefer English checkout or a human double-check?</h2>
+   <p>Official Chinese apps often require local SMS or WeChat mini-programs. You can check international booking portals or request a manual itinerary &amp; reservation review.</p>
+   <div className="partner-links">
+    <External className="outline-button" href="https://www.trip.com/trains/china/?utm_source=china-closer&utm_medium=booking">Trip.com China Trains</External>
+    <External className="outline-button" href="https://www.klook.com/city/16-shanghai-things-to-do/?utm_source=china-closer&utm_medium=booking">Klook Shanghai &amp; Transfers</External>
+    <a className="primary-button" href="mailto:hello@xizimist.com?subject=China%20Trip%20Double-Check%20Request&body=Arrival%20city%20(Beijing%2FShanghai%2FGuangzhou)%3A%0ADates%3A%0AWhat%20you%20want%20double-checked%20(tickets%2C%2012306%2C%20airport%20transfer%2C%20allergy%20cards)%3A">Request a human double-check</a>
+   </div>
+   <p className="module-disclaimer">External booking platforms are independent services and may include referral links in the future. Always verify cancellation and passport rules before paying.</p>
+  </section>
   <p className="privacy-note">Stored on this browser only. No passport number, payment information, or booking reference is collected. Keep the operator’s actual ticket or confirmation separately.</p>
   {showHotel&&<ChineseCard title="Hotel address in Chinese" text={hotel.name||'请送我到这个地址，谢谢。'} address={hotel.address} translation="Please take me to this address." onClose={()=>setShowHotel(false)}/>}
  </>;

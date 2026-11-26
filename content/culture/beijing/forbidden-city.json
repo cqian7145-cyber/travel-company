@@ -1,0 +1,37 @@
+{
+  "id": "forbidden-city",
+  "cityId": "beijing",
+  "slug": "forbidden-city",
+  "title": "How the Forbidden City makes an entrance",
+  "zhTitle": "故宫",
+  "zhPlace": "故宫博物院",
+  "placeLabel": "Forbidden City · Beijing",
+  "placeIds": [
+    "forbidden-city"
+  ],
+  "summary": "At Beijing’s Forbidden City, arrival happens in stages. The Meridian Gate stands on the palace’s north–south axis, with the Gate of Supreme Harmony beyond it. Successive gateways and courtyards make the approach part of the experience. As you look ahead, pay attention to how each opening frames the space beyond and what the walls keep out of sight.",
+  "image": {
+    "src": "/beijing-photography/forbidden-city-rooftops-640.webp",
+    "alt": "Golden roofs of the Forbidden City seen from above",
+    "caption": "The Forbidden City’s palace roofs, photographed from above."
+  },
+  "type": "history",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "Read the palace through its gates",
+      "kind": "fact",
+      "text": "The Palace Museum describes the Meridian Gate as the main gate of the Forbidden City. The wings on either side enclose the forecourt, and the gates and galleries lead visitors through successive spaces. Seen along the axis, the layout uses distance, enclosure and symmetry to give the entrance its ceremonial scale.",
+      "sourceIds": [
+        "beijing_forbidden_city"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "beijing_forbidden_city"
+  ],
+  "editorialReviewedAt": "2026-11-17",
+  "reviewStatus": "source_checked",
+  "visitNote": "Check current access and the visitor entrance with the site before setting out.",
+  "phrase": null
+}

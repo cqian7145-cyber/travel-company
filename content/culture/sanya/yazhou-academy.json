@@ -1,0 +1,30 @@
+{
+  "id": "yazhou-academy",
+  "cityId": "sanya",
+  "slug": "yazhou-academy",
+  "title": "The courtyard where old Yazhou studied",
+  "zhTitle": "崖城学宫",
+  "placeLabel": "Yazhou Academy · Sanya",
+  "summary": "In Sanya’s Yazhou district, the historic Yazhou Academy served as both a Confucian temple and a government-run school. The two roles bring education and ritual together in one place. If you are exploring the old town, pause at the academy and think of the grounds as a place where learning had a public and ceremonial role.",
+  "zhPlace": "崖城学宫",
+  "placeIds": [],
+  "type": "history",
+  "status": "published",
+  "sections": [
+    {
+      "heading": "A school and a temple in one setting",
+      "kind": "fact",
+      "text": "The district’s heritage inventory identifies the academy in Yacheng Village beside Yacheng Primary School. It describes the historic site as a Confucian temple as well as an official school. The pairing offers a way to understand why a place for study could also have a ceremonial layout.",
+      "sourceIds": [
+        "sanya_yazhou_academy"
+      ]
+    }
+  ],
+  "sourceIds": [
+    "sanya_yazhou_academy"
+  ],
+  "editorialReviewedAt": "2026-11-17",
+  "reviewStatus": "source_checked",
+  "visitNote": "Check current access and the visitor entrance with the site before setting out.",
+  "phrase": null
+}
