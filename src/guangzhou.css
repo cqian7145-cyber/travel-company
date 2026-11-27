@@ -1,0 +1,27 @@
+.guangzhou-page .beijing-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.guangzhou-page .beijing-cover {
+  width: min(100%, 480px);
+  justify-self: center;
+}
+.guangzhou-page .beijing-intro .beijing-intro-copy h1 {
+  font-size: clamp(45px, 5.5vw, 88px);
+  overflow-wrap: anywhere;
+}
+.guangzhou-page #pearl-river figure:nth-child(2) {
+  margin-top: clamp(35px, 5vw, 80px);
+}
+.guangzhou-page #riverside-walks .beijing-photos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.guangzhou-page #riverside-walks figure:first-child {
+  grid-row: span 2;
+  align-self: center;
+}
+@media (max-width: 760px) {
+  .guangzhou-page .beijing-intro { grid-template-columns: minmax(0, 1fr); }
+  .guangzhou-page #pearl-river figure:nth-child(2) { margin-top: 0; }
+  .guangzhou-page #riverside-walks .beijing-photos { display: flex; }
+}

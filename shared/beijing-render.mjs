@@ -61,7 +61,7 @@ export function renderBeijingPage() {
  ${renderCityCulture('beijing')}
  <section id="city-plan" class="city-content-zone">
   <h2>Practical information</h2>
-  <p>Amap links search by place name. For the Great Wall, choose a section before planning your journey. Check current access and reservations with each venue before visiting.</p>
-  <a class="outline-button" href="/cities">Explore our cities →</a>
+  <p>Beijing itinerary planning (10 curated stops) and Beijing Capital (PEK) / Daxing (PKX) airport arrival guides are ready. For the Great Wall, choose Mutianyu or Badaling before setting off.</p>
+  <div class="partner-links"><a class="primary-button" href="/trip">Plan a Beijing trip →</a><a class="outline-button" href="/arrival">PEK / PKX First 90 Minutes →</a><a class="text-link" href="/cities">Explore our cities →</a></div>
  </section>`;
 }

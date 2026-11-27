@@ -24,7 +24,7 @@ npm start
 
 ## Optional live AI
 
-Copy `.env.example` to `.env`, set `OPENAI_API_KEY` privately and optionally `OPENAI_MODEL`, then restart. Never put secrets in `VITE_` variables. Calls are server-side and opt-in via the planner; no call occurs without a key. Only trip preferences and public catalog information are sent. Nationality, passport data, checklist and saved places are not sent. API calls incur provider charges. Live provider integration requires verification with your account before being considered ready.
+The production Workers planner uses DeepSeek for Beijing, Shanghai, and Guangzhou. Keep `DEEPSEEK_API_KEY` in a Worker secret; `AI_ENABLED` must be exactly `true` without whitespace, and `PLAN_RATE_LIMITER` must be bound. The planner sends validated trip preferences and its fixed daily stops to DeepSeek for a summary and advice. Nationality, passport data, checklist, and saved places are not sent. Calls incur provider charges. Locally, the planner stays curated without a configured key.
 
 ## Features
 
@@ -49,9 +49,9 @@ No community, hotel booking engine, live chat, merchant portal or nationwide dat
 
 Workers migration is available alongside the existing Node launchers. Use `npm run cf:dev` for the local Workers runtime, `npm run cf:dry-run` to validate the bundle without publishing, and `npm run cf:whoami` for account authentication status. See [Cloudflare setup and publishing gates](docs/CLOUDFLARE.md) and [validation evidence](docs/CLOUDFLARE-VALIDATION.md).
 
-Static assets and the planner API share one Worker. Paid DeepSeek calls are disabled by default; secrets belong in Worker bindings, never frontend variables. Browser data does not automatically transfer from localhost to a new hosted origin.
+Static assets and the planner API share one Worker. Production AI is enabled in `wrangler.jsonc`; each `npm run cf:deploy` preserves that flag. Secrets belong in Worker bindings, never frontend variables. Browser data does not automatically transfer from localhost to a new hosted origin.
 
-Live Workers deployment: [China, closer](https://china-closer.cqian7145.workers.dev). Published with user authorization on 2026-11-08; curated planning and mobile offline reload verified. DeepSeek remains disabled and no key has been uploaded.
+Live Workers deployment: [China, closer](https://china-closer.xizimist.com). The DeepSeek secret is configured in production. On 2026-11-27, AI itineraries were generated for all three cities; the final advice alignment was retested with Guangzhou. The standalone Worker URL is `https://china-closer.cqian7145.workers.dev`.
 
 ## Verified Data Center V1 (local feature branch)
 

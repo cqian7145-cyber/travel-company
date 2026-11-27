@@ -221,3 +221,16 @@
 .matcha-site .partner-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 14px; }
 .matcha-site .footer-actions { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .matcha-site .footer-actions a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Decluttered 4-fact VenueEvidence & DeepSeek AI daily advisor */
+.matcha-site .core-facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 12px 0 16px; }
+.matcha-site .core-facts-grid > div { padding: 12px 14px; border-radius: 12px; background: var(--color-background-surface, #fff); border: 1px solid var(--color-border, #dce3ce); }
+.matcha-site .core-facts-grid dt { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-secondary, #5a6b2a); margin-bottom: 4px; }
+.matcha-site .core-facts-grid dd { margin: 0; font-size: 0.92rem; line-height: 1.5; }
+.matcha-site .evidence-audit-drawer { margin-top: 8px; padding: 10px 14px; border-radius: 12px; border: 1px dashed var(--color-border, #dce3ce); font-size: 0.9rem; }
+.matcha-site .evidence-audit-drawer > summary { cursor: pointer; font-weight: 600; color: var(--color-text-secondary, #5a6b2a); }
+.matcha-site .evidence-drawer-note { margin: 8px 0 10px; font-size: 0.84rem; color: var(--color-text-secondary, #5a6b2a); }
+.matcha-site .ai-summary-banner { display: inline-flex; align-items: flex-start; gap: 8px; margin-top: 10px; padding: 10px 14px; border-radius: 12px; background: color-mix(in srgb, var(--color-accent, #3e481d) 8%, var(--color-background-surface, #fff)); font-size: 0.93rem; }
+.matcha-site .ai-day-advice { margin: 0 0 14px; padding: 14px 16px; border-radius: 14px; background: color-mix(in srgb, var(--color-accent, #3e481d) 5%, var(--color-background-surface, #fff)); border: 1px solid var(--color-border, #dce3ce); display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem; }
+.matcha-site .ai-day-advice p { margin: 0; line-height: 1.55; }
+.matcha-site .ai-day-advice .eyebrow { display: inline-flex; align-items: center; gap: 6px; }

@@ -36,7 +36,7 @@
     ]
   },
   "vars": {
-    "AI_ENABLED": "false",
+    "AI_ENABLED": "true",
     "DEEPSEEK_MODEL": "deepseek-flash"
   },
   "ratelimits": [

@@ -15,7 +15,7 @@ import {createHandler as nodeHandler} from '../server.mjs';
 import {createHandler as deepseekHandler} from '../server-deepseek.mjs';
 
 test('city routes are canonical, scoped and reject unsupported cities',()=>{
- const expected=['shanghai','hangzhou','guiyang','sanya','shenzhen','beijing'];
+ const expected=['shanghai','hangzhou','guiyang','sanya','shenzhen','beijing','guangzhou'];
  assert.deepEqual(cities.map(city=>city.id),expected);
  for(const id of expected)for(const suffix of ['','/','/index.html'])assert.equal(cityRoute('/cities/'+id+suffix).city.id,id);
  assert.equal(cityRoute('/cities').kind,'cities');assert.equal(cityRoute('/cities/missing').kind,'not-found');assert.equal(cityRoute('/stories'),null);
@@ -105,7 +105,7 @@ test('city prerenders have distinct SEO, readable content, sitemap and offline c
   const route=cityRoute(path),html=await readFile('dist'+route.file,'utf8');
   assert.equal((html.match(/<title>/g)||[]).length,1);assert.equal((html.match(/name="description"/g)||[]).length,1);
   assert.ok(html.includes('rel="canonical"'));assert.ok(html.includes(path));assert.ok(sitemap.includes(path));assert.ok(manifest.files.includes(route.file));
-  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya','shenzhen','beijing'].includes(route.city.id)?['places','city-plan']:[route.city.id+'-culture','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
+  if(route.city){assert.ok(html.includes(route.city.name));const regions=['guiyang','sanya','shenzhen','beijing','guangzhou'].includes(route.city.id)?['places','city-plan']:[route.city.id+'-culture','city-places','city-plan'];for(const region of regions)assert.ok(html.includes('id="'+region+'"'));}
  }
 });
 test('Workers dispatches city HTML and returns a true 404 for unknown cities',async()=>{

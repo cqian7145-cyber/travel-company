@@ -6,6 +6,7 @@ import {hangzhou} from './hangzhou.mjs';
 import {guiyang,guiyangMap} from './guiyang.mjs';
 import {renderShenzhenPage} from './shenzhen-render.mjs';
 import {renderSanyaPage} from './sanya-render.mjs';
+import {renderGuangzhouPage} from './guangzhou-render.mjs';
 import {renderBeijingPage} from './beijing-render.mjs';
 const e=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
 export function cityMeta(route){const c=route.city;return {title:c?`${c.name} · ${c.id==='beijing'?'Places & photography':'Places & culture highlights'} | China, Closer`:'Explore our cities | China, Closer',description:c?c.tagline+' '+c.travelScope:`Explore ${new Intl.ListFormat('en').format(cities.map(city=>city.name))} through places, culture highlights and practical travel tools.`};}
@@ -16,6 +17,7 @@ export function renderCityBody(route){
   const c=cityById(route.city?.id);if(!c)throw Error('Unknown city');
   if(c.id==='shenzhen')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="shenzhen-page">${renderShenzhenPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
   if(c.id==='sanya')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="sanya-page">${renderSanyaPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
+  if(c.id==='guangzhou')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="beijing-page guangzhou-page">${renderGuangzhouPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
   if(c.id==='beijing')return `<div class="app-shell"><div class="workspace">${renderSiteHeader('/cities')}<main id="main"><div class="beijing-page">${renderBeijingPage()}</div></main></div>${renderMobileNavigation('/cities')}</div>`;
   const records=c.id==='shanghai'?places:c.id==='hangzhou'?hangzhou.places:guiyang.places;
   if(c.id==='guiyang'){

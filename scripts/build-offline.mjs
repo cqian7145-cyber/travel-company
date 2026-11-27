@@ -1,3 +1,4 @@
+import guangzhou from '../data/guangzhou.json' with {type:'json'};
 import {readdir,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {resolve,relative} from 'node:path';
@@ -28,5 +29,5 @@ self.addEventListener('fetch',event=>{const request=event.request,url=new URL(re
  if(FILES.includes(url.pathname))event.respondWith((async()=>{const cache=await caches.open(CACHE);return (await cache.match(url.pathname))||fetch(request);})());
 });`;
 await writeFile(resolve(root,'sw.js'),worker);
-await writeFile(resolve(root,'offline-manifest.json'),JSON.stringify({version,files:urls,dataVersion:dataVersion.version,cultureVersion:cultureVersion.version,hangzhouVersion:hangzhou.version,guiyangVersion:guiyang.version,sanyaVersion:sanya.version,shenzhenVersion:shenzhen.version,beijingVersion:beijing.version,preparedAt:dataVersion.prepared_at,reviewDueAt:nextDataReview()}));
+await writeFile(resolve(root,'offline-manifest.json'),JSON.stringify({version,files:urls,dataVersion:dataVersion.version,cultureVersion:cultureVersion.version,hangzhouVersion:hangzhou.version,guiyangVersion:guiyang.version,sanyaVersion:sanya.version,shenzhenVersion:shenzhen.version,beijingVersion:beijing.version,guangzhouVersion:guangzhou.version,preparedAt:dataVersion.prepared_at,reviewDueAt:nextDataReview()}));
 console.log(`Offline shell ${version}: ${urls.length} local files. No API or remote assets cached.`);
