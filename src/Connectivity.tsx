@@ -5,6 +5,8 @@ import {connectivityFlows,connectivityPriorities,defaultConnectivity,travelSourc
 import {useLocalState} from './companion-state';
 import {ChineseCard,External} from './ui';
 import OfflineTools,{type OfflineProps} from './OfflineTools';
+import {PARTNER_LINKS} from '../shared/monetization.mjs';
+import {trackEvent} from './telemetry';
 export function SourceNote({source}:{source:typeof travelSources.apple}){return <div className="travel-source"><External href={source.url}>{source.name}</External><small>Source updated: {source.updated} · Reviewed {source.reviewed} · Recheck before departure</small></div>;}
 export default function Connectivity(props:OfflineProps){
  const [input,setInput,storageError]=useLocalState('closer-connectivity-v1',defaultConnectivity,(v):v is typeof defaultConnectivity=>validConnectivity(v));
@@ -19,9 +21,9 @@ export default function Connectivity(props:OfflineProps){
    <h2 id="esim-compare-heading">Need a China travel eSIM before you fly?</h2>
    <p>Install and activate before boarding while you still have reliable Wi-Fi. Confirm your phone is carrier-unlocked and supports eSIM first.</p>
    <div className="partner-links">
-    <External className="outline-button" href="https://www.trip.com/things-to-do/list?keyword=China+eSIM&utm_source=china-closer&utm_medium=connectivity">Trip.com China eSIM</External>
-    <External className="outline-button" href="https://www.airalo.com/china-esim?utm_source=china-closer&utm_medium=connectivity">Airalo China eSIM</External>
-    <External className="outline-button" href="https://www.getnomad.app/china-eSIM?utm_source=china-closer&utm_medium=connectivity">Nomad China eSIM</External>
+    <a className="outline-button" href={PARTNER_LINKS.esimTrip.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent('partner_link_clicked',PARTNER_LINKS.esimTrip.id)}>{PARTNER_LINKS.esimTrip.label} ↗</a>
+    <a className="outline-button" href={PARTNER_LINKS.esimAiralo.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent('partner_link_clicked',PARTNER_LINKS.esimAiralo.id)}>{PARTNER_LINKS.esimAiralo.label} ↗</a>
+    <a className="outline-button" href={PARTNER_LINKS.esimNomad.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent('partner_link_clicked',PARTNER_LINKS.esimNomad.id)}>{PARTNER_LINKS.esimNomad.label} ↗</a>
    </div>
    <p className="module-disclaimer">Independent links for convenience. Some links may become affiliate links to help keep China, closer free and ad-light—at no extra cost to you. Always check provider coverage, hotspot rules, and refund terms.</p>
   </section>

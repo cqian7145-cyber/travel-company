@@ -5,6 +5,8 @@ import {bookingTasks,taskKey,safeOperatorUrl} from '../shared/companion.mjs';
 import {isConfirmations,useLocalState,type Hotel,type Plan} from './companion-state';
 import {ChineseCard,External} from './ui';
 import VenueEvidence from './VenueEvidence';
+import {PARTNER_LINKS,mailtoHumanCheck} from '../shared/monetization.mjs';
+import {trackEvent} from './telemetry';
 
 type Props={plan:Plan|null;hotel:Hotel;onHotelChange:(hotel:Hotel)=>void;hotelStorageError:boolean;onPlan:()=>void;onTrip:()=>void};
 export default function BookingAssistant({plan,hotel,onHotelChange,hotelStorageError,onPlan,onTrip}:Props){
@@ -39,9 +41,9 @@ export default function BookingAssistant({plan,hotel,onHotelChange,hotelStorageE
    <h2 id="booking-help-heading">Prefer English checkout or a human double-check?</h2>
    <p>Official Chinese apps often require local SMS or WeChat mini-programs. You can check international booking portals or request a manual itinerary &amp; reservation review.</p>
    <div className="partner-links">
-    <External className="outline-button" href="https://www.trip.com/trains/china/?utm_source=china-closer&utm_medium=booking">Trip.com China Trains</External>
-    <External className="outline-button" href="https://www.klook.com/city/16-shanghai-things-to-do/?utm_source=china-closer&utm_medium=booking">Klook Shanghai &amp; Transfers</External>
-    <a className="primary-button" href="mailto:hello@xizimist.com?subject=China%20Trip%20Double-Check%20Request&body=Arrival%20city%20(Beijing%2FShanghai%2FGuangzhou)%3A%0ADates%3A%0AWhat%20you%20want%20double-checked%20(tickets%2C%2012306%2C%20airport%20transfer%2C%20allergy%20cards)%3A">Request a human double-check</a>
+    <a className="outline-button" href={PARTNER_LINKS.railTrip.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent('partner_link_clicked',PARTNER_LINKS.railTrip.id)}>{PARTNER_LINKS.railTrip.label} ↗</a>
+    <a className="outline-button" href={PARTNER_LINKS.klookShanghai.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent('partner_link_clicked',PARTNER_LINKS.klookShanghai.id)}>{PARTNER_LINKS.klookShanghai.label} ↗</a>
+    <a className="primary-button" href={mailtoHumanCheck()} onClick={()=>trackEvent('partner_link_clicked','human-double-check')}>Request a human double-check</a>
    </div>
    <p className="module-disclaimer">External booking platforms are independent services and may include referral links in the future. Always verify cancellation and passport rules before paying.</p>
   </section>

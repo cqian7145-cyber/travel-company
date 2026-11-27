@@ -1,5 +1,6 @@
 import {cityRoute} from './shared/cities.mjs';
 import {toolRoute} from './shared/tools-routes.mjs';
+import {guideRoute} from './shared/seo-guides.mjs';
 import {cultureRoute} from './shared/story-catalog.mjs';
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
@@ -32,6 +33,7 @@ export function createHandler(vite){return async(req,res)=>{
  if(path.startsWith('/api/')){
   if(req.headers.origin&&req.headers.origin!==`http://${req.headers.host}`&&req.headers.origin!==`https://${req.headers.host}`)return send(403,{error:'Origin not allowed.'});
   if(path==='/api/status'&&req.method==='GET')return send(200,{aiConfigured:Boolean(process.env.OPENAI_API_KEY)});
+  if(path==='/api/event'&&req.method==='POST'){res.writeHead(204,{'Cache-Control':'no-store'});return res.end();}
   if(path!=='/api/plan'||req.method!=='POST')return send(404,{error:'Not found.'});
   if(!req.headers['content-type']?.startsWith('application/json'))return send(415,{error:'Send JSON trip details.'});
   const now=Date.now();for(const [ip,value] of limits){if(now-value.at>60000)limits.delete(ip);}
@@ -43,10 +45,10 @@ export function createHandler(vite){return async(req,res)=>{
    active++;try{const plan=await generate(input,{apiKey:JSON.parse(body).curated?'':process.env.OPENAI_API_KEY});return send(200,plan);}finally{active--;}
   }catch{return send(502,{error:'The planner could not finish. Please try the curated planner.'});}
  }
- const culture=cultureRoute(path)||cityRoute(path)||toolRoute(path);
+ const culture=cultureRoute(path)||cityRoute(path)||toolRoute(path)||guideRoute(path);
  if(culture?.kind==='redirect'){res.writeHead(308,{Location:culture.location+new URL(req.url,'http://localhost').search});return res.end();}
- if(culture?.kind==='not-found')return send(404,{error:'Story or experience not found.'});
- if(vite){if(culture)req.url=['city','cities','tool'].includes(culture.kind)?'/index.html':'/culture.html';return vite.middlewares(req,res);}
+ if(culture?.kind==='not-found')return send(404,{error:'Story, guide, or experience not found.'});
+ if(vite){if(culture)req.url=['city','cities','tool','guide','guides-index'].includes(culture.kind)?'/index.html':'/culture.html';return vite.middlewares(req,res);}
  try{
   const base=resolve(root,'dist'),file=resolve(base,'.'+decodeURIComponent(culture?.file||path));
   if(!file.startsWith(base+sep)&&file!==base)return send(403,{error:'Forbidden'});

@@ -17,7 +17,8 @@ function parseAdvice(parsed,days){
   const routeLogic=cleanTip(item.routeLogic,240);
   const diningTip=cleanTip(item.diningTip,240);
   const pitfallTip=cleanTip(item.pitfallTip,240);
-  if(routeLogic||diningTip||pitfallTip)dailyAdvice.push({day,routeLogic,diningTip,pitfallTip});
+  const rainyBackup=cleanTip(item.rainyBackup,200);
+  if(routeLogic||diningTip||pitfallTip||rainyBackup)dailyAdvice.push({day,routeLogic,diningTip,pitfallTip,...(rainyBackup?{rainyBackup}:{})});
  }
  return summary||dailyAdvice.length?{summary,dailyAdvice}:null;
 }
@@ -38,7 +39,7 @@ export async function generate(input,{apiKey=process.env.DEEPSEEK_API_KEY,model=
   response=await fetcher('https://api.deepseek.com/chat/completions',{
    method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${apiKey.trim()}`},signal:AbortSignal.timeout(25000),
    body:JSON.stringify({model,stream:false,thinking:{type:'disabled'},max_tokens:1200,response_format:{type:'json_object'},
-    messages:[{role:'system',content:`You are an expert China travel advisor for ${clean.city}. The supplied daily itinerary is final: do not reorder, add, or suggest any other attractions, even as optional stops. Return JSON with: {"placeIds":[the exact supplied stop IDs in the same order], "summary":"1 concise sentence on this itinerary", "dailyAdvice":[{"day":1,"routeLogic":"why only this day's listed stops flow well in their actual order","diningTip":"generic food pairing near these listed stops (no invented restaurant names or prices)","pitfallTip":"practical crowd, booking, or closure reminder relevant to these stops"}]}. Only mention venues on the relevant day. Never invent visa advice, ticket prices, or opening hours.`},
+    messages:[{role:'system',content:`You are an expert China travel advisor for ${clean.city}. The supplied daily itinerary is final: do not reorder, add, or suggest any other attractions, even as optional stops. Return JSON with: {"placeIds":[the exact supplied stop IDs in the same order], "summary":"1 concise sentence on this itinerary", "dailyAdvice":[{"day":1,"routeLogic":"why only this day's listed stops flow well in their actual order","diningTip":"generic food pairing near these listed stops (no invented restaurant names or prices)","pitfallTip":"practical crowd, booking, or closure reminder relevant to these stops","rainyBackup":"how to pace or shelter within these listed areas if it rains (do not name other attractions)"}]}. Only mention venues on the relevant day. Never invent visa advice, ticket prices, or opening hours.`},
      {role:'user',content:JSON.stringify({trip:clean,plannedDays})}]
    })
   });

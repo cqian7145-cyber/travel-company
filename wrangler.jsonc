@@ -32,7 +32,9 @@
       "/connectivity",
       "/connectivity/*",
       "/ready",
-      "/ready/*"
+      "/ready/*",
+      "/guides",
+      "/guides/*"
     ]
   },
   "vars": {
