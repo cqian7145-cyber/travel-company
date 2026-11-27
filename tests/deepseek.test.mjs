@@ -2,7 +2,9 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import http from 'node:http';
 import {generate,createHandler} from '../server-deepseek.mjs';
+import {buildPlan} from '../shared/planner.mjs';
 const trip={days:3,budget:2400,pace:'balanced',interests:['Culture'],date:'2026-11-09'};
+const scheduledIds=buildPlan(trip).days.flatMap(day=>day.stops.map(stop=>stop.placeId));
 const completion=(content,finish_reason='stop')=>({ok:true,json:async()=>({choices:[{finish_reason,message:{content}}]})});
 test('DeepSeek blank key never calls a provider',async()=>{
  assert.equal((await generate(trip,{apiKey:' ',fetcher:()=>assert.fail('No provider call')})).mode,'curated');
@@ -12,8 +14,9 @@ test('DeepSeek uses official endpoint and JSON contract with only validated trip
   assert.equal(url,'https://api.deepseek.com/chat/completions');assert.equal(options.headers.Authorization,'Bearer fake-test-key');
   const body=JSON.parse(options.body);assert.equal(body.model,'test-model');assert.deepEqual(body.response_format,{type:'json_object'});assert.equal(body.thinking.type,'disabled');assert.equal(body.stream,false);
   assert.ok(!options.body.includes('private'));assert.ok(!options.body.includes('passport'));assert.ok(options.signal instanceof AbortSignal);
-  return completion('{"placeIds":["museum"]}');
- }});assert.equal(plan.mode,'ai');assert.ok(plan.days.flatMap(d=>d.stops).some(s=>s.placeId==='museum'));
+  assert.deepEqual(body.messages[1].content.includes('plannedDays'),true);
+  return completion(JSON.stringify({placeIds:scheduledIds}));
+ }});assert.equal(plan.mode,'ai');assert.deepEqual(plan.days.flatMap(d=>d.stops).map(s=>s.placeId),scheduledIds);
 });
 test('DeepSeek rejects empty, malformed, truncated and noncatalog results without inventing facts',async()=>{
  for(const [content,finish] of [['','stop'],['  ','stop'],['not-json','stop'],['{"placeIds":["invented"]}','stop'],['{"placeIds":["museum"]}','length']]){

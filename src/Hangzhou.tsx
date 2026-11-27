@@ -28,7 +28,7 @@ export function DestinationChapters({onHangzhou,onGuiyang,onBeijing}:{onHangzhou
   <a className="chapter-card" href="/cities/beijing" onClick={onBeijing}>
    <div className="chapter-image"><img src="/beijing-photography/forbidden-city-rooftops-640.webp" alt="Golden rooftops of the Forbidden City seen from above" loading="lazy"/></div>
    <div className="chapter-copy"><h3>Beijing <small>北京</small></h3><p>Imperial courtyards. Lakeside walks. A skyline after dark.</p><strong>Discover Beijing <ArrowRight size={18}/></strong></div>
-  </a></div>
+  </a><a className="chapter-card" href="/cities/guangzhou"><div className="chapter-image"><img src="/guangzhou-photography/river-blue-hour-640.webp" alt="Guangzhou skyline beside the Pearl River at blue hour" loading="lazy"/></div><div className="chapter-copy"><h3>Guangzhou <small>广州</small></h3><p>Garden shade. River light. A city after sunset.</p><strong>Discover Guangzhou <ArrowRight size={18}/></strong></div></a></div>
  </section>;
 }
 const gallery=[

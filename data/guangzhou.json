@@ -1,0 +1,151 @@
+{
+  "id": "guangzhou",
+  "version": "2026-11-27.guangzhou1",
+  "coverImage": "river-blue-hour",
+  "places": [
+    {
+      "id": "city-gardens",
+      "name": "City gardens",
+      "zh": "城市园景",
+      "description": "A shaded garden and a pond set against city towers.",
+      "mapKeyword": null,
+      "photos": [
+        {
+          "image": "city-garden",
+          "caption": "City buildings above a shaded lawn",
+          "sourceFilename": "AI_1795707269100.png",
+          "width": 640,
+          "height": 1132,
+          "largeWidth": 1079,
+          "largeHeight": 1909
+        },
+        {
+          "image": "garden-pond",
+          "caption": "A garden bench beside a pond and city towers",
+          "sourceFilename": "AI_1795707277021.png",
+          "width": 640,
+          "height": 1133,
+          "largeWidth": 1075,
+          "largeHeight": 1903
+        }
+      ]
+    },
+    {
+      "id": "canton-tower",
+      "name": "Canton Tower",
+      "zh": "广州塔",
+      "description": "The tower lights up as the sun sets over the river.",
+      "mapKeyword": "广州塔",
+      "photos": [
+        {
+          "image": "canton-tower-sunset",
+          "caption": "Canton Tower at sunset, seen across a road",
+          "sourceFilename": "AI_1795707138026.png",
+          "width": 640,
+          "height": 1166,
+          "largeWidth": 1080,
+          "largeHeight": 1968
+        }
+      ]
+    },
+    {
+      "id": "pearl-river",
+      "name": "Pearl River after dark",
+      "zh": "珠江夜景",
+      "description": "Boats, skyline lights and a riverside path, seen in two different evening moods.",
+      "mapKeyword": "珠江",
+      "photos": [
+        {
+          "image": "river-cruise",
+          "caption": "Illuminated boats in front of the Guangzhou skyline",
+          "sourceFilename": "AI_1795707168510.png",
+          "width": 640,
+          "height": 856,
+          "largeWidth": 1071,
+          "largeHeight": 1432
+        },
+        {
+          "image": "river-blue-hour",
+          "caption": "Blue-hour skyline beside a riverside promenade",
+          "sourceFilename": "AI_1795707229272.png",
+          "width": 640,
+          "height": 1138,
+          "largeWidth": 1080,
+          "largeHeight": 1920
+        }
+      ]
+    },
+    {
+      "id": "pazhou-riverside",
+      "name": "An industrial riverside",
+      "zh": "滨江工业景观",
+      "description": "A tall brick chimney catches the evening light above a riverside commercial district.",
+      "mapKeyword": null,
+      "photos": [
+        {
+          "image": "chimney-evening",
+          "caption": "A tall chimney and riverside buildings in golden evening light",
+          "sourceFilename": "AI_1795707213745.png",
+          "width": 640,
+          "height": 1144,
+          "largeWidth": 1080,
+          "largeHeight": 1930
+        }
+      ]
+    },
+    {
+      "id": "sun-yat-sen-memorial-hall",
+      "name": "Sun Yat-sen Memorial Hall",
+      "zh": "中山纪念堂",
+      "description": "Blue tiles, red columns and the statue in front of the hall.",
+      "mapKeyword": "广州中山纪念堂",
+      "photos": [
+        {
+          "image": "memorial-hall",
+          "caption": "Sun Yat-sen Memorial Hall with the statue in its forecourt",
+          "sourceFilename": "AI_1795707238889.png",
+          "width": 640,
+          "height": 1151,
+          "largeWidth": 1080,
+          "largeHeight": 1943
+        }
+      ]
+    },
+    {
+      "id": "riverside-walks",
+      "name": "By the water",
+      "zh": "滨水漫步",
+      "description": "Tree canopies, benches and paths by the water, from sunset into blue hour.",
+      "mapKeyword": null,
+      "photos": [
+        {
+          "image": "riverside-night",
+          "caption": "A tree-lined promenade beside the river at night",
+          "sourceFilename": "AI_1795707257887.png",
+          "width": 640,
+          "height": 1129,
+          "largeWidth": 1080,
+          "largeHeight": 1905
+        },
+        {
+          "image": "riverside-sunset",
+          "caption": "A paved path and ramp beside the water at sunset",
+          "sourceFilename": "AI_1795711636126.png",
+          "width": 640,
+          "height": 847,
+          "largeWidth": 1077,
+          "largeHeight": 1426
+        },
+        {
+          "image": "riverside-blue",
+          "caption": "Two people walking beneath trees at blue hour",
+          "sourceFilename": "AI_1795711626167.png",
+          "width": 640,
+          "height": 843,
+          "largeWidth": 1071,
+          "largeHeight": 1411
+        }
+      ]
+    }
+  ]
+}

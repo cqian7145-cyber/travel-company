@@ -3,14 +3,14 @@ export const toolPages=[
   page:'arrival',
   path:'/arrival',
   file:'/arrival/index.html',
-  title:'First 90 Minutes: Shanghai Airport (PVG/SHA) to Hotel Guide | China, closer',
-  description:'Step-by-step arrival plan for Shanghai Pudong (PVG) and Hongqiao (SHA): passport Wi-Fi, Alipay backup, late-night taxi vs. Maglev/metro, and offline Chinese hotel cards.',
-  eyebrow:'ARRIVAL ASSISTANT · OFFLINE-READY',
+  title:'First 90 Minutes: Beijing, Shanghai & Guangzhou Airport Arrival Guide | China, closer',
+  description:'Step-by-step airport-to-hotel arrival plans for Beijing (PEK/PKX), Shanghai (PVG/SHA), and Guangzhou (CAN): passport Wi-Fi, Alipay backup, late-night taxi vs. rail, and offline Chinese hotel cards.',
+  eyebrow:'ARRIVAL ASSISTANT · BEIJING · SHANGHAI · GUANGZHOU',
   h1:'Your first 90 minutes in China.',
-  lead:'Choose your airport terminal, arrival time, and luggage to get a practical, offline-ready plan from baggage claim to hotel check-in.',
+  lead:'Choose your airport (PEK, PKX, PVG, SHA, or CAN), arrival time, and luggage to get a practical, offline-ready plan from baggage claim to hotel check-in.',
   bullets:[
-   'Pudong (PVG) & Hongqiao (SHA) terminal-specific transport & pickup guidance',
-   'Explicit late-night transit warnings when Maglev and metro services stop',
+   'Beijing (PEK/PKX), Shanghai (PVG/SHA), and Guangzhou (CAN) terminal-specific pickup & rail guidance',
+   'Explicit late-night transit warnings when airport express rail and metro services stop',
    'Passport-based airport Wi-Fi fallback and one-tap Chinese hotel address card'
   ]
  },
