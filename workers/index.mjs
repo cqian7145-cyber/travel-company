@@ -1,12 +1,14 @@
 import {cityRoute} from '../shared/cities.mjs';
 import {toolRoute} from '../shared/tools-routes.mjs';
+import {guideRoute} from '../shared/seo-guides.mjs';
 import {buildPlan,validateInput} from '../shared/planner.mjs';
 import {generate as generateDeepSeek} from '../shared/deepseek.mjs';
 import {cultureRoute} from '../shared/story-catalog.mjs';
 
 const MAX_BODY=8192;
+const EVENT_ALLOWLIST=new Set(['offline_kit_saved','offline_html_downloaded','chinese_card_copied','ai_plan_generated','curated_plan_generated','partner_link_clicked','amap_opened','guide_opened']);
 function json(status,data,extra={}){return Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin',...extra}});}
-function aiReady(env){return env.AI_ENABLED==='true'&&Boolean(env.DEEPSEEK_API_KEY?.trim())&&Boolean(env.PLAN_RATE_LIMITER);}
+function aiReady(env){return String(env.AI_ENABLED||'').trim()==='true'&&Boolean(env.DEEPSEEK_API_KEY?.trim())&&Boolean(env.PLAN_RATE_LIMITER);}
 async function readJson(request){
  const reader=request.body?.getReader();if(!reader)throw new Error('invalid');
  const chunks=[];let size=0;
@@ -21,14 +23,24 @@ export function createWorker({generate=generateDeepSeek}={}){return {
  async fetch(request,env){
   const url=new URL(request.url);
   if(url.pathname!=='/api'&&!url.pathname.startsWith('/api/')){
-   const route=cultureRoute(url.pathname)||cityRoute(url.pathname)||toolRoute(url.pathname);
+   const route=cultureRoute(url.pathname)||cityRoute(url.pathname)||toolRoute(url.pathname)||guideRoute(url.pathname);
    if(route?.kind==='redirect')return Response.redirect(new URL(route.location+url.search,url.origin),308);
-   if(route?.kind==='not-found')return new Response('Story or experience not found.',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
+   if(route?.kind==='not-found')return new Response('Story, guide, or experience not found.',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});
    if(route?.file){const assetUrl=new URL(request.url);assetUrl.pathname=route.file;return env.ASSETS.fetch(new Request(assetUrl,request));}
    return env.ASSETS.fetch(request);
   }
   const origin=request.headers.get('Origin');
   if((origin&&origin!==url.origin)||request.headers.get('Sec-Fetch-Site')==='cross-site')return json(403,{error:'Origin not allowed.'});
+  if(url.pathname==='/api/event'){
+   if(request.method!=='POST')return json(405,{error:'Method not allowed.'},{Allow:'POST'});
+   try{
+    const evt=await readJson(request);
+    if(!evt||typeof evt.event!=='string'||!EVENT_ALLOWLIST.has(evt.event))return json(400,{error:'Invalid event.'});
+    const target=typeof evt.target==='string'?evt.target.slice(0,40):undefined;
+    console.log(JSON.stringify({type:'funnel_event',event:evt.event,target,ts:new Date().toISOString()}));
+    return new Response(null,{status:204,headers:{'Cache-Control':'no-store'}});
+   }catch{return json(400,{error:'Invalid event payload.'});}
+  }
   if(url.pathname==='/api/status'){
    if(request.method!=='GET')return json(405,{error:'Method not allowed.'},{Allow:'GET'});
    return json(200,{aiConfigured:aiReady(env),aiProvider:'DeepSeek'});

@@ -1,4 +1,3 @@
-import './guangzhou.css';
 import {useState, type MouseEvent} from 'react';
 import guangzhou from '../data/guangzhou.json';
 import {renderGuangzhouPage} from '../shared/guangzhou-render.mjs';

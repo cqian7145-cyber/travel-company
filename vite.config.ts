@@ -12,4 +12,4 @@ const matchaFonts = {
   }
  },
 };
-export default defineConfig({plugins:[matchaFonts,react()],server:{host:'127.0.0.1'},build:{outDir:'dist',rollupOptions:{input:{main:'index.html',culture:'culture.html'}}}});
+export default defineConfig({plugins:[matchaFonts,react()],server:{host:'127.0.0.1'},build:{outDir:'dist',chunkSizeWarningLimit:700,rollupOptions:{input:{main:'index.html',culture:'culture.html'}}}});

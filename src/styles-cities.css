@@ -1,0 +1,337 @@
+/* === guiyang.css === */
+.guiyang-intro{align-items:stretch;gap:48px}.guiyang-intro h1 span{display:block;font:400 26px/1.5 var(--sans);letter-spacing:3px;color:var(--tea);margin-top:10px}.guiyang-intro .city-tagline{font-size:clamp(27px,3vw,38px)}.guiyang-intro .primary-button{margin-top:16px}.guiyang-cover{position:relative;min-width:0;height:570px;margin:0;overflow:hidden;border-radius:25px;background:#243a31}.guiyang-cover::after{position:absolute;content:"";inset:35% 0 0;background:linear-gradient(transparent,#14231fd9);pointer-events:none}.guiyang-cover img{width:100%;height:100%;object-fit:cover;object-position:center 45%;transition:transform 700ms cubic-bezier(.22,1,.36,1)}.guiyang-cover figcaption{position:absolute;z-index:1;left:28px;right:28px;bottom:24px;color:#fff;font-size:12px;letter-spacing:1px}.guiyang-cover figcaption small{display:block;margin-top:7px;font-size:12px;letter-spacing:.2px;color:#ffffffc7}.guiyang-places{padding:48px 0 24px;scroll-margin-top:105px}.guiyang-places>.section-heading{margin-bottom:30px}.guiyang-places .section-heading h2{font:500 clamp(38px,4vw,55px)/1.05 var(--serif);letter-spacing:-.8px}.guiyang-places .section-heading p:not(.eyebrow){max-width:570px;color:var(--muted);font-size:16px;line-height:1.7}.guiyang-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:42px 24px;align-items:start}.guiyang-card{min-width:0;grid-column:span 6}.guiyang-card-1{grid-column:span 7}.guiyang-card-2{grid-column:span 5;margin-top:75px}.guiyang-card-3{grid-column:span 5}.guiyang-card-4{grid-column:span 7;margin-top:65px}.guiyang-card-5,.guiyang-card-6{grid-column:span 6}.guiyang-image{position:relative;display:block;height:clamp(330px,39vw,540px);overflow:hidden;border-radius:22px;background:#e5e4dc}.guiyang-card-2 .guiyang-image,.guiyang-card-4 .guiyang-image{height:clamp(300px,34vw,465px)}.guiyang-image img{width:100%;height:100%;object-fit:cover;transition:transform 700ms cubic-bezier(.22,1,.36,1)}.guiyang-card-1 .guiyang-image img{object-position:center 57%}.guiyang-card-3 .guiyang-image img{object-position:center 48%}.guiyang-card-5 .guiyang-image img{object-position:center 55%}.guiyang-number,.guiyang-time{position:absolute;top:16px;display:grid;place-items:center;min-width:42px;height:38px;padding-inline:10px;border:1px solid #ffffff75;border-radius:999px;background:#1d2d28a8;color:#fff;backdrop-filter:blur(12px);font-size:13px}.guiyang-number{left:16px}.guiyang-time{right:16px}.guiyang-card-copy{padding:20px 3px 0}.guiyang-card-copy>.eyebrow{color:var(--tea);font-size:11px;letter-spacing:1.2px}.guiyang-card-copy h3{font:500 clamp(27px,2.4vw,36px)/1.12 var(--serif);letter-spacing:-.4px;margin:9px 0 12px}.guiyang-card-copy h3 small{display:inline-block;margin-left:12px;color:var(--tea);font:400 16px/1.4 var(--sans);letter-spacing:.3px}.guiyang-card-copy>p:not(.eyebrow){min-height:52px;color:var(--muted);font-size:15px;line-height:1.75}.guiyang-card-copy .text-link{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:var(--wine);font-size:14px}.guiyang-map-note{margin:1px 0;color:var(--muted);font-size:13px!important;min-height:0!important}.guiyang-provenance{max-width:850px;margin:45px 0 10px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px;line-height:1.75}.guiyang-plan{margin:38px 0 65px;padding:34px 0;border-top:1px solid var(--line)}.guiyang-plan h2{font:500 clamp(32px,3.6vw,46px)/1.07 var(--serif);letter-spacing:-.5px;margin:14px 0}.guiyang-plan>p:not(.eyebrow){max-width:730px;color:var(--muted);font-size:16px;line-height:1.8}.guiyang-plan .outline-button{margin-top:12px}
+@media(hover:hover) and (pointer:fine){.guiyang-image:hover img,.guiyang-cover:hover img{transform:scale(1.035)}}
+@media(max-width:1100px){.city-directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.guiyang-intro{gap:30px}.guiyang-cover{height:500px}.guiyang-grid{gap:34px 18px}.guiyang-card-1,.guiyang-card-2,.guiyang-card-3,.guiyang-card-4{grid-column:span 6;margin-top:0}.guiyang-image,.guiyang-card-2 .guiyang-image,.guiyang-card-4 .guiyang-image{height:clamp(300px,48vw,450px)}}
+@media(max-width:760px){.city-directory-grid{grid-template-columns:1fr;gap:32px}.city-directory-grid>article:nth-child(2){padding-top:0}.city-directory-photo{height:390px}.guiyang-intro{grid-template-columns:1fr;gap:24px;margin:22px 0 32px}.guiyang-intro h1{font-size:60px}.guiyang-intro .city-tagline{font-size:28px}.guiyang-cover{height:370px;border-radius:21px}.guiyang-cover figcaption{left:18px;right:18px;bottom:19px;font-size:10px}.guiyang-cover figcaption small{font-size:11px}.guiyang-places{padding-top:30px}.guiyang-places .section-heading h2{font-size:39px}.guiyang-grid{grid-template-columns:minmax(0,1fr);gap:30px}.guiyang-card-1,.guiyang-card-2,.guiyang-card-3,.guiyang-card-4,.guiyang-card-5,.guiyang-card-6,.guiyang-card-7{grid-column:auto;margin-top:0}.guiyang-image,.guiyang-card-2 .guiyang-image,.guiyang-card-4 .guiyang-image{height:clamp(330px,105vw,460px);border-radius:20px}.guiyang-card-copy{padding-top:16px}.guiyang-card-copy h3{font-size:32px}.guiyang-card-copy>p:not(.eyebrow){min-height:0}.guiyang-provenance{margin-top:24px}.guiyang-plan{margin-bottom:35px;padding-top:27px}.city-section-nav{grid-template-columns:1fr 1fr;gap:8px;margin:27px 0 32px;padding:16px 0}.city-section-nav a{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.guiyang-image img,.guiyang-cover img{transition:none!important;transform:none!important}}
+
+.guiyang-card[id] { scroll-margin-top: 100px; }
+
+/* === sanya.css === */
+.sanya-page{--sanya-sea:var(--tea);--sanya-sand:var(--line)}
+.sanya-intro{gap:48px;align-items:center}.sanya-intro h1 span{display:block;font:400 26px/1.5 var(--sans);letter-spacing:3px;color:var(--sanya-sea);margin-top:10px}.sanya-intro .city-tagline{font-size:clamp(27px,3vw,38px)}.sanya-intro .primary-button{margin-top:16px}
+.sanya-cover{height:570px;min-width:0;position:relative;margin:0;border-radius:26px;overflow:hidden;background:var(--sanya-sand)}.sanya-cover img{width:100%;height:100%;object-fit:cover;object-position:center 50%}.sanya-cover figcaption{position:absolute;left:24px;bottom:24px;padding:10px 18px;border:1px solid #ffffff70;border-radius:999px;background:#172e3bd9;color:#fff;font-size:18px;letter-spacing:.5px}
+.sanya-places{padding:48px 0 24px;scroll-margin-top:100px}.sanya-places>.section-heading{margin-bottom:32px}.sanya-places h2{font:500 clamp(36px,4vw,54px)/1.1 var(--serif);letter-spacing:-.7px}.sanya-places .section-heading p:not(.eyebrow){max-width:580px;font-size:16px;line-height:1.75;color:var(--muted)}
+.sanya-place-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}.sanya-place{min-width:0;scroll-margin-top:100px}.sanya-place:nth-child(2){padding-top:64px}.sanya-place-multiple{grid-column:1/-1}.sanya-place-heading{display:flex;align-items:center;gap:12px;margin-bottom:18px}.sanya-place-number{color:var(--sanya-sea);font:400 14px/1 var(--sans)}.sanya-place h3{font:500 clamp(28px,2.7vw,38px)/1.12 var(--serif);letter-spacing:-.4px;margin:0;flex:1}.sanya-place h3 small{display:block;color:var(--sanya-sea);font:400 16px/1.6 var(--sans);letter-spacing:.5px;margin-top:6px}.sanya-photo-count{font:400 13px/1.5 var(--sans);color:var(--muted);white-space:nowrap}
+.sanya-photo-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.sanya-place-multiple .sanya-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sanya-photo-grid figure{min-width:0;margin:0}.sanya-photo-grid a{display:block;overflow:hidden;border-radius:22px;background:var(--sanya-sand);aspect-ratio:4/5}.sanya-photo-grid img{width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.22,1,.36,1)}.sanya-photo-grid figcaption{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.65}.sanya-place>p{color:var(--muted);font-size:16px;line-height:1.75;max-width:720px}.sanya-place .text-link{display:inline-flex;align-items:center;min-height:44px;color:var(--wine);font-size:15px}.sanya-map-note{font-size:13px!important;margin-top:0}.sanya-provenance{border-top:1px solid var(--line);padding-top:20px;margin-top:40px;color:var(--muted);font-size:14px;line-height:1.75;max-width:900px}
+.sanya-plan{margin:32px 0 64px;padding-top:32px;border-top:1px solid var(--line)}.sanya-plan h2{font:500 clamp(32px,3.5vw,46px)/1.1 var(--serif);margin:14px 0}.sanya-plan>p:not(.eyebrow){max-width:760px;font-size:16px;line-height:1.8;color:var(--muted)}.sanya-plan .outline-button{margin-top:16px}
+@media(hover:hover) and (pointer:fine){.sanya-photo-grid a:hover img{transform:scale(1.04)}}
+@media(max-width:1100px){.sanya-intro{gap:28px}.sanya-cover{height:480px}.sanya-place-grid{gap:36px 24px}}
+@media(max-width:760px){.sanya-intro{grid-template-columns:1fr;gap:24px;margin:24px 0 32px}.sanya-intro h1{font-size:60px}.sanya-cover{height:400px}.sanya-cover figcaption{left:18px;bottom:18px;font-size:17px}.sanya-place-grid{grid-template-columns:minmax(0,1fr);gap:36px}.sanya-place:nth-child(2){padding-top:0}.sanya-place-multiple{grid-column:auto}.sanya-photo-grid,.sanya-place-multiple .sanya-photo-grid{grid-template-columns:minmax(0,1fr);gap:20px}.sanya-photo-grid a{aspect-ratio:4/5;max-height:500px}.sanya-places{padding-top:24px}.sanya-place-heading{gap:10px}.sanya-place h3{font-size:31px}.sanya-places h2{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.sanya-photo-grid img{transition:none!important;transform:none!important}}
+
+/* === shenzhen.css === */
+.shenzhen-page{--shenzhen-sea:var(--tea);--shenzhen-sand:var(--line)}
+.shenzhen-intro{gap:48px;align-items:center}.shenzhen-intro h1 span{display:block;font:400 26px/1.5 var(--sans);letter-spacing:3px;color:var(--shenzhen-sea);margin-top:10px}.shenzhen-intro .city-tagline{font-size:clamp(27px,3vw,38px)}.shenzhen-intro .primary-button{margin-top:16px}
+.shenzhen-cover{height:570px;min-width:0;position:relative;margin:0;border-radius:26px;overflow:hidden;background:var(--shenzhen-sand)}.shenzhen-cover img{width:100%;height:100%;object-fit:cover;object-position:center 50%}.shenzhen-cover figcaption{position:absolute;left:24px;bottom:24px;padding:10px 18px;border:1px solid #ffffff70;border-radius:999px;background:#172e3bd9;color:#fff;font-size:18px;letter-spacing:.5px}
+.shenzhen-places{padding:48px 0 24px;scroll-margin-top:100px}.shenzhen-places>.section-heading{margin-bottom:32px}.shenzhen-places h2{font:500 clamp(36px,4vw,54px)/1.1 var(--serif);letter-spacing:-.7px}.shenzhen-places .section-heading p:not(.eyebrow){max-width:580px;font-size:16px;line-height:1.75;color:var(--muted)}
+.shenzhen-place-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 28px;align-items:start}.shenzhen-place{min-width:0;scroll-margin-top:100px}.shenzhen-place:nth-child(2){padding-top:64px}.shenzhen-place-multiple{grid-column:1/-1}.shenzhen-place-heading{display:flex;align-items:center;gap:12px;margin-bottom:18px}.shenzhen-place-number{color:var(--shenzhen-sea);font:400 14px/1 var(--sans)}.shenzhen-place h3{font:500 clamp(28px,2.7vw,38px)/1.12 var(--serif);letter-spacing:-.4px;margin:0;flex:1}.shenzhen-place h3 small{display:block;color:var(--shenzhen-sea);font:400 16px/1.6 var(--sans);letter-spacing:.5px;margin-top:6px}.shenzhen-photo-count{font:400 13px/1.5 var(--sans);color:var(--muted);white-space:nowrap}
+.shenzhen-photo-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.shenzhen-place-multiple .shenzhen-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.shenzhen-photo-grid figure{min-width:0;margin:0}.shenzhen-photo-grid a{display:block;overflow:hidden;border-radius:22px;background:var(--shenzhen-sand);aspect-ratio:4/5}.shenzhen-photo-grid img{width:100%;height:100%;object-fit:cover;transition:transform 600ms cubic-bezier(.22,1,.36,1)}.shenzhen-photo-grid figcaption{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.65}.shenzhen-place>p{color:var(--muted);font-size:16px;line-height:1.75;max-width:720px}.shenzhen-place .text-link{display:inline-flex;align-items:center;min-height:44px;color:var(--wine);font-size:15px}.shenzhen-map-note{font-size:13px!important;margin-top:0}.shenzhen-provenance{border-top:1px solid var(--line);padding-top:20px;margin-top:40px;color:var(--muted);font-size:14px;line-height:1.75;max-width:900px}
+.shenzhen-plan{margin:32px 0 64px;padding-top:32px;border-top:1px solid var(--line)}.shenzhen-plan h2{font:500 clamp(32px,3.5vw,46px)/1.1 var(--serif);margin:14px 0}.shenzhen-plan>p:not(.eyebrow){max-width:760px;font-size:16px;line-height:1.8;color:var(--muted)}.shenzhen-plan .outline-button{margin-top:16px}
+@media(hover:hover) and (pointer:fine){.shenzhen-photo-grid a:hover img{transform:scale(1.04)}}
+@media(max-width:1100px){.shenzhen-intro{gap:28px}.shenzhen-cover{height:480px}.shenzhen-place-grid{gap:36px 24px}}
+@media(max-width:760px){.shenzhen-intro{grid-template-columns:1fr;gap:24px;margin:24px 0 32px}.shenzhen-intro h1{font-size:60px}.shenzhen-cover{height:400px}.shenzhen-cover figcaption{left:18px;bottom:18px;font-size:17px}.shenzhen-place-grid{grid-template-columns:minmax(0,1fr);gap:36px}.shenzhen-place:nth-child(2){padding-top:0}.shenzhen-place-multiple{grid-column:auto}.shenzhen-photo-grid,.shenzhen-place-multiple .shenzhen-photo-grid{grid-template-columns:minmax(0,1fr);gap:20px}.shenzhen-photo-grid a{aspect-ratio:4/5;max-height:500px}.shenzhen-places{padding-top:24px}.shenzhen-place-heading{gap:10px}.shenzhen-place h3{font-size:31px}.shenzhen-places h2{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.shenzhen-photo-grid img{transition:none!important;transform:none!important}}
+
+/* Preserve full supplied collages, including labels and existing attribution. */
+.shenzhen-photo-grid img{object-fit:contain}.shenzhen-photo-grid a:hover img{transform:none}.shenzhen-cover img{object-position:center}.shenzhen-page .shenzhen-cover figcaption{background:var(--tea)}
+
+/* === beijing.css === */
+.beijing-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(250px, 1fr);
+  align-items: center;
+  gap: clamp(26px, 4vw, 64px);
+  margin: clamp(30px, 5vw, 72px) 0 36px;
+}
+
+.beijing-cover { grid-area: 1 / 1; }
+
+.beijing-intro .beijing-intro-copy h1 {
+  margin: 18px 0;
+  font-size: clamp(58px, 6.5vw, 98px);
+  line-height: .98;
+}
+
+.beijing-intro h1 span {
+  display: block;
+  margin-top: 14px;
+  color: var(--tea);
+  font: 400 .32em/1.4 var(--sans);
+}
+
+.beijing-intro-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.beijing-intro-copy .beijing-tagline {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font: 500 clamp(20px, 2vw, 29px)/1.35 var(--sans);
+  text-wrap: balance;
+}
+
+.beijing-intro-copy .primary-button {
+  margin-top: 12px;
+}
+
+.beijing-cover,
+.beijing-photos figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.beijing-cover {
+  position: relative;
+}
+
+.beijing-cover img,
+.beijing-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.beijing-cover img {
+  border-radius: var(--radius-page, 24px);
+}
+
+.beijing-cover figcaption {
+  position: absolute;
+  inset: auto auto 16px 16px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: #25150edc;
+  color: #fff8ee;
+  font-size: 13px;
+}
+
+.beijing-cover figcaption span {
+  margin-inline-start: 6px;
+}
+
+.beijing-gallery {
+  scroll-margin-top: 100px;
+}
+
+.beijing-gallery > .section-heading {
+  margin-bottom: 22px;
+}
+
+.beijing-places {
+  --gallery-gap: clamp(14px, 2vw, 26px);
+  display: grid;
+  gap: clamp(46px, 8vw, 110px);
+  padding-bottom: 40px;
+}
+
+.beijing-place {
+  min-width: 0;
+  padding-top: clamp(20px, 3vw, 42px);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 100px;
+}
+
+.beijing-place[data-layout="landscape"],
+.beijing-place[data-layout="portrait"] {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 74px);
+}
+
+.beijing-place[data-layout="portrait"] {
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 1.1fr);
+  max-width: 1040px;
+  width: 100%;
+  justify-self: center;
+}
+
+.beijing-place[data-layout="landscape"] .beijing-photos {
+  grid-area: 1 / 1;
+}
+
+.beijing-place-heading {
+  margin-bottom: 20px;
+}
+
+.beijing-place[data-layout="spread"] .beijing-place-heading {
+  display: flex;
+  gap: 8px 24px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.beijing-place .beijing-place-heading h3 {
+  margin: 0;
+  font: 400 clamp(25px, 3.3vw, 43px)/1.18 var(--serif);
+  text-wrap: balance;
+}
+
+.beijing-place h3 small {
+  display: inline-block;
+  margin-inline-start: .4em;
+  color: var(--tea);
+  font: 400 clamp(14px, 1.4vw, 17px)/1.5 var(--sans);
+}
+
+.beijing-place-heading p {
+  max-width: 58ch;
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.beijing-place-heading .text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.beijing-photos {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: var(--gallery-gap);
+}
+
+.beijing-photos figure {
+  flex: var(--photo-width) 1 0;
+}
+
+.beijing-place[data-layout="portrait"] .beijing-photos {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+}
+
+.beijing-place[data-layout="portrait"] figure {
+  flex: 1;
+}
+
+.beijing-photos a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-container, 16px);
+}
+
+.beijing-photos a:focus-visible {
+  outline: 2px solid var(--tea);
+  outline-offset: 4px;
+}
+
+.beijing-photos figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.beijing-photo-expand {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #171b18d9;
+  color: white;
+  font-size: 18px;
+}
+
+.beijing-photo-dialog figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(68vh, 850px);
+  margin: auto;
+  object-fit: contain;
+}
+
+.beijing-photo-dialog figcaption {
+  text-align: center;
+  padding: 12px 18px;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .beijing-photo-expand {
+    transition: transform 220ms cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .beijing-photos a:hover .beijing-photo-expand {
+    transform: translate(2px, -2px);
+  }
+}
+
+@media (max-width: 760px) {
+  .beijing-intro,
+  .beijing-place[data-layout="landscape"],
+  .beijing-place[data-layout="portrait"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .beijing-cover,
+  .beijing-place[data-layout="landscape"] .beijing-photos {
+    grid-area: auto;
+  }
+
+  .beijing-intro .beijing-intro-copy h1 {
+    font-size: clamp(52px, 14vw, 80px);
+  }
+
+  .beijing-place h3 small {
+    display: block;
+    margin: 4px 0 0;
+  }
+
+  .beijing-place[data-layout] .beijing-place-heading {
+    margin-bottom: 0;
+  }
+
+  .beijing-place[data-layout="spread"] .beijing-place-heading {
+    margin-bottom: 16px;
+  }
+
+  .beijing-photos {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .beijing-photos figure {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+/* === guangzhou.css === */
+.guangzhou-page .beijing-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.guangzhou-page .beijing-cover {
+  width: min(100%, 480px);
+  justify-self: center;
+}
+.guangzhou-page .beijing-intro .beijing-intro-copy h1 {
+  font-size: clamp(45px, 5.5vw, 88px);
+  overflow-wrap: anywhere;
+}
+.guangzhou-page #pearl-river figure:nth-child(2) {
+  margin-top: clamp(35px, 5vw, 80px);
+}
+.guangzhou-page #riverside-walks .beijing-photos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.guangzhou-page #riverside-walks figure:first-child {
+  grid-row: span 2;
+  align-self: center;
+}
+@media (max-width: 760px) {
+  .guangzhou-page .beijing-intro { grid-template-columns: minmax(0, 1fr); }
+  .guangzhou-page #pearl-river figure:nth-child(2) { margin-top: 0; }
+  .guangzhou-page #riverside-walks .beijing-photos { display: flex; }
+}

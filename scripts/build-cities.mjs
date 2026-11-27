@@ -3,6 +3,7 @@ import {resolve,dirname} from 'node:path';
 import {cityRoutes,cityRoute} from '../shared/cities.mjs';
 import {cityMeta,renderCityBody} from '../shared/city-render.mjs';
 import {toolPages,renderToolFallback} from '../shared/tools-routes.mjs';
+import {guideRoutes,guideRoute,buildGuideJsonLd,renderGuidesBody} from '../shared/seo-guides.mjs';
 import {escape} from '../shared/culture-render.mjs';
 const origin=new URL(process.env.PUBLIC_SITE_URL||'https://china-closer.xizimist.com');
 if(origin.protocol!=='https:'||origin.username||origin.password)throw Error('Use a public HTTPS origin.');
@@ -19,7 +20,16 @@ for(const tool of toolPages){
  const html=template.replace(/<title>.*?<\/title>/,tags).replace(/<meta name="description" content="[^"]*"\s*\/?>(?!<link rel="canonical")/,'').replace('<div id="root"></div>',()=>`<div id="root">${renderToolFallback(tool,escape)}</div>`);
  const file=resolve('dist','.'+tool.file);await mkdir(dirname(file),{recursive:true});await writeFile(file,html);
 }
+for(const path of guideRoutes()){
+ const route=guideRoute(path),canonical=new URL(path,origin).href;
+ const title=route.kind==='guides-index'?'Practical China Travel Guides: Airports, Alipay SOS, 240h Transit & Allergies | China, closer':route.guide.title;
+ const description=route.kind==='guides-index'?'Offline-ready practical guides for Beijing, Shanghai, and Guangzhou: late-night airport arrivals, Alipay foreign card fixes, 240-hour transit checklist, and printable Chinese allergy cards.':route.guide.description;
+ const jsonLd=route.kind==='guide'?`<script type="application/ld+json">${buildGuideJsonLd(route.guide,origin)}</script>`:'';
+ const tags=`<title>${escape(title)}</title><meta name="description" content="${escape(description)}"><link rel="canonical" href="${canonical}"><meta property="og:type" content="${route.kind==='guide'?'article':'website'}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${canonical}">${jsonLd}`;
+ const html=template.replace(/<title>.*?<\/title>/,tags).replace(/<meta name="description" content="[^"]*"\s*\/?>(?!<link rel="canonical")/,'').replace('<div id="root"></div>',()=>`<div id="root">${renderGuidesBody(route)}</div>`);
+ const file=resolve('dist','.'+route.file);await mkdir(dirname(file),{recursive:true});await writeFile(file,html);
+}
 const sitemap=await readFile('dist/sitemap.xml','utf8');
-const extraUrls=[...cityRoutes(),...toolPages.map(t=>t.path)];
+const extraUrls=[...cityRoutes(),...toolPages.map(t=>t.path),...guideRoutes()];
 await writeFile('dist/sitemap.xml',sitemap.replace('</urlset>',extraUrls.map(p=>`<url><loc>${new URL(p,origin).href}</loc></url>`).join('')+'</urlset>'));
-console.log(`Pre-rendered city directory, ${cityRoutes().length-1} city entrances, and ${toolPages.length} SEO tool pages.`);
+console.log(`Pre-rendered city directory, ${cityRoutes().length-1} city entrances, ${toolPages.length} SEO tool pages, and ${guideRoutes().length} long-tail guide routes.`);

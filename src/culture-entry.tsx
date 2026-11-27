@@ -2,18 +2,14 @@ import MatchaTheme from './MatchaTheme';
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import CulturePage from './CulturePage';
-import './styles.css';
-import './companion.css';
-import './arrival-tools.css';
-import './verification.css';
-import './culture.css';
-import './micro-adventures.css';
-import './polish.css';
-import './colour-motion.css';
-import './editorial.css';
-import './discovery-journey.css';
-createRoot(document.getElementById('culture-root')!).render(<React.StrictMode><MatchaTheme><CulturePage/></MatchaTheme></React.StrictMode>);
-
-import './culture-highlights.css';
-
+import './styles-core.css';
+import './styles-editorial.css';
 import './matcha.css';
+
+createRoot(document.getElementById('culture-root')!).render(
+ <React.StrictMode>
+  <MatchaTheme>
+   <CulturePage/>
+  </MatchaTheme>
+ </React.StrictMode>
+);
